@@ -1,0 +1,144 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { seoMetadata } from '../lib/constants';
+
+const pageMetadata = seoMetadata['/work-with-me/'];
+---
+
+<BaseLayout
+  title={pageMetadata.title}
+  description={pageMetadata.description}
+>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8">
+      Work With Me
+    </h1>
+
+    <p class="text-2xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl">
+      I work with teams and founders who want to build systems that actually work. Here's what engagement looks like.
+    </p>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <!-- Operations Assessment -->
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-lg border border-gray-200 dark:border-gray-700">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Operations Assessment
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-6">
+          Understand where your operations are working and where they're creating friction. We'll map your current state, identify opportunities for improvement, and create a clear roadmap for building better systems.
+        </p>
+        <ul class="space-y-3 text-gray-600 dark:text-gray-400 mb-6">
+          <li class="flex gap-2">
+            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
+            <span>Current state mapping</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
+            <span>Process analysis</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
+            <span>Improvement roadmap</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
+            <span>Implementation guidance</span>
+          </li>
+        </ul>
+        <a
+          href="/contact/"
+          class="inline-block px-6 py-2 border-2 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700 font-semibold rounded-lg transition-colors"
+        >
+          Learn More
+        </a>
+      </div>
+
+      <!-- Digital Assessment -->
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-lg border border-gray-200 dark:border-gray-700">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Digital Assessment
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400 mb-6">
+          Is your digital strategy aligned with your business goals? Let's evaluate your product, technology decisions, and organizational structure around digital work—then build a clearer path forward.
+        </p>
+        <ul class="space-y-3 text-gray-600 dark:text-gray-400 mb-6">
+          <li class="flex gap-2">
+            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
+            <span>Strategy review</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
+            <span>Product assessment</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
+            <span>Organizational alignment</span>
+          </li>
+          <li class="flex gap-2">
+            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
+            <span>Roadmap planning</span>
+          </li>
+        </ul>
+        <a
+          href="/contact/"
+          class="inline-block px-6 py-2 border-2 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700 font-semibold rounded-lg transition-colors"
+        >
+          Learn More
+        </a>
+      </div>
+    </div>
+
+    <!-- Engagement Models -->
+    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-8 mb-16">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+        Engagement Models
+      </h2>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            Clarity Sessions
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            One-off conversations (2-3 hours) to explore a specific challenge or opportunity. Great for getting an outside perspective on a particular question.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            Working Partnerships
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Ongoing engagement over weeks or months. I work closely with your team to design, build, and implement specific improvements. Great for organizations making significant changes.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+            Advisory Relationships
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400">
+            Regular touchbases (monthly or quarterly) to think through strategic questions as your organization evolves. Great for ongoing support and guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-12 border border-gray-200 dark:border-gray-700">
+      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+        Ready to start?
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+        Let's have a conversation about what you're working on and how I might help.
+      </p>
+      <a
+        href="/contact/"
+        class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
+      >
+        Start a Conversation
+      </a>
+    </div>
+  </section>
+</BaseLayout>

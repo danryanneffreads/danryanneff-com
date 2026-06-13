@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { seoMetadata } from '../lib/constants';
+
+const pageMetadata = seoMetadata['/contact/'];
+---
+
+<BaseLayout
+  title={pageMetadata.title}
+  description={pageMetadata.description}
+>
+  <section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8">
+      Let's Talk
+    </h1>
+
+    <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">
+      Have a question or want to explore working together? Fill out the form below and I'll get back to you soon.
+    </p>
+
+    <!-- Contact Form with Formspree -->
+    <form
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST"
+      class="space-y-6"
+    >
+      <!-- Email Field -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+          Email Address *
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="your@email.com"
+          class="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 transition-all"
+        />
+      </div>
+
+      <!-- Subject Field -->
+      <div>
+        <label for="subject" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+          Subject *
+        </label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          required
+          placeholder="What this is about"
+          class="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 transition-all"
+        />
+      </div>
+
+      <!-- Message Field -->
+      <div>
+        <label for="message" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
+          Message *
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          required
+          placeholder="Project inquiry, question, or introduction... whatever you'd like to share."
+          rows={6}
+          class="w-full px-4 py-2 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 transition-all resize-none"
+        ></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button
+          type="submit"
+          class="w-full px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors cursor-pointer"
+        >
+          Send Message
+        </button>
+      </div>
+
+      <!-- Form Note -->
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        * Required fields. I'll get back to you within 24 hours.
+      </p>
+    </form>
+
+    <!-- Alternative Contact Methods -->
+    <div class="mt-16 pt-12 border-t border-gray-200 dark:border-gray-700">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
+        Other ways to connect
+      </h2>
+
+      <div class="space-y-4 text-gray-600 dark:text-gray-400">
+        <p>
+          Prefer email? Send a message directly to <a href="mailto:danryanneff@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">danryanneff@gmail.com</a>
+        </p>
+        <p>
+          Or connect on <a href="https://twitter.com" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Twitter</a> or <a href="https://linkedin.com" class="text-blue-600 dark:text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
