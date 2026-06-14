@@ -5,76 +5,79 @@ import { seoMetadata } from '../lib/constants';
 const pageMetadata = seoMetadata['/about/'];
 ---
 
-<BaseLayout
-  title={pageMetadata.title}
-  description={pageMetadata.description}
->
-  <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8">
-      About Dan
-    </h1>
-
-    <div class="prose prose-lg dark:prose-invert max-w-none">
-      <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
-        I work with thoughtful founders, operators, and teams who want to build with intention. My background is in operations, systems design, and digital strategy. I've spent the last decade helping organizations move from chaos to clarity.
-      </p>
-
-      <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
-        I believe the best work happens when strategy, structure, and clarity align. Whether you're building a new product, scaling operations, or asking bigger questions about how to work together—I'm here to help you find the path forward.
-      </p>
-
-      <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
-        My approach is conversational. I ask questions, listen carefully, and work with you to understand what matters most. Then we build the systems, strategies, and structures that make your work feel easier and more meaningful.
-      </p>
-
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
-        What I do
-      </h2>
-
-      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
-        Operations & Systems
-      </h3>
-      <p class="text-gray-600 dark:text-gray-400 mb-4">
-        Clear systems create clarity. I help teams design and implement the operational frameworks that support growth—from decision-making processes to communication structures to scaling patterns.
-      </p>
-
-      <h3 class="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">
-        Digital Strategy
-      </h3>
-      <p class="text-gray-600 dark:text-gray-400 mb-4">
-        Digital products should serve your goals, not the other way around. I help teams think through digital strategy, product direction, and the technical and organizational patterns that support meaningful product work.
-      </p>
-
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
-        How to work together
-      </h2>
-
-      <p class="text-gray-600 dark:text-gray-400 mb-6">
-        I offer a few different ways to engage depending on your needs:
-      </p>
-
-      <ul class="list-disc list-inside space-y-4 text-gray-600 dark:text-gray-400 mb-8">
-        <li>
-          <strong class="text-gray-900 dark:text-white">Clarity Sessions</strong> — One-off conversations to explore a specific challenge or opportunity
-        </li>
-        <li>
-          <strong class="text-gray-900 dark:text-white">Working Partnerships</strong> — Ongoing engagement over weeks or months to build something specific
-        </li>
-        <li>
-          <strong class="text-gray-900 dark:text-white">Advisory Relationships</strong> — Regular touchbases to think through strategic questions
-        </li>
-      </ul>
-
-      <div class="mt-12 pt-12 border-t border-gray-200 dark:border-gray-700">
-        <p class="text-lg text-gray-600 dark:text-gray-400 mb-6">
-          Ready to talk? Let's find a time.
+<BaseLayout title={pageMetadata.title} description={pageMetadata.description}>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_0.8fr] gap-12 items-center mb-16">
+      <div>
+        <p class="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+          About Dan
         </p>
-        <a
-          href="/contact/"
-          class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
-        >
-          Start a Conversation
-        </a>
+
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          I enjoy understanding how things fit together.
+        </h1>
+
+        <p class="text-xl text-gray-600 dark:text-gray-400">
+          My work sits between operations, websites, digital tools, AI, communication, and conversation.
+        </p>
+      </div>
+
+      <img
+        src="/images/DOT_artist_with_ideas.webp"
+        alt=""
+        class="w-full rounded-3xl shadow-lg object-cover"
+        loading="lazy"
+      />
+    </div>
+
+    <div class="max-w-4xl space-y-6 text-lg text-gray-600 dark:text-gray-400 mb-16">
+      <p>
+        The common thread is helping people look carefully at real situations and find a clearer path forward.
+      </p>
+
+      <p>
+        I do not assume I know the answer before understanding the situation. I listen, ask useful questions, notice patterns, and share what I see.
+      </p>
+
+      <p>
+        Sometimes the work leads to a website. Sometimes it leads to an operational change. Sometimes it leads to a better decision, a clearer explanation, or simply a stronger sense of what matters next.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+      <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Operations experience
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400">
+          I spent 21 years inside a large organization coordinating teams, supporting communication, improving operations, training people, interviewing candidates, and working across departments.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Digital fluency
+        </h2>
+        <p class="text-gray-600 dark:text-gray-400">
+          I build websites, digital tools, and online spaces. I care about digital environments that help people understand who you are, what you do, and why it matters.
+        </p>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 rounded-lg">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+        What I pay attention to
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600 dark:text-gray-400">
+        <p>What is unclear</p>
+        <p>What actually matters</p>
+        <p>Where coordination is breaking down</p>
+        <p>Where people may be operating with different assumptions</p>
+        <p>How people find or enter the work</p>
+        <p>What digital spaces are communicating</p>
+        <p>What structure would help without overcomplicating things</p>
+        <p>What might become clearer through conversation</p>
       </div>
     </div>
   </section>

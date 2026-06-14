@@ -5,92 +5,61 @@ import { seoMetadata } from '../lib/constants';
 const pageMetadata = seoMetadata['/mandalafy/'];
 ---
 
-<BaseLayout
-  title={pageMetadata.title}
-  description={pageMetadata.description}
->
+<BaseLayout title={pageMetadata.title} description={pageMetadata.description}>
   <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-8">
-      Mandalafy
-    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_0.8fr] gap-12 items-center mb-16">
+      <div>
+        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          Mandalafy
+        </h1>
 
-    <p class="text-2xl text-gray-600 dark:text-gray-400 mb-12">
-      An interactive tool for creating and exploring mandalas. Coming soon.
-    </p>
-
-    <!-- Placeholder Content -->
-    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-12 text-center mb-12">
-      <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-        This project page is currently being built. Check back soon for more details and the interactive tool.
-      </p>
-
-      <div class="space-x-4">
-        <a
-          href="/"
-          class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
-        >
-          Back to Home
-        </a>
-        <a
-          href="/work-with-me/"
-          class="inline-block px-8 py-3 border-2 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700 font-semibold rounded-lg transition-colors"
-        >
-          Explore Services
-        </a>
-      </div>
-    </div>
-
-    <!-- Project Details Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-lg border border-gray-200 dark:border-gray-700">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-          About Mandalafy
-        </h2>
-        <p class="text-gray-600 dark:text-gray-400">
-          Mandalafy is an interactive digital tool for creating, exploring, and sharing custom mandalas. 
-          It combines geometric patterns, symmetry, and interactivity to create unique visual experiences.
+        <p class="text-2xl text-gray-600 dark:text-gray-400 mb-8">
+          A digital playground for creating your own mandalas.
         </p>
+
+        <a href="https://mandalafy.com/" target="_blank" rel="noopener" class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors">
+          Explore Mandalafy
+        </a>
       </div>
 
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-lg border border-gray-200 dark:border-gray-700">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-          Features
-        </h2>
-        <ul class="space-y-2 text-gray-600 dark:text-gray-400">
-          <li class="flex gap-2">
-            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
-            <span>Interactive creation</span>
-          </li>
-          <li class="flex gap-2">
-            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
-            <span>Real-time preview</span>
-          </li>
-          <li class="flex gap-2">
-            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
-            <span>Export options</span>
-          </li>
-          <li class="flex gap-2">
-            <span class="text-blue-600 dark:text-blue-400 font-bold">✓</span>
-            <span>Gallery sharing</span>
-          </li>
-        </ul>
-      </div>
+      <img
+        src="/images/mandala2.webp"
+        alt=""
+        class="w-full rounded-3xl shadow-lg object-cover"
+        loading="lazy"
+      />
     </div>
 
-    <!-- CTA Section -->
-    <div class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 rounded-lg p-12 text-center">
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-        Interested in Learning More?
-      </h2>
-      <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
-        Let's discuss how this type of project could serve your goals.
+    <div class="max-w-4xl space-y-6 text-lg text-gray-600 dark:text-gray-400 mb-16">
+      <p>
+        Mandalafy lets anyone explore a timeless art form through symmetry, color, and curiosity. Draw, experiment, and shape something beautiful—then bring it to life on custom products.
       </p>
-      <a
-        href="/contact/"
-        class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
-      >
-        Get in Touch
-      </a>
+
+      <p>
+        What began as a creative experiment grew into a fully interactive digital tool, blending code, design, and accessible creativity into a single, intentional experience.
+      </p>
+
+      <p>
+        For many people, Mandalafy becomes a moment of flow—a quiet space where intuition and pattern meet.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg space-y-6 text-gray-600 dark:text-gray-400">
+      <p>
+        For me, mandalas are more than visual patterns. They’re a creative practice built on rhythm, repetition, and structure.
+      </p>
+
+      <p>
+        You don’t control every detail. You work within constraints and let the design emerge. Structure provides guidance; creativity fills in the rest.
+      </p>
+
+      <p>
+        That balance mirrors how I approach digital strategy and systems work.
+      </p>
+
+      <p>
+        Mandalafy is both a creative offering and a living example of how thoughtful digital environments can feel intuitive, expressive, and human—even when built on complex systems underneath.
+      </p>
     </div>
   </section>
 </BaseLayout>
