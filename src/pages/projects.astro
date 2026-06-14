@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { seoMetadata } from '../lib/constants';
+
+const pageMetadata = seoMetadata['/projects/'];
+
+const projects = [
+  {
+    title: 'Mandalafy',
+    image: '/images/mandala2.webp',
+    href: '/mandalafy/',
+    linkText: 'View project',
+    description:
+      'A digital playground for creating your own mandalas. It began as a creative experiment and became an interactive tool for symmetry, color, rhythm, and flow.',
+  },
+  {
+    title: 'LandingBio',
+    image: '/images/SubtleCircles.webp',
+    href: 'https://landingbio.com/',
+    linkText: 'Visit LandingBio',
+    description:
+      'A platform for clearer introductions and online presence beyond social media. Simple pages for individuals, creators, and professionals.',
+  },
+  {
+    title: 'ImagineThis.Site',
+    image: '/images/.gitignore.webp',
+    href: 'https://imaginethis.site/',
+    linkText: 'Visit ImagineThis.Site',
+    description:
+      'A space for concept websites, private drafts, guides, and creative experiments around what a website could become.',
+  },
+  {
+    title: 'Systems Atlas',
+    image: '/images/dot-compilation.webp',
+    href: 'https://systemsatlas.com/',
+    linkText: 'Visit Systems Atlas',
+    description:
+      'A digital resource for thinking about systems, relationships, patterns, and how complex things fit together.',
+  },
+];
+---
+
+<BaseLayout title={pageMetadata.title} description={pageMetadata.description}>
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <p class="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
+      Projects
+    </p>
+
+    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+      Things I’ve built, explored, and continued to develop.
+    </h1>
+
+    <p class="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl">
+      These projects reflect my interest in clarity, structure, creativity, digital experience, and useful online spaces.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {projects.map((project) => (
+        <article class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm">
+          <img
+            src={project.image}
+            alt=""
+            class="w-full h-56 object-cover"
+            loading="lazy"
+          />
+
+          <div class="p-8">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              {project.title}
+            </h2>
+
+            <p class="text-gray-600 dark:text-gray-400 mb-6">
+              {project.description}
+            </p>
+
+            <a
+              href={project.href}
+              class="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
+              target={project.href.startsWith('http') ? '_blank' : undefined}
+              rel={project.href.startsWith('http') ? 'noopener' : undefined}
+            >
+              {project.linkText} →
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

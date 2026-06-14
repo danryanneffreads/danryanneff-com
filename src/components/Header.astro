@@ -2,46 +2,19 @@
 import { navigation } from '../lib/constants';
 ---
 
-<header class="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 transition-colors">
+<header class="bg-white/90 dark:bg-gray-900/90 backdrop-blur border-b border-gray-200 dark:border-gray-800 sticky top-0 z-50 transition-colors">
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
     <div class="flex items-center justify-between">
-      <!-- Logo/Brand -->
-      <a href="/" class="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+      <a href="/" class="text-xl md:text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
         DanRyanNeff.com
       </a>
-      
-      <!-- Navigation Links -->
+
       <div class="hidden md:flex items-center gap-8">
         {navigation.map((item) => (
-          <a
-            href={item.href}
-            class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
-          >
+          <a href={item.href} class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors">
             {item.label}
           </a>
         ))}
-      </div>
-
-      <!-- Mobile Navigation Toggle (placeholder for future mobile menu) -->
-      <div class="md:hidden">
-        <button
-          class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
-          aria-label="Toggle menu"
-        >
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            ></path>
-          </svg>
-        </button>
       </div>
     </div>
   </nav>
