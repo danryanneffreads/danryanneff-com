@@ -5,12 +5,9 @@ import { seoMetadata } from '../lib/constants';
 const pageMetadata = seoMetadata['/privacy-policy/'];
 ---
 
-<BaseLayout
-  title={pageMetadata.title}
-  description={pageMetadata.description}
->
+<BaseLayout title={pageMetadata.title} description={pageMetadata.description}>
   <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-2">
+    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
       Privacy Policy
     </h1>
 
@@ -18,93 +15,91 @@ const pageMetadata = seoMetadata['/privacy-policy/'];
       Last updated: June 2026
     </p>
 
-    <div class="prose prose-lg dark:prose-invert max-w-none space-y-8">
-      <div>
+    <div class="space-y-12">
+
+      <section>
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Introduction
+          Who we are
         </h2>
-        <p class="text-gray-600 dark:text-gray-400">
-          DanRyanNeff.com ("we" or "us" or "our") operates the DanRyanNeff.com website (the "Service").
-        </p>
-        <p class="text-gray-600 dark:text-gray-400">
-          This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
-        </p>
-      </div>
 
-      <div>
+        <p class="text-gray-600 dark:text-gray-400">
+          DanRyanNeff.com is a personal website and portfolio operated by Dan Ryan Neff.
+        </p>
+      </section>
+
+      <section>
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Information Collection And Use
+          Cookies & Tracking
         </h2>
-        <p class="text-gray-600 dark:text-gray-400">
-          We collect several different types of information for various purposes to provide and improve our Service to you.
+
+        <p class="text-gray-600 dark:text-gray-400 mb-4">
+          We do not use advertising pixels or third-party analytics platforms to track your behavior across the web.
         </p>
 
-        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mt-6 mb-3">
-          Types of Data Collected:
-        </h3>
+        <p class="text-gray-600 dark:text-gray-400">
+          This site is designed to be simple, readable, and respectful of your privacy.
+        </p>
+      </section>
 
-        <ul class="space-y-4 text-gray-600 dark:text-gray-400 list-disc list-inside">
-          <li>
-            <strong class="text-gray-900 dark:text-white">Personal Data:</strong> While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). This may include, but is not limited to:
-            <ul class="mt-2 ml-8 space-y-2 list-circle list-inside">
-              <li>Email address</li>
-              <li>First name and last name</li>
-              <li>Cookies and Usage Data</li>
-            </ul>
-          </li>
-          <li>
-            <strong class="text-gray-900 dark:text-white">Usage Data:</strong> We may also collect information on how the Service is accessed and used ("Usage Data"). This may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, and other diagnostic data.
-          </li>
-        </ul>
-      </div>
-
-      <div>
+      <section>
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Use of Data
+          Security & Infrastructure
         </h2>
-        <p class="text-gray-600 dark:text-gray-400">
-          DanRyanNeff.com uses the collected data for various purposes:
-        </p>
-        <ul class="space-y-2 text-gray-600 dark:text-gray-400 list-disc list-inside mt-4">
-          <li>To provide and maintain our Service</li>
-          <li>To notify you about changes to our Service</li>
-          <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
-          <li>To provide customer support</li>
-          <li>To gather analysis or valuable information so that we can improve our Service</li>
-          <li>To monitor the usage of our Service</li>
-          <li>To detect, prevent and address technical issues</li>
-        </ul>
-      </div>
 
-      <div>
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Security Of Data
-        </h2>
         <p class="text-gray-600 dark:text-gray-400">
-          The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security.
+          This website uses Cloudflare and related infrastructure services to improve security, performance, and reliability. These services may use strictly necessary technical cookies or collect limited technical information required to protect and deliver the site.
         </p>
-      </div>
+      </section>
 
-      <div>
+      <section>
         <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Changes To This Privacy Policy
+          Contact Forms & Email
         </h2>
-        <p class="text-gray-600 dark:text-gray-400">
-          We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "effective date" at the top of this Privacy Policy.
-        </p>
-      </div>
 
-      <div>
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Contact Us
-        </h2>
         <p class="text-gray-600 dark:text-gray-400">
-          If you have any questions about this Privacy Policy, please contact us at:
+          If you contact me through a form, email, or scheduling tool, I will receive the information you choose to provide. That information is used only for communication and related follow-up.
         </p>
-        <p class="text-gray-600 dark:text-gray-400 mt-4">
-          Email: <a href="mailto:danryanneff@gmail.com" class="text-blue-600 dark:text-blue-400 hover:underline">danryanneff@gmail.com</a>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          Embedded Content
+        </h2>
+
+        <p class="text-gray-600 dark:text-gray-400">
+          Some pages may contain links or embedded content from third-party websites. Those services operate under their own privacy policies and terms.
         </p>
-      </div>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          Data Sharing
+        </h2>
+
+        <p class="text-gray-600 dark:text-gray-400">
+          I do not sell, rent, or trade personal information.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+          Questions
+        </h2>
+
+        <p class="text-gray-600 dark:text-gray-400">
+          If you have questions about this policy, please contact me at:
+        </p>
+
+        <p class="mt-4">
+          <a
+            href="mailto:danryanneff@gmail.com"
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+          >
+            danryanneff@gmail.com
+          </a>
+        </p>
+      </section>
+
     </div>
   </section>
 </BaseLayout>
