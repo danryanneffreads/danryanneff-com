@@ -84,7 +84,17 @@ const pageMetadata = seoMetadata['/contact/'];
         action="https://formspree.io/f/mvzndpja"
         method="POST"
         class="space-y-6"
-      >
+            >
+        <input
+          type="text"
+          name="_gotcha"
+          class="hidden"
+          tabindex="-1"
+          autocomplete="off"
+          aria-hidden="true"
+        />
+
+        <div>
         <div>
           <label for="email" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
             Email Address *
