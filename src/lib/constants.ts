@@ -8,7 +8,6 @@ export const OG_IMAGE = 'https://danryanneff.com/images/og-preview.png';
 
 export const navigation = [
   { label: 'About', href: '/about/' },
-  { label: 'Work With Me', href: '/work-with-me/' },
   { label: 'Projects', href: '/projects/' },
   { label: 'Contact', href: '/contact/' },
 ];

@@ -1,83 +1,438 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { seoMetadata } from '../lib/constants';
+import {
+  SITE_NAME,
+  OG_IMAGE,
+} from '../lib/constants';
 
-const pageMetadata = seoMetadata['/about/'];
+const pageTitle = `About | ${SITE_NAME}`;
+
+const pageDescription =
+  'About Dan Ryan Neff and his exploration of technology, accessibility, creativity, organizations, digital places, and human participation.';
+
+const interests = [
+  {
+    title: 'People and participation',
+    description:
+      'I pay attention to how people enter, navigate, and contribute to communities, organizations, and digital environments—and to what helps or prevents them from participating fully.',
+  },
+  {
+    title: 'Technology and judgment',
+    description:
+      'I am interested in technology not simply as a collection of tools, but as an environment that influences attention, behavior, learning, relationships, and the choices available to us.',
+  },
+  {
+    title: 'Physical and virtual landscapes',
+    description:
+      'I enjoy noticing how places are structured, how people move through them, and how their design encourages certain kinds of behavior. That applies to neighborhoods and natural environments as much as websites, platforms, and information ecosystems.',
+  },
+  {
+    title: 'Creativity and learning',
+    description:
+      'I like building things, following questions, experimenting with unfamiliar tools, and finding ways technology can support curiosity, expression, and deeper understanding.',
+  },
+];
+
+const experience = [
+  {
+    title: 'Operations',
+    description:
+      'Working in operations taught me to look beyond isolated problems. I learned to notice relationships among people, processes, technology, incentives, and the conditions surrounding a decision.',
+  },
+  {
+    title: 'Accessibility',
+    description:
+      'Accessibility made the importance of context impossible to ignore. The same technology can be distracting or unnecessary for one person and profoundly enabling for another.',
+  },
+  {
+    title: 'Websites and digital tools',
+    description:
+      'Building websites and experimenting with digital products has made me think of the internet as a landscape people inhabit—not merely a channel through which information travels.',
+  },
+  {
+    title: 'Artificial intelligence',
+    description:
+      'AI has expanded how I learn, think, and build. It has also made questions about dependence, confidence, authorship, attention, environmental impact, and human capability more urgent.',
+  },
+];
 ---
 
-<BaseLayout title={pageMetadata.title} description={pageMetadata.description}>
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <div class="grid grid-cols-1 md:grid-cols-[1fr_0.8fr] gap-12 items-center mb-16">
-      <div>
-        <p class="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
-          About Dan
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  ogTitle={pageTitle}
+  ogDescription={pageDescription}
+  ogImage={OG_IMAGE}
+>
+  <!-- Hero -->
+  <section
+    class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
+  >
+    <div
+      class="pointer-events-none absolute inset-0"
+      aria-hidden="true"
+    >
+      <div
+        class="absolute -right-32 top-8 h-96 w-96 rounded-full bg-indigo-100/70 blur-3xl dark:bg-indigo-900/20"
+      >
+      </div>
+
+      <div
+        class="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl dark:bg-blue-900/20"
+      >
+      </div>
+    </div>
+
+    <div
+      class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-16 lg:px-8 lg:py-32"
+    >
+      <div class="max-w-4xl">
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+        >
+          About
         </p>
 
-        <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+        <h1
+          class="mt-6 text-5xl font-bold leading-[1.06] tracking-tight text-gray-900 dark:text-white sm:text-6xl"
+        >
           I enjoy understanding how things fit together.
         </h1>
 
-        <p class="text-xl text-gray-600 dark:text-gray-400">
-          My work sits between operations, websites, digital tools, AI, communication, and conversation.
+        <div
+          class="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl"
+        >
+          <p>
+            I’m Dan Ryan Neff. My interests move among technology,
+            accessibility, organizations, creativity, learning, communities,
+            and the physical and virtual landscapes people inhabit.
+          </p>
+
+          <p>
+            The connection among them is a question I keep returning to:
+            what does it mean to participate well in a technological world?
+          </p>
+        </div>
+      </div>
+
+      <figure class="mx-auto w-full max-w-xs lg:mx-0 lg:justify-self-end">
+        <div
+          class="overflow-hidden rounded-[2rem] border border-gray-200 bg-gray-100 shadow-lg shadow-gray-200/60 dark:border-gray-700 dark:bg-gray-800 dark:shadow-black/20"
+        >
+          <img
+            src="/images/dan-ryan-neff.webp"
+            alt="Dan Ryan Neff outdoors"
+            class="aspect-[4/5] w-full object-cover object-center"
+            width="640"
+            height="800"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Orientation -->
+  <section class="bg-white dark:bg-gray-900">
+    <div
+      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.45fr_1fr] lg:px-8 lg:py-28"
+    >
+      <div>
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+        >
+          How I see my work
         </p>
       </div>
 
-      <img
-        src="/images/DOT_artist_with_ideas.webp"
-        alt=""
-        class="w-full rounded-3xl shadow-lg object-cover"
-        loading="lazy"
-      />
+      <div class="max-w-3xl">
+        <p
+          class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+        >
+          I'm interested in the choices we make as technology becomes part of everyday life. These choices shape how we live, think, and relate.
+        </p>
+
+        <div
+          class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+        >
+          <p>
+            Technology can expand independence, deepen learning, enable
+            creativity, strengthen relationships, and give people new ways to
+            participate.
+          </p>
+
+          <p>
+            It can also weaken attention, encourage passivity, distort
+            incentives, replace meaningful effort, and reshape shared
+            environments in ways no individual intended.
+          </p>
+
+          <p>
+            I do not think those tensions can be resolved with a universal rule.
+            Participating well depends on the person, the situation, the tool,
+            the surrounding system, and the effects of our choices on other
+            people.
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="max-w-4xl space-y-6 text-lg text-gray-600 dark:text-gray-400 mb-16">
-      <p>
-        The common thread is helping people look carefully at real situations and find a clearer path forward.
-      </p>
+  <!-- What I pay attention to -->
+  <section
+    class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+  >
+    <div
+      class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+    >
+      <div class="max-w-3xl">
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+        >
+          What I pay attention to
+        </p>
 
-      <p>
-        I do not assume I know the answer before understanding the situation. I listen, ask useful questions, notice patterns, and share what I see.
-      </p>
-
-      <p>
-        Sometimes the work leads to a website. Sometimes it leads to an operational change. Sometimes it leads to a better decision, a clearer explanation, or simply a stronger sense of what matters next.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-      <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-          Operations experience
+        <h2
+          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+        >
+          The structures beneath the visible experience.
         </h2>
-        <p class="text-gray-600 dark:text-gray-400">
-          I spent 21 years inside a large organization coordinating teams, supporting communication, improving operations, training people, interviewing candidates, and working across departments.
-        </p>
       </div>
 
-      <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
-        <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-          Digital fluency
-        </h2>
-        <p class="text-gray-600 dark:text-gray-400">
-          I build websites, digital tools, and online spaces. I care about digital environments that help people understand who you are, what you do, and why it matters.
-        </p>
+      <div class="mt-14 grid gap-6 md:grid-cols-2">
+        {
+          interests.map((interest) => (
+            <article
+              class="rounded-2xl border border-gray-200 bg-white p-7 dark:border-gray-800 dark:bg-gray-900 sm:p-8"
+            >
+              <h3
+                class="text-xl font-bold text-gray-900 dark:text-white"
+              >
+                {interest.title}
+              </h3>
+
+              <p
+                class="mt-4 leading-7 text-gray-600 dark:text-gray-300"
+              >
+                {interest.description}
+              </p>
+            </article>
+          ))
+        }
       </div>
     </div>
+  </section>
 
-    <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 rounded-lg">
-      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-        What I pay attention to
-      </h2>
+  <!-- Landscape image -->
+  <section class="overflow-hidden bg-white dark:bg-gray-900">
+    <div
+      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:py-28"
+    >
+      <div
+        class="rounded-3xl border border-gray-200 bg-gray-50 p-6 dark:border-gray-800 dark:bg-gray-950 sm:p-8"
+      >
+        <img
+          src="/images/SubtleCircles.webp"
+          alt="An abstract composition of circles, paths, and connected forms"
+          class="mx-auto w-full max-w-xl"
+          width="1200"
+          height="675"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-gray-600 dark:text-gray-400">
-        <p>What is unclear</p>
-        <p>What actually matters</p>
-        <p>Where coordination is breaking down</p>
-        <p>Where people may be operating with different assumptions</p>
-        <p>How people find or enter the work</p>
-        <p>What digital spaces are communicating</p>
-        <p>What structure would help without overcomplicating things</p>
-        <p>What might become clearer through conversation</p>
+      <div>
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+        >
+          Landscapes and patterns
+        </p>
+
+        <h2
+          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+        >
+          I like making relationships easier to see.
+        </h2>
+
+        <div
+          class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+        >
+          <p>
+            In the physical world, I notice paths, gathering places,
+            boundaries, communities, natural patterns, and the ways environments
+            guide movement.
+          </p>
+
+          <p>
+            I bring the same attention to virtual places. Websites, platforms,
+            feeds, interfaces, and online communities also contain paths,
+            boundaries, incentives, gathering places, and areas people struggle
+            to reach.
+          </p>
+
+          <p>
+            Sometimes my work involves building within those landscapes.
+            Sometimes it means observing them, mapping their relationships, or
+            helping someone see a situation more clearly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section
+    class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+  >
+    <div
+      class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+    >
+      <div
+        class="grid gap-12 lg:grid-cols-[0.55fr_1fr]"
+      >
+        <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+          >
+            Experience
+          </p>
+
+          <h2
+            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            Different kinds of work have shaped the same way of thinking.
+          </h2>
+        </div>
+
+        <div class="border-t border-gray-300 dark:border-gray-700">
+          {
+            experience.map((item, index) => (
+              <article
+                class="grid gap-4 border-b border-gray-300 py-8 dark:border-gray-700 sm:grid-cols-[3rem_1fr]"
+              >
+                <span
+                  class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500"
+                >
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+
+                <div>
+                  <h3
+                    class="text-2xl font-bold text-gray-900 dark:text-white"
+                  >
+                    {item.title}
+                  </h3>
+
+                  <p
+                    class="mt-4 max-w-2xl leading-7 text-gray-600 dark:text-gray-300"
+                  >
+                    {item.description}
+                  </p>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects connection -->
+  <section class="bg-gray-900 text-white dark:bg-black">
+    <div
+      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8 lg:py-28"
+    >
+      <div class="max-w-3xl">
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-400"
+        >
+          How I explore
+        </p>
+
+        <h2
+          class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl"
+        >
+          Projects let me turn questions into things people can experience.
+        </h2>
+
+        <div class="mt-7 space-y-5 text-lg leading-8 text-gray-300">
+          <p>
+            Mandalafy explores creativity, attention, symmetry, play, and flow.
+          </p>
+
+          <p>
+            LandingBio explores identity, relationships, and how people present
+            themselves online.
+          </p>
+
+          <p>
+            ImagineThis.Site explores learning, building, expression, and
+            helping people create their own place on the web.
+          </p>
+        </div>
+
+        <a
+          href="/projects/"
+          class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+        >
+          Explore the projects
+          <span class="ml-2" aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="flex justify-center lg:justify-end">
+        <img
+          src="/images/dot-compilation.webp"
+          alt="A colorful collection of connected circular illustrations"
+          class="w-full max-w-md"
+          width="800"
+          height="800"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Invitation -->
+  <section class="bg-white dark:bg-gray-900">
+    <div
+      class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+    >
+      <div
+        class="rounded-3xl border border-gray-200 bg-gray-50 px-6 py-14 dark:border-gray-800 dark:bg-gray-950 sm:px-10 lg:px-14 lg:py-20"
+      >
+        <div class="max-w-4xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+          >
+            Continue the conversation
+          </p>
+
+          <h2
+            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            I’m interested in thoughtful people and real situations.
+          </h2>
+
+          <p
+            class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            You may be building something, navigating technological change,
+            trying to understand a complicated situation, or asking questions
+            similar to mine.
+          </p>
+
+          <a
+            href="/contact/"
+            class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
+          >
+            Start a conversation
+            <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>

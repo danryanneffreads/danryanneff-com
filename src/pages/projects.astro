@@ -1,89 +1,268 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { seoMetadata } from '../lib/constants';
-
-const pageMetadata = seoMetadata['/projects/'];
-
-const projects = [
-  {
-    title: 'Mandalafy',
-    image: '/images/mandala2.webp',
-    href: '/mandalafy/',
-    linkText: 'View project',
-    description:
-      'A digital playground for creating your own mandalas. It began as a creative experiment and became an interactive tool for symmetry, color, rhythm, and flow.',
-  },
-  {
-    title: 'LandingBio',
-    image: '/images/SubtleCircles.webp',
-    href: 'https://landingbio.com/',
-    linkText: 'Visit LandingBio',
-    description:
-      'A platform for clearer introductions and online presence beyond social media. Simple pages for individuals, creators, and professionals.',
-  },
-  {
-    title: 'ImagineThis.Site',
-    image: '/images/VividRhythms.webp',
-    href: 'https://imaginethis.site/',
-    linkText: 'Visit ImagineThis.Site',
-    description:
-      'A space for concept websites, private drafts, guides, and creative experiments around what a website could become.',
-  },
-  {
-    title: 'Systems Atlas',
-    image: '/images/dot-compilation.webp',
-    href: 'https://systemsatlas.com/',
-    linkText: 'Visit Systems Atlas',
-    description:
-      'A digital resource for thinking about systems, relationships, patterns, and how complex things fit together.',
-  },
-];
 ---
 
-<BaseLayout title={pageMetadata.title} description={pageMetadata.description}>
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <p class="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
-      Projects
-    </p>
+<BaseLayout
+  title="Projects | Dan Ryan Neff"
+  description="Projects exploring creativity, digital identity, and possibilities for the web."
+>
+  <main>
+    <!-- Introduction -->
+    <section class="px-6 py-20 sm:py-28">
+      <div class="mx-auto max-w-5xl">
+        <div class="max-w-3xl">
+          <p
+            class="mb-5 text-sm font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400"
+          >
+            Projects
+          </p>
 
-    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-      Things I’ve built, explored, and continued to develop.
-    </h1>
+          <h1
+            class="text-4xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl"
+          >
+            Exploring ideas by building them.
+          </h1>
 
-    <p class="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl">
-      These projects reflect my interest in clarity, structure, creativity, digital experience, and useful online spaces.
-    </p>
+          <p
+            class="mt-8 max-w-2xl text-xl leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            These projects explore different aspects of the same question:
+          </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-      {projects.map((project) => (
-        <article class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden shadow-sm">
+          <blockquote
+            class="mt-8 border-l-2 border-gray-300 pl-6 text-2xl leading-relaxed text-gray-900 dark:border-gray-700 dark:text-gray-100"
+          >
+            What does it mean to participate well in a technological world?
+          </blockquote>
+
+          <p
+            class="mt-8 max-w-2xl text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            Some are software. Some are experiments. Some are ongoing
+            practices. Each has taught me something about how people interact
+            with technology—and with one another.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mandalafy -->
+    <section class="px-6 py-16 sm:py-24">
+      <div
+        class="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-20"
+      >
+        <div>
+          <p
+            class="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-gray-500 dark:text-gray-400"
+          >
+            Creative practice
+          </p>
+
+          <h2
+            class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
+            Mandalafy
+          </h2>
+
+          <p
+            class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            Mandalafy began as an exploration of generative art and has become
+            an ongoing creative practice. Through patterns, symmetry, and
+            color, it explores attention, beauty, and the pleasure of making.
+          </p>
+
+          <p
+            class="mt-5 text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            It reminds me that technology can be more than a tool for
+            productivity. It can also be a medium for creativity, reflection,
+            and wonder.
+          </p>
+        </div>
+
+        <figure>
           <img
-            src={project.image}
-            alt=""
-            class="w-full h-36 md:h-40 object-cover"
+            src="/images/mandala-woven-sunlight-660.webp"
+            alt="A colorful geometric mandala created through the Mandalafy project"
+            class="mx-auto w-full max-w-md rounded-3xl object-cover shadow-sm"
             loading="lazy"
           />
+        </figure>
+      </div>
+    </section>
 
-          <div class="p-6">
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-              {project.title}
-            </h2>
+    <!-- LandingBio -->
+    <section class="px-6 py-16 sm:py-24">
+      <div
+        class="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[0.9fr_1fr] lg:gap-20"
+      >
+        <figure class="order-2 lg:order-1">
+          <img
+            src="/images/dot-compilation.webp"
+            alt="An abstract composition of colorful dots and connected forms"
+            class="mx-auto w-full max-w-md rounded-3xl object-cover shadow-sm"
+            loading="lazy"
+          />
+        </figure>
 
-            <p class="text-gray-600 dark:text-gray-400 mb-6">
-              {project.description}
+        <div class="order-1 lg:order-2">
+          <p
+            class="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-gray-500 dark:text-gray-400"
+          >
+            Digital identity
+          </p>
+
+          <h2
+            class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
+            LandingBio
+          </h2>
+
+          <p
+            class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            LandingBio helps people create a simple home for themselves on the
+            web. Instead of chasing algorithms or optimizing for attention, it
+            encourages clarity, authenticity, and ownership.
+          </p>
+
+          <p
+            class="mt-5 text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            It is an exploration of digital identity and what it means to have
+            a place online that genuinely reflects who you are.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ImagineThis.Site -->
+    <section class="px-6 py-16 sm:py-24">
+      <div
+        class="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[1fr_0.9fr] lg:gap-20"
+      >
+        <div>
+          <p
+            class="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-gray-500 dark:text-gray-400"
+          >
+            Exploring possibilities
+          </p>
+
+          <h2
+            class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
+            ImagineThis.Site
+          </h2>
+
+          <p
+            class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            ImagineThis.Site is where I build concept websites that explore
+            what the web could become. It’s a space for experimenting with
+            ideas and, over time, helping others imagine websites of their own.
+          </p>
+        </div>
+
+        <figure>
+          <img
+            src="/images/VividRhythms.webp"
+            alt="An expressive abstract artwork with layered shapes and vivid visual rhythms"
+            class="mx-auto w-full max-w-md rounded-3xl object-cover shadow-sm"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Connections -->
+    <section class="px-6 py-20 sm:py-28">
+      <div
+        class="mx-auto grid max-w-5xl items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20"
+      >
+        <figure>
+          <img
+            src="/images/SubtleCircles.webp"
+            alt="A subtle arrangement of overlapping circular forms"
+            class="mx-auto w-full max-w-sm opacity-90"
+            loading="lazy"
+          />
+        </figure>
+
+        <div>
+          <p
+            class="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-gray-500 dark:text-gray-400"
+          >
+            A shared curiosity
+          </p>
+
+          <h2
+            class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
+            What connects these projects?
+          </h2>
+
+          <p
+            class="mt-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            Although they look different, they all grow from a related set of
+            questions.
+          </p>
+
+          <div class="mt-8 space-y-5">
+            <p
+              class="border-l-2 border-gray-300 pl-5 text-lg leading-relaxed text-gray-800 dark:border-gray-700 dark:text-gray-200"
+            >
+              How can technology help people participate more fully?
             </p>
 
-            <a
-              href={project.href}
-              class="text-blue-600 dark:text-blue-400 hover:underline font-semibold"
-              target={project.href.startsWith('http') ? '_blank' : undefined}
-              rel={project.href.startsWith('http') ? 'noopener' : undefined}
+            <p
+              class="border-l-2 border-gray-300 pl-5 text-lg leading-relaxed text-gray-800 dark:border-gray-700 dark:text-gray-200"
             >
-              {project.linkText} →
-            </a>
+              How do digital tools shape human relationships?
+            </p>
+
+            <p
+              class="border-l-2 border-gray-300 pl-5 text-lg leading-relaxed text-gray-800 dark:border-gray-700 dark:text-gray-200"
+            >
+              How can we design technology that invites curiosity rather than
+              distraction?
+            </p>
+
+            <p
+              class="border-l-2 border-gray-300 pl-5 text-lg leading-relaxed text-gray-800 dark:border-gray-700 dark:text-gray-200"
+            >
+              What makes a digital place feel welcoming?
+            </p>
           </div>
-        </article>
-      ))}
-    </div>
-  </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- What's Next -->
+    <section class="px-6 py-20 sm:py-28">
+      <div class="mx-auto max-w-5xl">
+        <div class="max-w-2xl">
+          <p
+            class="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-gray-500 dark:text-gray-400"
+          >
+            Ongoing
+          </p>
+
+          <h2
+            class="text-3xl font-semibold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
+            What’s next?
+          </h2>
+
+          <p
+            class="mt-6 text-xl leading-relaxed text-gray-700 dark:text-gray-300"
+          >
+            I’m always exploring new ideas at the intersection of people and
+            technology. Some become projects. Others become conversations.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>

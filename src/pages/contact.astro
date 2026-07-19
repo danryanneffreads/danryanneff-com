@@ -1,149 +1,335 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { seoMetadata } from '../lib/constants';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-const pageMetadata = seoMetadata['/contact/'];
+const calUrl = "https://cal.com/danryanneff/conversation";
+const emailAddress = "danryannneff@gmail.com";
 ---
 
-<BaseLayout title={pageMetadata.title} description={pageMetadata.description}>
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-    <p class="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-4">
-      Contact
-    </p>
+<BaseLayout
+  title="Contact"
+  description="Schedule a conversation, follow along by email, or get in touch directly."
+>
+  <main>
+    <section class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Contact</p>
 
-    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-      Let’s talk.
-    </h1>
+        <h1>Let’s continue the conversation.</h1>
 
-    <p class="text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl">
-      If you have a real situation, idea, website, project, or question that feels worth thinking through together, a conversation is the easiest place to start.
-    </p>
-
-    <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 mb-16">
-      <div class="bg-blue-50 dark:bg-gray-800 border border-blue-100 dark:border-gray-700 p-8 rounded-xl">
-        <p class="text-sm uppercase tracking-widest text-blue-700 dark:text-blue-400 mb-3">
-          Recommended
+        <p class="hero__intro">
+          Whether you have a question, an idea, or simply want to connect,
+          I’d be glad to hear from you.
         </p>
-
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Book a free video conversation
-        </h2>
-
-        <p class="text-gray-600 dark:text-gray-400 mb-6">
-          A low-friction way to meet, talk through what you’re working on, and see whether there may be a useful next step.
-        </p>
-
-        <p class="text-gray-600 dark:text-gray-400 mb-8">
-          This is especially useful if you’re thinking about a website, AI, operations, communication, a project, or a decision that would benefit from another perspective.
-        </p>
-
-        <a
-          href="https://cal.com/danryanneff/conversation"
-          target="_blank"
-          rel="noopener"
-          class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
-        >
-          Book a free conversation
-        </a>
       </div>
 
-      <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-8 rounded-xl">
-        <p class="text-sm uppercase tracking-widest text-gray-500 dark:text-gray-400 mb-3">
-          Focused work
-        </p>
-
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-          Book a working session
-        </h2>
-
-        <p class="text-gray-600 dark:text-gray-400 mb-6">
-          If you already have a specific challenge, decision, website, system, or project in mind, a working session gives us dedicated time to focus on it.
-        </p>
-
-        <a
-          href="https://cal.com/danryanneff/working-session"
-          target="_blank"
-          rel="noopener"
-          class="inline-block px-8 py-3 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-500 hover:bg-blue-50 dark:hover:bg-gray-900 font-semibold rounded-lg transition-colors"
-        >
-          Book a working session
-        </a>
-      </div>
-    </div>
-
-    <section class="max-w-3xl">
-      <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-        Or send a message
-      </h2>
-
-      <p class="text-gray-600 dark:text-gray-400 mb-8">
-        Use the form if you prefer to share a few details first. I personally read every message.
-      </p>
-
-      <form
-        action="https://formspree.io/f/mvzndpja"
-        method="POST"
-        class="space-y-6"
-            >
-        <input
-          type="text"
-          name="_gotcha"
-          class="hidden"
-          tabindex="-1"
-          autocomplete="off"
-          aria-hidden="true"
+      <div class="hero__art" aria-hidden="true">
+        <img
+          src="/images/orange-loops-green-background.webp"
+          alt=""
+          width="660"
+          height="660"
         />
-
-        <div>
-        <div>
-          <label for="email" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-            Email Address *
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            required
-            placeholder="your@email.com"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 transition-all"
-          />
-        </div>
-
-        <div>
-          <label for="subject" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-            Subject *
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            required
-            placeholder="What this is about"
-            class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 transition-all"
-          />
-        </div>
-
-        <div>
-          <label for="message" class="block text-sm font-medium text-gray-900 dark:text-white mb-2">
-            Message *
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            required
-            placeholder="Project inquiry, question, or introduction... whatever you'd like to share."
-            rows={6}
-            class="w-full px-4 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-600 dark:focus:ring-blue-500 transition-all resize-none"
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="w-full sm:w-auto px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors cursor-pointer"
-        >
-          Send message
-        </button>
-      </form>
+      </div>
     </section>
-  </section>
+
+    <section class="contact-options" aria-label="Ways to connect">
+      <article class="contact-option">
+        <p class="contact-option__number" aria-hidden="true">01</p>
+
+        <div class="contact-option__content">
+          <h2>Let’s talk</h2>
+
+          <p>
+            Some conversations become collaborations. Others simply help
+            clarify an idea.
+          </p>
+
+          <a
+            class="button"
+            href={calUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Schedule a conversation
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </article>
+
+      <article class="contact-option">
+        <p class="contact-option__number" aria-hidden="true">02</p>
+
+        <div class="contact-option__content">
+          <h2>Follow along</h2>
+
+          <p>
+            I occasionally share thoughts, projects, and questions I’m
+            exploring. You can receive them by email.
+          </p>
+
+          <div class="email-signup">
+            <iframe
+              src="https://embeds.beehiiv.com/7b7905fd-bdf1-49b9-9cbc-754021ddf12e?slim=true"
+              data-test-id="beehiiv-embed"
+              title="Join my email list"
+              height="52"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
+          </div>
+        </div>
+      </article>
+
+      <article class="contact-option">
+        <p class="contact-option__number" aria-hidden="true">03</p>
+
+        <div class="contact-option__content">
+          <h2>Email me</h2>
+
+          <p>
+            You can also reach me directly at:
+          </p>
+
+          <a class="email-link" href={`mailto:${emailAddress}`}>
+            {emailAddress}
+          </a>
+        </div>
+      </article>
+    </section>
+
+    <section class="closing">
+      <div class="closing__art" aria-hidden="true">
+        <img
+          src="/images/mandala-blue-labyrinth-660.webp"
+          alt=""
+          width="660"
+          height="660"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="closing__content">
+        <p>I’d enjoy hearing what you’re exploring.</p>
+      </div>
+    </section>
+  </main>
 </BaseLayout>
+
+<style>
+  main {
+    overflow: hidden;
+  }
+
+  .hero,
+  .contact-options,
+  .closing {
+    width: min(1120px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    align-items: center;
+    gap: clamp(3rem, 8vw, 7rem);
+    min-height: 72vh;
+    padding-block: clamp(5rem, 11vw, 9rem);
+  }
+
+  .hero__content {
+    max-width: 720px;
+  }
+
+  .eyebrow {
+    margin: 0 0 1.25rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(3.2rem, 7vw, 6.8rem);
+    font-weight: 450;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+  }
+
+  .hero__intro {
+    max-width: 600px;
+    margin: 2rem 0 0;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.6;
+  }
+
+  .hero__art img,
+  .closing__art img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__art img {
+    border-radius: 50%;
+  }
+
+  .contact-options {
+    border-top: 1px solid currentColor;
+  }
+
+  .contact-option {
+    display: grid;
+    grid-template-columns: minmax(3rem, 0.25fr) minmax(0, 1fr);
+    gap: clamp(1.5rem, 5vw, 5rem);
+    padding-block: clamp(3rem, 7vw, 5rem);
+    border-bottom: 1px solid currentColor;
+  }
+
+  .contact-option__number {
+    margin: 0.5rem 0 0;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+  }
+
+  .contact-option__content {
+    width: 100%;
+    max-width: 720px;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: clamp(2rem, 4.5vw, 4rem);
+    font-weight: 450;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+
+  .contact-option__content p {
+    max-width: 620px;
+    margin: 1.25rem 0 0;
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    line-height: 1.65;
+  }
+
+  .button,
+  .email-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: 2rem;
+    color: inherit;
+    font-weight: 600;
+    text-underline-offset: 0.25em;
+  }
+
+  .button {
+    padding: 0.9rem 1.2rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    text-decoration: none;
+    transition:
+      opacity 160ms ease,
+      transform 160ms ease;
+  }
+
+  .button:hover {
+    opacity: 0.72;
+    transform: translateY(-2px);
+  }
+
+  .email-link {
+    font-size: 1.05rem;
+    overflow-wrap: anywhere;
+  }
+
+  .button:focus-visible,
+  .email-link:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 5px;
+  }
+
+  .email-signup {
+    width: 100%;
+    max-width: 620px;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+
+  .email-signup iframe {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  .closing {
+    display: grid;
+    grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
+    align-items: center;
+    gap: clamp(3rem, 8vw, 7rem);
+    padding-block: clamp(5rem, 11vw, 10rem);
+  }
+
+  .closing__art {
+    max-width: 420px;
+  }
+
+  .closing__content p {
+    max-width: 700px;
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+  }
+
+  @media (max-width: 760px) {
+    .hero,
+    .closing {
+      grid-template-columns: 1fr;
+    }
+
+    .hero {
+      min-height: auto;
+      padding-top: 5rem;
+    }
+
+    .hero__art {
+      width: min(78vw, 420px);
+      margin-inline: auto;
+    }
+
+    .contact-option {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .contact-option__number {
+      margin: 0;
+    }
+
+    .email-signup iframe {
+      width: 100%;
+    }
+
+    .closing__art {
+      width: min(72vw, 360px);
+      margin-inline: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .button {
+      transition: none;
+    }
+
+    .button:hover {
+      transform: none;
+    }
+  }
+</style>

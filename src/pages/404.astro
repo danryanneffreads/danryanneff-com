@@ -1,56 +1,155 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-  title="Page Not Found - DanRyanNeff.com"
-  description="The page you're looking for doesn't exist."
+  title="Page Not Found | DanRyanNeff.com"
+  description="The page you were looking for could not be found."
 >
-  <section class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
-    <div class="mb-12">
-      <h1 class="text-6xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4">
-        404
-      </h1>
-      <p class="text-2xl text-gray-600 dark:text-gray-400">
-        Page not found
+  <section class="not-found">
+    <div class="not-found__content">
+      <p class="eyebrow">404</p>
+
+      <h1>This page isn’t here.</h1>
+
+      <p class="introduction">
+        It may have moved, or it may no longer be part of the site.
       </p>
-    </div>
 
-    <p class="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-lg mx-auto">
-      Sorry, the page you're looking for doesn't exist. It might have moved, or perhaps there's a typo in the URL.
-    </p>
+      <div class="actions">
+        <a class="primary-link" href="/">
+          Return home
+          <span aria-hidden="true">→</span>
+        </a>
 
-    <div class="space-x-4">
-      <a
-        href="/"
-        class="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
-      >
-        Go Home
-      </a>
-      <a
-        href="/contact/"
-        class="inline-block px-8 py-3 border-2 border-blue-600 dark:border-blue-500 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-gray-800 font-semibold rounded-lg transition-colors"
-      >
-        Contact Us
-      </a>
-    </div>
-
-    <!-- Helpful Links -->
-    <div class="mt-16 pt-12 border-t border-gray-200 dark:border-gray-700">
-      <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-        Popular Pages
-      </h2>
-      <div class="space-y-2">
-        <p>
-          <a href="/about/" class="text-blue-600 dark:text-blue-400 hover:underline">About</a>
-        </p>
-        <p>
-          <a href="/work-with-me/" class="text-blue-600 dark:text-blue-400 hover:underline">Work With Me</a>
-        </p>
-        <p>
-          <a href="/contact/" class="text-blue-600 dark:text-blue-400 hover:underline">Contact</a>
-        </p>
+        <a class="secondary-link" href="/contact/">
+          Contact me
+        </a>
       </div>
+    </div>
+
+    <div class="not-found__art" aria-hidden="true">
+      <img
+        src="/images/mandala-blue-labyrinth-660.webp"
+        alt=""
+        width="660"
+        height="660"
+      />
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .not-found {
+    width: min(1120px, calc(100% - 2rem));
+    min-height: 72vh;
+    margin-inline: auto;
+    padding-block: clamp(5rem, 11vw, 9rem);
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    align-items: center;
+    gap: clamp(3rem, 8vw, 7rem);
+  }
+
+  .not-found__content {
+    max-width: 720px;
+  }
+
+  .eyebrow {
+    margin: 0 0 1.25rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(3.2rem, 7vw, 6.8rem);
+    font-weight: 450;
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+  }
+
+  .introduction {
+    max-width: 600px;
+    margin: 2rem 0 0;
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    line-height: 1.6;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2.25rem;
+  }
+
+  .primary-link,
+  .secondary-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    color: inherit;
+    font-weight: 600;
+    text-underline-offset: 0.25em;
+  }
+
+  .primary-link {
+    padding: 0.9rem 1.2rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    text-decoration: none;
+    transition:
+      opacity 160ms ease,
+      transform 160ms ease;
+  }
+
+  .primary-link:hover {
+    opacity: 0.72;
+    transform: translateY(-2px);
+  }
+
+  .secondary-link:hover {
+    text-decoration-thickness: 2px;
+  }
+
+  .primary-link:focus-visible,
+  .secondary-link:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 5px;
+  }
+
+  .not-found__art img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 760px) {
+    .not-found {
+      min-height: auto;
+      grid-template-columns: 1fr;
+      padding-top: 5rem;
+    }
+
+    .not-found__art {
+      width: min(78vw, 420px);
+      margin-inline: auto;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .primary-link {
+      transition: none;
+    }
+
+    .primary-link:hover {
+      transform: none;
+    }
+  }
+</style>
