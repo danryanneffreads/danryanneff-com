@@ -8,52 +8,60 @@ import {
 const pageTitle = `About | ${SITE_NAME}`;
 
 const pageDescription =
-  'About Dan Ryan Neff and his exploration of technology, accessibility, creativity, organizations, digital places, and human participation.';
+  'About Dan Ryan Neff and his exploration of human capability, technology, accessibility, organizations, creativity, and the environments people inhabit.';
 
 const interests = [
   {
     title: 'People and participation',
     description:
-      'I pay attention to how people enter, navigate, and contribute to communities, organizations, and digital environments—and to what helps or prevents them from participating fully.',
+      'I pay attention to what helps people enter, navigate, contribute to, and feel at home in organizations, communities, and digital environments.',
   },
   {
     title: 'Technology and judgment',
     description:
-      'I am interested in technology not simply as a collection of tools, but as an environment that influences attention, behavior, learning, relationships, and the choices available to us.',
+      'I am interested in how technology expands what people can do, but also in how it shapes attention, confidence, dependence, decision-making, and the choices available to us.',
   },
   {
-    title: 'Physical and virtual landscapes',
+    title: 'Organizations and systems',
     description:
-      'I enjoy noticing how places are structured, how people move through them, and how their design encourages certain kinds of behavior. That applies to neighborhoods and natural environments as much as websites, platforms, and information ecosystems.',
+      'I tend to look beneath isolated problems toward the relationships among people, processes, tools, expectations, incentives, and the surrounding environment.',
   },
   {
     title: 'Creativity and learning',
     description:
-      'I like building things, following questions, experimenting with unfamiliar tools, and finding ways technology can support curiosity, expression, and deeper understanding.',
+      'I like following questions, experimenting with unfamiliar tools, building things, and finding ways to support curiosity, expression, understanding, and meaningful participation.',
   },
 ];
 
 const experience = [
   {
-    title: 'Operations',
+    title: 'Operations and leadership',
     description:
-      'Working in operations taught me to look beyond isolated problems. I learned to notice relationships among people, processes, technology, incentives, and the conditions surrounding a decision.',
+      'More than two decades inside organizations taught me to see work as a living system. I learned to coordinate people, processes, information, expectations, and changing conditions while keeping the human consequences of decisions in view.',
   },
   {
     title: 'Accessibility',
     description:
-      'Accessibility made the importance of context impossible to ignore. The same technology can be distracting or unnecessary for one person and profoundly enabling for another.',
+      'Accessibility has made the importance of context impossible to ignore. A tool that is unnecessary for one person may be profoundly enabling for another, and thoughtful design often improves an experience for everyone.',
   },
   {
-    title: 'Websites and digital tools',
+    title: 'Websites and digital places',
     description:
-      'Building websites and experimenting with digital products has made me think of the internet as a landscape people inhabit—not merely a channel through which information travels.',
+      'Building websites and digital projects has led me to think of the internet as a place people inhabit. Websites and platforms shape identity, access, attention, belonging, and what people believe they are able to do.',
   },
   {
     title: 'Artificial intelligence',
     description:
-      'AI has expanded how I learn, think, and build. It has also made questions about dependence, confidence, authorship, attention, environmental impact, and human capability more urgent.',
+      'AI has expanded how I learn, reason, create, and build. It has also made questions about judgment, authorship, dependence, inequality, attention, environmental impact, and human capability more urgent.',
   },
+];
+
+const principles = [
+  'Technology should expand human capability without diminishing human life.',
+  'Accessibility is not a separate feature. It is part of whether people can participate at all.',
+  'Efficiency matters, but it is not the same as effectiveness, wisdom, or care.',
+  'Digital environments deserve the same thoughtful stewardship as physical ones.',
+  'Good judgment depends on context, consequences, and the people affected.',
 ];
 ---
 
@@ -96,21 +104,22 @@ const experience = [
         <h1
           class="mt-6 text-5xl font-bold leading-[1.06] tracking-tight text-gray-900 dark:text-white sm:text-6xl"
         >
-          I enjoy understanding how things fit together.
+          I am interested in what helps people become more capable.
         </h1>
 
         <div
           class="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl"
         >
           <p>
-            I’m Dan Ryan Neff. My interests move among technology,
-            accessibility, organizations, creativity, learning, communities,
-            and the physical and virtual landscapes people inhabit.
+            I’m Dan Ryan Neff. My work and interests move among organizations,
+            technology, accessibility, creativity, learning, health, and the
+            physical and digital environments people inhabit.
           </p>
 
           <p>
-            The connection among them is a question I keep returning to:
-            what does it mean to participate well in a technological world?
+            The connection among them is a question I keep returning to: what
+            helps people learn, create, participate, contribute, and live more
+            fully?
           </p>
         </div>
       </div>
@@ -129,20 +138,26 @@ const experience = [
             decoding="async"
           />
         </div>
+
+        <figcaption
+          class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400 lg:text-left"
+        >
+          Dan Ryan Neff
+        </figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- Orientation -->
+  <!-- Personal orientation -->
   <section class="bg-white dark:bg-gray-900">
     <div
-      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.45fr_1fr] lg:px-8 lg:py-28"
+      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
     >
       <div>
         <p
           class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
         >
-          How I see my work
+          How I see the work
         </p>
       </div>
 
@@ -150,29 +165,35 @@ const experience = [
         <p
           class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
         >
-          I'm interested in the choices we make as technology becomes part of everyday life. These choices shape how we live, think, and relate.
+          People do not become capable through effort alone.
         </p>
 
         <div
           class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
         >
           <p>
-            Technology can expand independence, deepen learning, enable
-            creativity, strengthen relationships, and give people new ways to
-            participate.
+            Capability is shaped by access, health, confidence, knowledge,
+            relationships, tools, institutions, habits, and the design of the
+            environments around us.
           </p>
 
           <p>
-            It can also weaken attention, encourage passivity, distort
-            incentives, replace meaningful effort, and reshape shared
-            environments in ways no individual intended.
+            A useful technology can extend perception, communication, memory,
+            creativity, or movement. A good organization can help people
+            coordinate their abilities and accomplish what no individual could
+            do alone. A thoughtfully designed environment can turn frustration,
+            exclusion, or confusion into participation.
           </p>
 
           <p>
-            I do not think those tensions can be resolved with a universal rule.
-            Participating well depends on the person, the situation, the tool,
-            the surrounding system, and the effects of our choices on other
-            people.
+            Those same systems can also diminish people. They can weaken
+            judgment, exhaust attention, obscure responsibility, create
+            dependency, or make participation unnecessarily difficult.
+          </p>
+
+          <p class="font-medium text-gray-900 dark:text-white">
+            I am interested in the choices that determine which direction we
+            move.
           </p>
         </div>
       </div>
@@ -196,8 +217,15 @@ const experience = [
         <h2
           class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
         >
-          The structures beneath the visible experience.
+          The conditions beneath the visible experience.
         </h2>
+
+        <p
+          class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
+        >
+          I tend to look past the surface of a problem and ask what is making
+          the current situation possible.
+        </p>
       </div>
 
       <div class="mt-14 grid gap-6 md:grid-cols-2">
@@ -224,7 +252,7 @@ const experience = [
     </div>
   </section>
 
-  <!-- Landscape image -->
+  <!-- Patterns and environments -->
   <section class="overflow-hidden bg-white dark:bg-gray-900">
     <div
       class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8 lg:py-28"
@@ -247,7 +275,7 @@ const experience = [
         <p
           class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
         >
-          Landscapes and patterns
+          Patterns and environments
         </p>
 
         <h2
@@ -260,22 +288,27 @@ const experience = [
           class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
         >
           <p>
-            In the physical world, I notice paths, gathering places,
-            boundaries, communities, natural patterns, and the ways environments
-            guide movement.
+            In organizations, I notice handoffs, responsibilities, informal
+            expectations, bottlenecks, incentives, and the gaps between how work
+            is described and how it actually happens.
           </p>
 
           <p>
-            I bring the same attention to virtual places. Websites, platforms,
-            feeds, interfaces, and online communities also contain paths,
-            boundaries, incentives, gathering places, and areas people struggle
-            to reach.
+            In physical environments, I notice paths, boundaries, gathering
+            places, natural patterns, and the ways design guides movement and
+            behavior.
           </p>
 
           <p>
-            Sometimes my work involves building within those landscapes.
-            Sometimes it means observing them, mapping their relationships, or
-            helping someone see a situation more clearly.
+            I bring the same attention to digital places. Websites, platforms,
+            feeds, interfaces, and AI systems also contain pathways, barriers,
+            defaults, incentives, and assumptions about the people using them.
+          </p>
+
+          <p>
+            Sometimes I build within these systems. Sometimes I organize them.
+            Sometimes I help someone see the situation clearly enough to decide
+            what should change.
           </p>
         </div>
       </div>
@@ -289,9 +322,7 @@ const experience = [
     <div
       class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
     >
-      <div
-        class="grid gap-12 lg:grid-cols-[0.55fr_1fr]"
-      >
+      <div class="grid gap-12 lg:grid-cols-[0.55fr_1fr]">
         <div>
           <p
             class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
@@ -304,6 +335,13 @@ const experience = [
           >
             Different kinds of work have shaped the same way of thinking.
           </h2>
+
+          <p
+            class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            My perspective comes less from one discipline than from years spent
+            moving among people, processes, tools, and real-world constraints.
+          </p>
         </div>
 
         <div class="border-t border-gray-300 dark:border-gray-700">
@@ -339,43 +377,91 @@ const experience = [
     </div>
   </section>
 
-  <!-- Projects connection -->
+  <!-- Principles -->
   <section class="bg-gray-900 text-white dark:bg-black">
     <div
-      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8 lg:py-28"
+      class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.62fr_1fr] lg:px-8 lg:py-28"
     >
-      <div class="max-w-3xl">
+      <div>
         <p
           class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-400"
         >
-          How I explore
+          Principles
         </p>
 
         <h2
           class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl"
         >
-          Projects let me turn questions into things people can experience.
+          A few ideas guide how I think and work.
+        </h2>
+      </div>
+
+      <ol class="border-t border-gray-700">
+        {
+          principles.map((principle, index) => (
+            <li
+              class="grid grid-cols-[2rem_1fr] gap-4 border-b border-gray-700 py-6 sm:grid-cols-[3rem_1fr]"
+            >
+              <span class="pt-1 font-mono text-xs text-gray-500">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+
+              <p class="text-xl leading-8 text-gray-200 sm:text-2xl">
+                {principle}
+              </p>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <!-- Projects connection -->
+  <section class="bg-white dark:bg-gray-900">
+    <div
+      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8 lg:py-28"
+    >
+      <div class="max-w-3xl">
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+        >
+          How I explore
+        </p>
+
+        <h2
+          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+        >
+          I learn by building, observing, and following questions.
         </h2>
 
-        <div class="mt-7 space-y-5 text-lg leading-8 text-gray-300">
+        <div
+          class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+        >
           <p>
-            Mandalafy explores creativity, attention, symmetry, play, and flow.
+            Mandalafy explores creativity, attention, symmetry, play, and the
+            experience of making.
           </p>
 
           <p>
-            LandingBio explores identity, relationships, and how people present
+            LandingBio explores identity, connection, and how people represent
             themselves online.
           </p>
 
           <p>
-            ImagineThis.Site explores learning, building, expression, and
-            helping people create their own place on the web.
+            ImagineThis.Site explores learning, expression, and helping people
+            imagine and build a place of their own on the web.
+          </p>
+
+          <p>
+            The projects are different, but each gives me a way to examine how
+            tools and environments affect what people can create, understand,
+            and share.
           </p>
         </div>
 
         <a
           href="/projects/"
-          class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+          class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
         >
           Explore the projects
           <span class="ml-2" aria-hidden="true">→</span>
@@ -397,12 +483,14 @@ const experience = [
   </section>
 
   <!-- Invitation -->
-  <section class="bg-white dark:bg-gray-900">
+  <section
+    class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+  >
     <div
       class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
     >
       <div
-        class="rounded-3xl border border-gray-200 bg-gray-50 px-6 py-14 dark:border-gray-800 dark:bg-gray-950 sm:px-10 lg:px-14 lg:py-20"
+        class="rounded-3xl border border-gray-200 bg-white px-6 py-14 dark:border-gray-800 dark:bg-gray-900 sm:px-10 lg:px-14 lg:py-20"
       >
         <div class="max-w-4xl">
           <p
@@ -414,20 +502,21 @@ const experience = [
           <h2
             class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
           >
-            I’m interested in thoughtful people and real situations.
+            I welcome thoughtful conversations about people, systems, and
+            possibility.
           </h2>
 
           <p
             class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
           >
-            You may be building something, navigating technological change,
-            trying to understand a complicated situation, or asking questions
-            similar to mine.
+            You may be building something, navigating change, trying to
+            understand a complicated situation, or exploring questions similar
+            to mine.
           </p>
 
           <a
             href="/contact/"
-            class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
+            class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
           >
             Start a conversation
             <span class="ml-2" aria-hidden="true">→</span>

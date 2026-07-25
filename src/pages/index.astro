@@ -5,36 +5,36 @@ import {
   OG_IMAGE,
 } from '../lib/constants';
 
-const areas = [
+const capabilities = [
   {
-    title: 'Learning & Thinking',
+    title: 'Learning',
     description:
-      "How can technology deepen understanding without replacing our own thinking? I'm interested in AI as a partner for learning, reasoning, and creativity, but I see the danger in using AI as a shortcut instead of thinking independently.",
+      'How do we deepen understanding, remain curious, and use powerful tools without giving up the work of thinking for ourselves?',
   },
   {
-    title: 'Attention & Creativity',
+    title: 'Creating',
     description:
-      "The tools we use shape the way we think. I'm exploring how digital environments can encourage focus, play, exploration, and creative expression instead of distraction and endless consumption.",
+      'What helps people move from imagination to expression—and experience creativity as a form of attention, discovery, and participation?',
   },
   {
-    title: 'Accessibility & Participation',
+    title: 'Participating',
     description:
-      'Technology has an incredible ability to expand participation. My work with accessibility continues to shape how I think about designing tools and experiences that help more people engage fully with the world.',
+      'How can accessibility, thoughtful design, and supportive environments help more people engage fully with the world around them?',
   },
   {
-    title: 'Digital Places',
+    title: 'Working together',
     description:
-      "Websites, online communities, and digital tools are places people inhabit. I'm interested in how these spaces influence identity, relationships, communication, and belonging, and how we can build better ones.",
+      'What makes organizations more humane, capable, and responsive without reducing people to processes, outputs, or data?',
   },
   {
-    title: 'Organizations & Work',
+    title: 'Living well',
     description:
-      'Organizations are systems made of people, processes, and technology. I enjoy helping teams navigate complexity, improve operations, and thoughtfully adopt new technologies without losing sight of the humans involved.',
+      'How do our habits, technologies, relationships, and surroundings affect our ability to live with energy, focus, meaning, and agency?',
   },
   {
-    title: 'Stewardship',
+    title: 'Shaping environments',
     description:
-      "Every choice we make contributes to the technological landscape around us. Whether we create software, publish content, adopt AI, or simply decide how we spend our attention, we're helping shape the world that others will participate in tomorrow.",
+      'How do the physical and digital places we create influence what people notice, believe, attempt, and become able to do?',
   },
 ];
 
@@ -42,38 +42,38 @@ const projects = [
   {
     title: 'Mandalafy',
     description:
-      'An exploration of creativity, attention, symmetry, and playful digital experiences.',
+      'A creative project exploring symmetry, color, attention, play, and the experience of making and encountering patterns.',
     href: '/projects/mandalafy/',
     theme: 'Creativity and attention',
   },
   {
     title: 'LandingBio',
     description:
-      'An exploration of how people represent themselves and connect with others online.',
+      'An exploration of how people represent themselves, share what matters to them, and create a more intentional home online.',
     href: '/projects/landingbio/',
     theme: 'Identity and connection',
   },
   {
     title: 'ImagineThis.Site',
     description:
-      'An exploration of building, learning, and giving people practical tools to create their own place on the web.',
+      'A growing collection of ideas and practical tools for imagining, planning, and building meaningful places on the web.',
     href: '/projects/imaginethis-site/',
     theme: 'Learning and expression',
   },
 ];
 
-const questions = [
-  'When does AI strengthen our thinking, and when does it undermine it?',
-  'How can technology support health, and when does it damage health?',
-  'What makes a digital place feel welcoming, useful, and genuinely human?',
-  'How can accessibility improve experiences for everyone?',
-  'How do our individual choices shape the technological world we all share?',
+const currentQuestions = [
+  'When does technology expand human capability, and when does it quietly diminish it?',
+  'What helps people preserve attention in environments designed to capture it?',
+  'How can accessibility change not only who can participate, but the quality of an experience for everyone?',
+  'What makes an organization genuinely capable rather than merely efficient?',
+  'How do the places we build—physical and digital—shape what people believe is possible?',
 ];
 
-const pageTitle = `${SITE_NAME} | Living well in a technological world`;
+const pageTitle = `${SITE_NAME} | Exploring human capability`;
 
 const pageDescription =
-  'Exploring how technology shapes learning, creativity, accessibility, relationships, organizations, and the environments we inhabit.';
+  'Exploring what helps people learn, create, participate, work together, and live more fully.';
 ---
 
 <BaseLayout
@@ -87,13 +87,12 @@ const pageDescription =
   <section
     class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
   >
-    <!-- Decorative background -->
     <div
       class="pointer-events-none absolute inset-0"
       aria-hidden="true"
     >
       <div
-        class="absolute -right-32 top-16 h-96 w-96 rounded-full bg-blue-100/70 blur-3xl dark:bg-blue-900/20"
+        class="absolute -right-32 top-8 h-96 w-96 rounded-full bg-blue-100/70 blur-3xl dark:bg-blue-900/20"
       >
       </div>
 
@@ -107,39 +106,43 @@ const pageDescription =
       class="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32"
     >
       <div
-        class="grid items-center gap-12 lg:grid-cols-[minmax(0,1.45fr)_minmax(240px,0.55fr)] lg:gap-14"
+        class="grid items-center gap-14 lg:grid-cols-[minmax(0,1.5fr)_minmax(240px,0.5fr)] lg:gap-16"
       >
-        <!-- Hero copy -->
         <div class="max-w-4xl">
           <p
             class="mb-6 text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
           >
-            Exploring
+            An ongoing exploration
           </p>
 
           <h1
-            class="text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl"
+            class="text-5xl font-bold leading-[1.02] tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl"
           >
-            Living well in a technological world.
+            Exploring human capability.
           </h1>
+
+          <p
+            class="mt-8 max-w-3xl text-2xl font-medium leading-tight tracking-tight text-gray-800 dark:text-gray-100 sm:text-3xl"
+          >
+            What helps people become more capable?
+          </p>
 
           <div
             class="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl"
           >
             <p>
-              Technology is becoming woven into nearly every part of our lives.
-              It shapes how we learn, create, communicate, work, care for our
-              health, build relationships, and understand the world.
+              Technology sometimes does.
             </p>
 
             <p>
-              As these technologies become more capable, they don't just change
-              what we do—they change the environments we inhabit and the kinds
-              of people we're becoming.
+              So do healthy habits, creative practice, accessible design,
+              thoughtful organizations, supportive communities, and the
+              environments we build together.
             </p>
 
-            <p class="font-medium text-gray-900 dark:text-white">
-              A place to think, build, and explore.
+            <p>
+              This site is where I explore those possibilities through ideas,
+              projects, and conversation.
             </p>
           </div>
 
@@ -148,7 +151,7 @@ const pageDescription =
               href="#explore"
               class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
             >
-              Explore
+              Begin exploring
               <span class="ml-2" aria-hidden="true">↓</span>
             </a>
 
@@ -156,12 +159,11 @@ const pageDescription =
               href="/projects/"
               class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-gray-800 transition-colors hover:border-blue-500 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-400 dark:hover:text-blue-400 dark:focus:ring-offset-gray-900"
             >
-              View projects
+              Explore projects
             </a>
           </div>
         </div>
 
-        <!-- Portrait -->
         <figure
           class="mx-auto w-full max-w-xs lg:mx-0 lg:max-w-none lg:justify-self-end"
         >
@@ -190,19 +192,19 @@ const pageDescription =
     </div>
   </section>
 
-  <!-- Introduction -->
+  <!-- Central idea -->
   <section
     id="explore"
     class="scroll-mt-24 bg-white dark:bg-gray-900"
   >
     <div
-      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.45fr_1fr] lg:px-8 lg:py-28"
+      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
     >
       <div>
         <p
           class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
         >
-          Exploration
+          The central idea
         </p>
       </div>
 
@@ -210,19 +212,41 @@ const pageDescription =
         <p
           class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
         >
-          Technology doesn't exist apart from our lives—it shapes how we think,
-          create, relate, and participate in the world.
+          Human capability is shaped by more than individual talent or effort.
         </p>
 
-        <p class="mt-7 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          Through projects, writing, experiments, and conversation, I'm exploring
-          what it means to live well as that world continues to change.
-        </p>
+        <div
+          class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+        >
+          <p>
+            It is shaped by the tools available to us, the systems surrounding
+            us, the people who support us, the habits we cultivate, and the
+            environments in which we live and work.
+          </p>
+
+          <p>
+            A good tool can extend perception, memory, creativity, movement, or
+            communication. A thoughtful organization can help people contribute
+            at a level they could not reach alone. An accessible environment can
+            turn exclusion into participation.
+          </p>
+
+          <p>
+            The opposite is also true. Tools can weaken judgment. Systems can
+            narrow possibility. Environments can exhaust attention or prevent
+            people from participating at all.
+          </p>
+
+          <p class="font-medium text-gray-900 dark:text-white">
+            The question is not simply what people can do. It is what helps them
+            become able to do more.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Areas of exploration -->
+  <!-- Dimensions of capability -->
   <section
     class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
   >
@@ -233,26 +257,28 @@ const pageDescription =
         <p
           class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
         >
-          Areas of exploration
+          Dimensions of capability
         </p>
 
         <h2
           class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
         >
-          Technology is not separate from life.
+          Becoming capable takes many forms.
         </h2>
 
-        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          It increasingly shapes how we think, create, connect, work, and move
-          through the world.
+        <p
+          class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
+        >
+          Capability is not one fixed trait. It changes across situations,
+          stages of life, relationships, and environments.
         </p>
       </div>
 
       <div class="mt-14 grid gap-6 md:grid-cols-2">
         {
-          areas.map((area, index) => (
+          capabilities.map((capability, index) => (
             <article
-              class="rounded-2xl border border-gray-200 bg-white p-7 transition-colors dark:border-gray-800 dark:bg-gray-900 sm:p-8"
+              class="rounded-2xl border border-gray-200 bg-white p-7 dark:border-gray-800 dark:bg-gray-900 sm:p-8"
             >
               <div class="flex items-start gap-4">
                 <span
@@ -265,13 +291,13 @@ const pageDescription =
                   <h3
                     class="text-xl font-bold text-gray-900 dark:text-white"
                   >
-                    {area.title}
+                    {capability.title}
                   </h3>
 
                   <p
                     class="mt-4 leading-7 text-gray-600 dark:text-gray-300"
                   >
-                    {area.description}
+                    {capability.description}
                   </p>
                 </div>
               </div>
@@ -282,22 +308,23 @@ const pageDescription =
     </div>
   </section>
 
-  <!-- Physical and virtual landscapes -->
+  <!-- Technology -->
   <section class="bg-white dark:bg-gray-900">
     <div
-      class="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28"
+      class="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8 lg:py-28"
     >
       <div>
         <p
           class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
         >
-          Physical and virtual landscapes
+          Technology and human life
         </p>
 
         <h2
           class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
         >
-          I pay attention to the places people inhabit.
+          Technology is one influence among many—but an increasingly powerful
+          one.
         </h2>
       </div>
 
@@ -305,28 +332,75 @@ const pageDescription =
         class="space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
       >
         <p>
-          Some of those places are physical: neighborhoods, organizations,
-          communities, cities, and natural environments.
+          Technology can help people communicate across distance, navigate
+          disability, learn unfamiliar subjects, create new forms of art, manage
+          complex work, and gain access to knowledge that once belonged to only
+          a few.
         </p>
 
         <p>
-          Others are virtual: websites, platforms, online communities,
-          information ecosystems, and AI-shaped spaces.
+          It can also overwhelm attention, replace judgment, intensify
+          inequality, weaken relationships, and reorganize human life around the
+          needs of systems rather than people.
         </p>
 
         <p>
-          I'm interested in how these landscapes influence behavior, attention,
-          relationships, access, and belonging—and in how our actions help
-          shape them for other people.
+          I am interested in neither rejecting technology nor accepting every
+          new capability uncritically. I am interested in learning how to use,
+          design, and shape technology in ways that expand human possibility
+          without diminishing human life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Environments -->
+  <section
+    class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+  >
+    <div
+      class="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8 lg:py-28"
+    >
+      <div>
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+        >
+          The places we inhabit
+        </p>
+
+        <h2
+          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+        >
+          Environments shape what people are able to do.
+        </h2>
+      </div>
+
+      <div
+        class="space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+      >
+        <p>
+          Some environments are physical: homes, workplaces, neighborhoods,
+          cities, natural landscapes, and public spaces.
+        </p>
+
+        <p>
+          Others are digital: websites, platforms, online communities,
+          information systems, and spaces increasingly shaped by artificial
+          intelligence.
+        </p>
+
+        <p>
+          Each environment directs attention, encourages certain behaviors,
+          makes some actions easier, and makes others difficult or impossible.
+          None of us merely occupies these places. Through our choices, we also
+          help shape them for the people who come after us.
         </p>
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section
-    class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
-  >
+  <section class="bg-white dark:bg-gray-900">
     <div
       class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
     >
@@ -343,8 +417,15 @@ const pageDescription =
           <h2
             class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
           >
-            Ideas explored through projects.
+            Ideas become clearer when they take form.
           </h2>
+
+          <p
+            class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            These projects explore different aspects of creativity, identity,
+            learning, participation, and life online.
+          </p>
         </div>
 
         <a
@@ -361,7 +442,7 @@ const pageDescription =
           projects.map((project) => (
             <a
               href={project.href}
-              class="group flex min-h-80 flex-col justify-between rounded-2xl border border-gray-200 bg-white p-8 transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg dark:border-gray-800 dark:bg-gray-900 dark:hover:border-blue-700"
+              class="group flex min-h-80 flex-col justify-between rounded-2xl border border-gray-200 bg-gray-50 p-8 transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950 dark:hover:border-blue-700"
             >
               <div>
                 <p
@@ -405,7 +486,7 @@ const pageDescription =
   <!-- Current questions -->
   <section class="bg-gray-900 text-white dark:bg-black">
     <div
-      class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.6fr_1fr] lg:px-8 lg:py-28"
+      class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.62fr_1fr] lg:px-8 lg:py-28"
     >
       <div>
         <p
@@ -417,13 +498,18 @@ const pageDescription =
         <h2
           class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl"
         >
-          Questions I'm actively thinking about.
+          Questions worth staying with.
         </h2>
+
+        <p class="mt-6 max-w-xl text-lg leading-8 text-gray-300">
+          I do not expect every question here to resolve into a simple answer.
+          The value is often in learning how to see the question more clearly.
+        </p>
       </div>
 
       <ol class="border-t border-gray-700">
         {
-          questions.map((question, index) => (
+          currentQuestions.map((question, index) => (
             <li
               class="grid grid-cols-[2rem_1fr] gap-4 border-b border-gray-700 py-6 sm:grid-cols-[3rem_1fr]"
             >
@@ -441,38 +527,97 @@ const pageDescription =
     </div>
   </section>
 
-  <!-- Invitation -->
+  <!-- About bridge -->
   <section class="bg-white dark:bg-gray-900">
+    <div
+      class="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:px-8 lg:py-28"
+    >
+      <div>
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+        >
+          Why I am exploring this
+        </p>
+
+        <h2
+          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+        >
+          My work has repeatedly brought me to the intersection of people,
+          systems, and technology.
+        </h2>
+      </div>
+
+      <div>
+        <div
+          class="space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+        >
+          <p>
+            I spent more than two decades working inside organizations,
+            including years leading people, improving operations, building
+            processes, and helping others navigate change.
+          </p>
+
+          <p>
+            Alongside that work, I have built websites, developed digital
+            projects, explored accessibility, experimented with artificial
+            intelligence, and continued thinking about the systems that shape
+            how people live and participate.
+          </p>
+
+          <p>
+            Those experiences have made me less interested in technology as an
+            end in itself and more interested in the human possibilities it can
+            strengthen—or weaken.
+          </p>
+        </div>
+
+        <a
+          href="/about/"
+          class="mt-8 inline-flex items-center font-medium text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+        >
+          Read more about me
+          <span class="ml-2" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Invitation -->
+  <section
+    class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+  >
     <div
       class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
     >
       <div
-        class="rounded-3xl border border-gray-200 bg-gray-50 px-6 py-14 dark:border-gray-800 dark:bg-gray-950 sm:px-10 lg:px-14 lg:py-20"
+        class="rounded-3xl border border-gray-200 bg-white px-6 py-14 dark:border-gray-800 dark:bg-gray-900 sm:px-10 lg:px-14 lg:py-20"
       >
         <div class="max-w-4xl">
           <p
             class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
           >
-            Let's explore
+            Continue the exploration
           </p>
 
           <h2
             class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
           >
-            Great conversations begin with curiosity.
+            Meaningful questions become more useful when we explore them
+            together.
           </h2>
 
           <p
             class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
           >
-            Whether you're building a project, navigating change in your
-            organization, curious about AI, or simply asking similar questions,
-            I'd enjoy connecting.
+            You may be building something, navigating change, thinking about
+            technology, or trying to create conditions in which people can do
+            better work and live more fully. I welcome thoughtful conversation
+            about any of it.
           </p>
 
           <a
             href="/contact/"
-            class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
+            class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
           >
             Start a conversation
             <span class="ml-2" aria-hidden="true">→</span>
