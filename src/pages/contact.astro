@@ -2,47 +2,71 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const calUrl = "https://cal.com/danryanneff/conversation";
-const emailAddress = "danryannneff@gmail.com";
+const emailAddress = "danryanneff@gmail.com";
 ---
 
 <BaseLayout
-  title="Contact"
-  description="Schedule a conversation, follow along by email, or get in touch directly."
+  title="Contact | Dan Ryan Neff"
+  description="Start a conversation, follow new work by email, or contact Dan Ryan Neff directly."
 >
   <main>
+    <!-- Hero -->
     <section class="hero">
       <div class="hero__content">
         <p class="eyebrow">Contact</p>
 
-        <h1>Let’s continue the conversation.</h1>
+        <h1>What are you thinking about?</h1>
 
-        <p class="hero__intro">
-          Whether you have a question, an idea, or simply want to connect,
-          I’d be glad to hear from you.
-        </p>
+        <div class="hero__intro">
+          <p>
+            You may be developing an idea, reconsidering how something works,
+            or exploring a question that overlaps with my interests.
+          </p>
+
+          <p>
+            I welcome thoughtful conversations about websites, technology,
+            organizations, accessibility, creativity, communities, and the
+            systems that shape everyday life.
+          </p>
+        </div>
       </div>
 
-      <div class="hero__art" aria-hidden="true">
+      <figure class="hero__art" aria-hidden="true">
         <img
           src="/images/orange-loops-green-background.webp"
           alt=""
           width="660"
           height="660"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
         />
-      </div>
+      </figure>
     </section>
 
+    <!-- Contact options -->
     <section class="contact-options" aria-label="Ways to connect">
+      <!-- Conversation -->
       <article class="contact-option">
         <p class="contact-option__number" aria-hidden="true">01</p>
 
         <div class="contact-option__content">
-          <h2>Let’s talk</h2>
+          <p class="contact-option__label">A place to begin</p>
 
-          <p>
-            Some conversations become collaborations. Others simply help
-            clarify an idea.
-          </p>
+          <h2>Schedule a conversation</h2>
+
+          <div class="contact-option__copy">
+            <p>
+              A conversation can help clarify an idea, reveal a useful
+              connection, or open a direction neither person had anticipated.
+            </p>
+
+            <p>
+              This is a free, informal conversation rather than a sales call.
+              There is no expectation that it needs to lead anywhere in
+              particular.
+            </p>
+          </div>
 
           <a
             class="button"
@@ -50,28 +74,38 @@ const emailAddress = "danryannneff@gmail.com";
             target="_blank"
             rel="noopener noreferrer"
           >
-            Schedule a conversation
+            Choose a time
             <span aria-hidden="true">↗</span>
           </a>
         </div>
       </article>
 
+      <!-- Email updates -->
       <article class="contact-option">
         <p class="contact-option__number" aria-hidden="true">02</p>
 
         <div class="contact-option__content">
-          <h2>Follow along</h2>
+          <p class="contact-option__label">Occasional updates</p>
 
-          <p>
-            I occasionally share thoughts, projects, and questions I’m
-            exploring. You can receive them by email.
-          </p>
+          <h2>Follow what I’m exploring</h2>
+
+          <div class="contact-option__copy">
+            <p>
+              I occasionally share new projects, observations, questions, and
+              additions to the site.
+            </p>
+
+            <p>
+              Messages are infrequent and written when there is something
+              worthwhile to share.
+            </p>
+          </div>
 
           <div class="email-signup">
             <iframe
               src="https://embeds.beehiiv.com/7b7905fd-bdf1-49b9-9cbc-754021ddf12e?slim=true"
               data-test-id="beehiiv-embed"
-              title="Join my email list"
+              title="Subscribe to email updates from Dan Ryan Neff"
               height="52"
               frameborder="0"
               scrolling="no"
@@ -80,36 +114,57 @@ const emailAddress = "danryannneff@gmail.com";
         </div>
       </article>
 
+      <!-- Direct email -->
       <article class="contact-option">
         <p class="contact-option__number" aria-hidden="true">03</p>
 
         <div class="contact-option__content">
-          <h2>Email me</h2>
+          <p class="contact-option__label">Direct contact</p>
 
-          <p>
-            You can also reach me directly at:
-          </p>
+          <h2>Send me an email</h2>
 
-          <a class="email-link" href={`mailto:${emailAddress}`}>
+          <div class="contact-option__copy">
+            <p>
+              Email may be the simplest option if you already know what you
+              would like to discuss or share.
+            </p>
+          </div>
+
+          <a
+            class="email-link"
+            href={`mailto:${emailAddress}`}
+            aria-label={`Email ${emailAddress}`}
+          >
             {emailAddress}
           </a>
         </div>
       </article>
     </section>
 
+    <!-- Closing -->
     <section class="closing">
-      <div class="closing__art" aria-hidden="true">
+      <figure class="closing__art" aria-hidden="true">
         <img
           src="/images/mandala-blue-labyrinth-660.webp"
           alt=""
           width="660"
           height="660"
           loading="lazy"
+          decoding="async"
         />
-      </div>
+      </figure>
 
       <div class="closing__content">
-        <p>I’d enjoy hearing what you’re exploring.</p>
+        <p class="eyebrow">An open door</p>
+
+        <p class="closing__statement">
+          You do not need to arrive with a finished idea.
+        </p>
+
+        <p class="closing__support">
+          Curiosity, a useful question, or something you have begun noticing is
+          enough.
+        </p>
       </div>
     </section>
   </main>
@@ -127,6 +182,8 @@ const emailAddress = "danryannneff@gmail.com";
     margin-inline: auto;
   }
 
+  /* Hero */
+
   .hero {
     display: grid;
     grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
@@ -137,19 +194,24 @@ const emailAddress = "danryannneff@gmail.com";
   }
 
   .hero__content {
-    max-width: 720px;
+    max-width: 760px;
   }
 
-  .eyebrow {
-    margin: 0 0 1.25rem;
+  .eyebrow,
+  .contact-option__label {
+    margin: 0;
     font-size: 0.78rem;
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
   }
 
+  .eyebrow {
+    margin-bottom: 1.25rem;
+  }
+
   h1 {
-    max-width: 760px;
+    max-width: 800px;
     margin: 0;
     font-size: clamp(3.2rem, 7vw, 6.8rem);
     font-weight: 450;
@@ -159,10 +221,22 @@ const emailAddress = "danryannneff@gmail.com";
   }
 
   .hero__intro {
-    max-width: 600px;
-    margin: 2rem 0 0;
+    max-width: 650px;
+    margin-top: 2rem;
     font-size: clamp(1.15rem, 2vw, 1.45rem);
     line-height: 1.6;
+  }
+
+  .hero__intro p {
+    margin: 0;
+  }
+
+  .hero__intro p + p {
+    margin-top: 1rem;
+  }
+
+  .hero__art {
+    margin: 0;
   }
 
   .hero__art img,
@@ -176,6 +250,8 @@ const emailAddress = "danryannneff@gmail.com";
     border-radius: 50%;
   }
 
+  /* Contact options */
+
   .contact-options {
     border-top: 1px solid currentColor;
   }
@@ -184,7 +260,7 @@ const emailAddress = "danryannneff@gmail.com";
     display: grid;
     grid-template-columns: minmax(3rem, 0.25fr) minmax(0, 1fr);
     gap: clamp(1.5rem, 5vw, 5rem);
-    padding-block: clamp(3rem, 7vw, 5rem);
+    padding-block: clamp(3.5rem, 7vw, 5.5rem);
     border-bottom: 1px solid currentColor;
   }
 
@@ -196,23 +272,40 @@ const emailAddress = "danryannneff@gmail.com";
 
   .contact-option__content {
     width: 100%;
-    max-width: 720px;
+    max-width: 760px;
+  }
+
+  .contact-option__label {
+    margin-bottom: 1rem;
+    opacity: 0.68;
   }
 
   h2 {
+    max-width: 720px;
     margin: 0;
     font-size: clamp(2rem, 4.5vw, 4rem);
     font-weight: 450;
     line-height: 1.05;
     letter-spacing: -0.04em;
+    text-wrap: balance;
   }
 
-  .contact-option__content p {
-    max-width: 620px;
-    margin: 1.25rem 0 0;
+  .contact-option__copy {
+    max-width: 640px;
+    margin-top: 1.5rem;
     font-size: clamp(1.05rem, 1.8vw, 1.25rem);
     line-height: 1.65;
   }
+
+  .contact-option__copy p {
+    margin: 0;
+  }
+
+  .contact-option__copy p + p {
+    margin-top: 1rem;
+  }
+
+  /* Links and actions */
 
   .button,
   .email-link {
@@ -241,7 +334,7 @@ const emailAddress = "danryannneff@gmail.com";
   }
 
   .email-link {
-    font-size: 1.05rem;
+    font-size: clamp(1rem, 2vw, 1.15rem);
     overflow-wrap: anywhere;
   }
 
@@ -251,9 +344,11 @@ const emailAddress = "danryannneff@gmail.com";
     outline-offset: 5px;
   }
 
+  /* Email signup */
+
   .email-signup {
     width: 100%;
-    max-width: 620px;
+    max-width: 640px;
     margin-top: 2rem;
     overflow: hidden;
   }
@@ -267,6 +362,8 @@ const emailAddress = "danryannneff@gmail.com";
     background-color: transparent;
   }
 
+  /* Closing */
+
   .closing {
     display: grid;
     grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
@@ -277,16 +374,33 @@ const emailAddress = "danryannneff@gmail.com";
 
   .closing__art {
     max-width: 420px;
+    margin: 0;
   }
 
-  .closing__content p {
-    max-width: 700px;
+  .closing__content {
+    max-width: 720px;
+  }
+
+  .closing__content .eyebrow {
+    opacity: 0.68;
+  }
+
+  .closing__statement {
     margin: 0;
     font-size: clamp(1.8rem, 4vw, 3.6rem);
     line-height: 1.15;
     letter-spacing: -0.035em;
     text-wrap: balance;
   }
+
+  .closing__support {
+    max-width: 600px;
+    margin: 1.5rem 0 0;
+    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+    line-height: 1.65;
+  }
+
+  /* Responsive */
 
   @media (max-width: 760px) {
     .hero,
@@ -306,7 +420,7 @@ const emailAddress = "danryannneff@gmail.com";
 
     .contact-option {
       grid-template-columns: 1fr;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .contact-option__number {

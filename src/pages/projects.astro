@@ -1,73 +1,68 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import {
-  SITE_NAME,
-  OG_IMAGE,
-} from '../lib/constants';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_NAME, OG_IMAGE } from "../lib/constants";
+
+const projects = [
+  {
+    title: "Mandalafy",
+    category: "Interactive creativity",
+    introduction:
+      "Mandalafy is a guided creative tool for making a mandala one choice at a time.",
+    body: [
+      "Mandalas combine structure with freedom. Every choice influences the whole, yet the finished design can still feel surprising and distinctly your own.",
+      "I created Mandalafy to make that kind of creative experience approachable. Rather than beginning with a blank canvas, you choose colors, shapes, patterns, and arrangements as the design gradually emerges.",
+      "The experience provides a framework without taking over the creative decisions. You can experiment, revise, and watch the composition change through your participation.",
+      "When the design is finished, you can save it or choose to place it on a product. Making the mandala is free, and buying something is entirely optional. The creative process comes first.",
+    ],
+    image: "/images/mandala-woven-sunlight-660.webp",
+    imageAlt:
+      "A colorful geometric mandala created with the Mandalafy design tool",
+    href: "/mandalafy/",
+    linkLabel: "Explore Mandalafy",
+    accent: "Art, attention, and play",
+  },
+  {
+    title: "LandingBio",
+    category: "Personal websites",
+    introduction:
+      "LandingBio grew from a simple question: what if everyone had a thoughtful home on the web?",
+    body: [
+      "Most people now have an online presence, but much of it exists inside platforms built around feeds, follower counts, reactions, and continual posting.",
+      "LandingBio offers a different model: a personal website organized around who you are, what you do, what matters to you, and what you want others to find.",
+      "It can support professional work, creative projects, community involvement, personal interests, or simply a more intentional introduction to yourself.",
+      "There is no social feed to maintain and no audience metric to chase. The goal is to help people create a digital place that feels more stable, personal, and genuinely their own.",
+    ],
+    image: "/images/dot-compilation.webp",
+    imageAlt:
+      "An abstract composition of colorful dots and connected forms",
+    href: "/landingbio/",
+    linkLabel: "Explore LandingBio",
+    accent: "Identity, presence, and connection",
+  },
+  {
+    title: "ImagineThis.Site",
+    category: "Website ideas and guides",
+    introduction:
+      "Many people know they need a website long before they know what that website should become.",
+    body: [
+      "ImagineThis.Site explores that gap through concept websites, practical guides, and small experiments in digital design.",
+      "The concept sites imagine fictional businesses, organizations, places, events, and services. By giving an idea a visual form, they make it easier to see how different choices might shape the experience.",
+      "The guides help people think through questions such as what a website needs to accomplish, what visitors need to understand, which tools may fit, and how the finished site should feel.",
+      "The project is both practical and imaginative: a place to learn about websites while also seeing what becomes possible when an idea is developed with care.",
+    ],
+    image: "/images/VividRhythms.webp",
+    imageAlt:
+      "An expressive abstract artwork with layered shapes and vivid visual rhythms",
+    href: "/imaginethis-site/",
+    linkLabel: "Explore ImagineThis.Site",
+    accent: "Websites, imagination, and possibility",
+  },
+];
 
 const pageTitle = `Projects | ${SITE_NAME}`;
 
 const pageDescription =
-  'Projects by Dan Ryan Neff exploring creativity, digital identity, learning, human capability, and the possibilities of the web.';
-
-const projects = [
-  {
-    title: 'Mandalafy',
-    category: 'Creativity and attention',
-    description:
-      'A creative practice built around symmetry, pattern, color, and the experience of making.',
-    body: [
-      'Mandalafy began as an exploration of generative art and gradually became something broader: a continuing practice of arranging color, shape, rhythm, and symmetry.',
-      'The project gives me a way to explore attention, patience, play, beauty, repetition, and the relationship between human intention and digital tools.',
-      'It reminds me that technology does not have to be organized only around speed, productivity, or scale. It can also create space for concentration, curiosity, expression, and wonder.',
-    ],
-    image: '/images/mandala-woven-sunlight-660.webp',
-    imageAlt:
-      'A colorful geometric mandala created through the Mandalafy project',
-    href: '/mandalafy/',
-    linkLabel: 'Explore Mandalafy',
-  },
-  {
-    title: 'LandingBio',
-    category: 'Identity and connection',
-    description:
-      'An exploration of how people can represent themselves more clearly and intentionally online.',
-    body: [
-      'LandingBio grew from a simple idea: people should be able to create a place online that reflects who they are without turning themselves into a brand or constantly producing content for an algorithm.',
-      'It explores digital identity, ownership, authenticity, relationships, and the difference between having a home on the web and merely maintaining a profile inside someone else’s platform.',
-      'The larger question is not only how people present themselves online, but how digital environments shape what kinds of identity, connection, and participation become possible.',
-    ],
-    image: '/images/dot-compilation.webp',
-    imageAlt:
-      'An abstract composition of colorful dots and connected forms',
-    href: '/landingbio/',
-    linkLabel: 'Explore LandingBio',
-  },
-  {
-    title: 'ImagineThis.Site',
-    category: 'Learning and possibility',
-    description:
-      'A place for imagining, planning, and building meaningful websites and digital environments.',
-    body: [
-      'ImagineThis.Site is where I create concept websites, practical guides, and experiments that help make the possibilities of the web easier to see.',
-      'Some ideas begin as fictional organizations, places, or services. Others become guides that help people think through what a website needs to do, how it should feel, and what kind of relationship it should create with visitors.',
-      'The project treats websites not simply as marketing assets, but as environments for learning, expression, orientation, connection, and participation.',
-    ],
-    image: '/images/VividRhythms.webp',
-    imageAlt:
-      'An expressive abstract artwork with layered shapes and vivid visual rhythms',
-    href: '/imaginethis-site/',
-    linkLabel: 'Explore ImagineThis.Site',
-  },
-];
-
-const sharedQuestions = [
-  'What helps people move from possibility to participation?',
-  'How can digital tools support attention rather than continually fragment it?',
-  'What makes an online place feel understandable, welcoming, and human?',
-  'How can technology extend creativity without replacing the person creating?',
-  'What changes when people can shape their digital environments rather than merely adapt to them?',
-];
+  "Explore Mandalafy, LandingBio, and ImagineThis.Site—creative and practical projects by Dan Ryan Neff involving art, personal websites, digital identity, and thoughtful web design.";
 ---
 
 <BaseLayout
@@ -81,10 +76,7 @@ const sharedQuestions = [
   <section
     class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
   >
-    <div
-      class="pointer-events-none absolute inset-0"
-      aria-hidden="true"
-    >
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
       <div
         class="absolute -right-32 top-8 h-96 w-96 rounded-full bg-blue-100/70 blur-3xl dark:bg-blue-900/20"
       >
@@ -109,93 +101,91 @@ const sharedQuestions = [
         <h1
           class="mt-6 text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl"
         >
-          Exploring ideas by building them.
+          Projects are one way I explore ideas.
         </h1>
 
         <div
           class="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl"
         >
           <p>
-            Some questions become clearer when they take physical or digital
-            form.
+            Some questions are easiest to explore by making something.
           </p>
 
           <p>
-            These projects explore creativity, identity, learning, attention,
-            participation, and the environments people create with technology.
+            These projects combine curiosity, design, technology, creativity,
+            and practical problem solving. Some are tools. Some are
+            experiments. Each continues to evolve as I learn.
           </p>
 
           <p>
-            Each began with a practical idea. Each has also become a way of
-            examining what helps people become more capable of expressing,
-            understanding, creating, and connecting.
+            Together, they show where several of my interests have taken
+            concrete form.
+          </p>
+        </div>
+
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a
+            href="#mandalafy"
+            class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+          >
+            Explore the projects
+            <span class="ml-2" aria-hidden="true">↓</span>
+          </a>
+
+          <a
+            href="/contact/"
+            class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-gray-800 transition-colors hover:border-blue-500 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-400 dark:hover:text-blue-400 dark:focus:ring-offset-gray-900"
+          >
+            Start a conversation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project overview -->
+  <section class="bg-white dark:bg-gray-900">
+    <div
+      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
+    >
+      <div>
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
+        >
+          The workshop
+        </p>
+      </div>
+
+      <div class="max-w-3xl">
+        <h2
+          class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+        >
+          Each project began with something I wanted to understand, improve, or
+          bring into existence.
+        </h2>
+
+        <div
+          class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+        >
+          <p>
+            Mandalafy explores guided creativity. LandingBio explores identity
+            and personal presence online. ImagineThis.Site explores how ideas
+            become useful, expressive websites.
+          </p>
+
+          <p>
+            They are different projects, but they share an approach: start with
+            a worthwhile question, make something real, pay attention to what
+            happens, and continue refining the idea.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Project index -->
-  <section class="bg-white dark:bg-gray-900">
-    <div
-      class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
-      <div
-        class="grid gap-6 md:grid-cols-3"
-      >
-        {
-          projects.map((project, index) => (
-            <a
-              href={`#project-${index + 1}`}
-              class="group flex min-h-72 flex-col justify-between rounded-2xl border border-gray-200 bg-gray-50 p-7 transition-all hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg dark:border-gray-800 dark:bg-gray-950 dark:hover:border-blue-700 sm:p-8"
-            >
-              <div>
-                <span
-                  class="font-mono text-xs text-gray-400 dark:text-gray-500"
-                >
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-
-                <p
-                  class="mt-6 text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 dark:text-blue-400"
-                >
-                  {project.category}
-                </p>
-
-                <h2
-                  class="mt-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
-                >
-                  {project.title}
-                </h2>
-
-                <p
-                  class="mt-5 leading-7 text-gray-600 dark:text-gray-300"
-                >
-                  {project.description}
-                </p>
-              </div>
-
-              <span
-                class="mt-8 font-medium text-gray-900 dark:text-white"
-              >
-                Read about the project
-                <span
-                  class="ml-2 inline-block transition-transform group-hover:translate-y-1"
-                  aria-hidden="true"
-                >
-                  ↓
-                </span>
-              </span>
-            </a>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
   <!-- Mandalafy -->
   <section
-    id="project-1"
+    id="mandalafy"
     class="scroll-mt-24 border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
   >
     <div
@@ -214,6 +204,12 @@ const sharedQuestions = [
           {projects[0].title}
         </h2>
 
+        <p
+          class="mt-6 text-xl font-medium leading-8 text-gray-900 dark:text-white"
+        >
+          {projects[0].introduction}
+        </p>
+
         <div
           class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
         >
@@ -224,13 +220,15 @@ const sharedQuestions = [
           }
         </div>
 
-        <a
-          href={projects[0].href}
-          class="mt-9 inline-flex items-center font-medium text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-        >
-          {projects[0].linkLabel}
-          <span class="ml-2" aria-hidden="true">→</span>
-        </a>
+        <div class="mt-9">
+          <a
+            href={projects[0].href}
+            class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
+          >
+            {projects[0].linkLabel}
+            <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
 
       <figure>
@@ -247,13 +245,19 @@ const sharedQuestions = [
             decoding="async"
           />
         </div>
+
+        <figcaption
+          class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400"
+        >
+          {projects[0].accent}
+        </figcaption>
       </figure>
     </div>
   </section>
 
   <!-- LandingBio -->
   <section
-    id="project-2"
+    id="landingbio"
     class="scroll-mt-24 bg-white dark:bg-gray-900"
   >
     <div
@@ -273,6 +277,12 @@ const sharedQuestions = [
             decoding="async"
           />
         </div>
+
+        <figcaption
+          class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400"
+        >
+          {projects[1].accent}
+        </figcaption>
       </figure>
 
       <div class="order-1 lg:order-2">
@@ -288,6 +298,12 @@ const sharedQuestions = [
           {projects[1].title}
         </h2>
 
+        <p
+          class="mt-6 text-xl font-medium leading-8 text-gray-900 dark:text-white"
+        >
+          {projects[1].introduction}
+        </p>
+
         <div
           class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
         >
@@ -298,20 +314,22 @@ const sharedQuestions = [
           }
         </div>
 
-        <a
-          href={projects[1].href}
-          class="mt-9 inline-flex items-center font-medium text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-        >
-          {projects[1].linkLabel}
-          <span class="ml-2" aria-hidden="true">→</span>
-        </a>
+        <div class="mt-9">
+          <a
+            href={projects[1].href}
+            class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+          >
+            {projects[1].linkLabel}
+            <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ImagineThis.Site -->
   <section
-    id="project-3"
+    id="imaginethis-site"
     class="scroll-mt-24 border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
   >
     <div
@@ -330,6 +348,12 @@ const sharedQuestions = [
           {projects[2].title}
         </h2>
 
+        <p
+          class="mt-6 text-xl font-medium leading-8 text-gray-900 dark:text-white"
+        >
+          {projects[2].introduction}
+        </p>
+
         <div
           class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
         >
@@ -340,18 +364,20 @@ const sharedQuestions = [
           }
         </div>
 
-        <a
-          href={projects[2].href}
-          class="mt-9 inline-flex items-center font-medium text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-        >
-          {projects[2].linkLabel}
-          <span class="ml-2" aria-hidden="true">→</span>
-        </a>
+        <div class="mt-9">
+          <a
+            href={projects[2].href}
+            class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
+          >
+            {projects[2].linkLabel}
+            <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
 
       <figure>
         <div
-          class="overflow-hidden rounded-3xl border border-gray-200 bg-white p-5 dark:border-gray-800 dark:bg-gray-900 sm:p-8"
+          class="overflow-hidden rounded-3xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900 sm:p-8"
         >
           <img
             src={projects[2].image}
@@ -363,121 +389,59 @@ const sharedQuestions = [
             decoding="async"
           />
         </div>
+
+        <figcaption
+          class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400"
+        >
+          {projects[2].accent}
+        </figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- Shared questions -->
-  <section class="bg-gray-900 text-white dark:bg-black">
-    <div
-      class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.62fr_1fr] lg:px-8 lg:py-28"
-    >
-      <div>
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-400"
-        >
-          A shared curiosity
-        </p>
-
-        <h2
-          class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl"
-        >
-          Different projects, related questions.
-        </h2>
-
-        <p class="mt-6 max-w-xl text-lg leading-8 text-gray-300">
-          The projects do not need to look alike to belong together. Each gives
-          me another way to examine the relationship between people, tools,
-          environments, and possibility.
-        </p>
-      </div>
-
-      <ol class="border-t border-gray-700">
-        {
-          sharedQuestions.map((question, index) => (
-            <li
-              class="grid grid-cols-[2rem_1fr] gap-4 border-b border-gray-700 py-6 sm:grid-cols-[3rem_1fr]"
-            >
-              <span class="pt-1 font-mono text-xs text-gray-500">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-
-              <p class="text-xl leading-8 text-gray-200 sm:text-2xl">
-                {question}
-              </p>
-            </li>
-          ))
-        }
-      </ol>
-    </div>
-  </section>
-
-  <!-- Process -->
+  <!-- Future projects -->
   <section class="bg-white dark:bg-gray-900">
     <div
-      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.82fr_1.18fr] lg:px-8 lg:py-28"
+      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
     >
-      <figure>
-        <div
-          class="rounded-3xl border border-gray-200 bg-gray-50 p-6 dark:border-gray-800 dark:bg-gray-950 sm:p-8"
-        >
-          <img
-            src="/images/SubtleCircles.webp"
-            alt="A subtle arrangement of overlapping circular forms"
-            class="mx-auto w-full max-w-lg"
-            width="1200"
-            height="675"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-      </figure>
-
       <div>
         <p
           class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
         >
-          How projects develop
+          What comes next
         </p>
+      </div>
 
+      <div class="max-w-3xl">
         <h2
-          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
         >
-          I do not always know what a project means when I begin it.
+          There will always be another project.
         </h2>
 
         <div
-          class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
         >
           <p>
-            A project may start with a practical need, a visual idea, an
-            unfamiliar tool, or a question that feels easier to investigate by
-            making something.
+            Some ideas become websites. Others become tools, conversations,
+            essays, artwork, resources, or entirely new directions I have not
+            anticipated yet.
           </p>
 
           <p>
-            Building reveals assumptions that abstract thinking can leave
-            hidden. It creates constraints, consequences, unexpected
-            connections, and opportunities to revise the original idea.
-          </p>
-
-          <p>
-            Some projects become useful products or resources. Others remain
-            experiments. Their value may lie in what they teach me, what they
-            help someone else imagine, or the new questions they make possible.
+            This collection reflects where my curiosity has led so far—not
+            where it ends.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ongoing -->
+  <!-- Invitation -->
   <section
     class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
   >
-    <div
-      class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
-    >
+    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div
         class="rounded-3xl border border-gray-200 bg-white px-6 py-14 dark:border-gray-800 dark:bg-gray-900 sm:px-10 lg:px-14 lg:py-20"
       >
@@ -485,21 +449,23 @@ const sharedQuestions = [
           <p
             class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
           >
-            Ongoing
+            Ideas can connect
           </p>
 
           <h2
             class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
           >
-            The collection will continue to change.
+            A project may begin with one person’s question and grow through
+            conversation.
           </h2>
 
           <p
             class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
           >
-            Some projects will deepen. Others may change direction, combine
-            with something new, or reach a natural conclusion. New projects
-            will emerge as new questions become worth exploring.
+            Something here may connect with an idea you are developing, a
+            challenge you are considering, or work you would like to bring into
+            the world. I welcome thoughtful conversations and unexpected
+            possibilities.
           </p>
 
           <a

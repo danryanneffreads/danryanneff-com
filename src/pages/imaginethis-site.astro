@@ -1,316 +1,456 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const explorationTypes = [
+  {
+    title: "Concepts",
+    description:
+      "Fictional businesses, organizations, places, and experiences developed far enough to reveal how they might work.",
+  },
+  {
+    title: "Practical guides",
+    description:
+      "Resources for moving from a broad idea toward clearer choices, stronger plans, and better digital decisions.",
+  },
+  {
+    title: "Thought experiments",
+    description:
+      "Questions that test assumptions, expose tradeoffs, and make room for alternatives that are easy to overlook.",
+  },
+  {
+    title: "Early prototypes",
+    description:
+      "Initial versions of ideas that may later become websites, projects, tools, or something entirely different.",
+  },
+];
+
+const explorationAreas = [
+  {
+    title: "Businesses and organizations",
+    description:
+      "Concepts for ventures, services, and institutions designed around real human needs.",
+  },
+  {
+    title: "Technology",
+    description:
+      "Tools and digital systems that expand human capability without replacing human judgment.",
+  },
+  {
+    title: "Communities and places",
+    description:
+      "Neighborhoods, public spaces, and organizations shaped around the people who use them.",
+  },
+  {
+    title: "Learning and creativity",
+    description:
+      "Ways curiosity, experimentation, and making can help people develop new abilities.",
+  },
+  {
+    title: "Accessibility",
+    description:
+      "Experiences shaped by imagining needs, perspectives, and ways of participating different from our own.",
+  },
+  {
+    title: "Everyday life",
+    description:
+      "Smaller ideas that make ordinary experiences more useful, humane, or enjoyable.",
+  },
+];
 ---
 
 <BaseLayout
   title="ImagineThis.Site | Dan Ryan Neff"
-  description="ImagineThis.Site explores imagination as a practical tool for learning, design, entrepreneurship, and building a better future."
+  description="ImagineThis.Site is an idea laboratory for exploring concepts, guides, thought experiments, fictional organizations, and possibilities that do not yet exist."
 >
   <main>
-
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-amber-50 via-white to-sky-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
-      <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28">
+    <section
+      class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
+    >
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div
+          class="absolute -right-24 top-0 h-96 w-96 rounded-full bg-amber-100/70 blur-3xl dark:bg-amber-900/20"
+        >
+        </div>
 
+        <div
+          class="absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-sky-100/60 blur-3xl dark:bg-sky-900/20"
+        >
+        </div>
+      </div>
+
+      <div
+        class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 lg:px-8 lg:py-32"
+      >
         <div>
-
-          <p class="font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-400">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-400"
+          >
             Project
           </p>
 
-          <h1 class="mt-3 text-5xl font-bold tracking-tight text-gray-900 dark:text-white md:text-6xl">
+          <h1
+            class="mt-6 text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl"
+          >
             ImagineThis.Site
           </h1>
 
-          <p class="mt-6 text-2xl leading-relaxed text-gray-700 dark:text-gray-300">
-            Every meaningful project begins with imagining something that doesn't yet exist.
+          <p
+            class="mt-7 max-w-3xl text-2xl leading-9 text-gray-700 dark:text-gray-300"
+          >
+            Exploring what could exist before it is built.
           </p>
 
-          <p class="mt-6 max-w-xl text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-            ImagineThis.Site is a collection of concepts, thought experiments,
-            prototypes, and practical guides exploring how people can create
-            better businesses, organizations, communities, and digital experiences.
+          <p
+            class="mt-6 max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            ImagineThis.Site is an idea laboratory filled with concepts,
+            practical guides, thought experiments, fictional organizations, and
+            early explorations of businesses, communities, technology, and
+            everyday life.
           </p>
 
-          <div class="mt-10 flex flex-wrap gap-4">
-
+          <div class="mt-9 flex flex-wrap gap-4">
             <a
               href="https://imaginethis.site/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center rounded-lg bg-amber-600 px-6 py-3 font-semibold text-white transition hover:bg-amber-700"
+              class="inline-flex items-center rounded-lg bg-amber-600 px-6 py-3 font-medium text-white transition-colors hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
             >
               Visit ImagineThis.Site
-              <span class="ml-2">↗</span>
+              <span class="ml-2" aria-hidden="true">↗</span>
             </a>
 
             <a
               href="/projects/"
-              class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-semibold text-gray-900 transition hover:bg-white dark:border-gray-700 dark:text-white dark:hover:bg-gray-800"
+              class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-offset-gray-900"
             >
-              Back to Projects
+              View all projects
             </a>
-
           </div>
-
         </div>
 
-        <div>
-
+        <figure class="m-0">
           <img
             src="/images/DOT_artist_with_ideas.webp"
             alt="An artist surrounded by ideas and creative possibilities"
-            class="w-full rounded-2xl shadow-xl"
+            class="w-full rounded-[2rem] border border-gray-200 shadow-xl shadow-gray-200/60 dark:border-gray-800 dark:shadow-black/20"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
           />
-
-        </div>
-
+        </figure>
       </div>
     </section>
 
-    <!-- Core Idea -->
-
-    <section class="mx-auto max-w-4xl px-6 py-20">
-
-      <p class="font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-400">
-        Core idea
-      </p>
-
-      <h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-        Imagination is a practical skill.
-      </h2>
-
-      <div class="mt-8 space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-
-        <p>
-          We often think of imagination as something reserved for artists or
-          fiction writers. In reality, nearly every meaningful improvement
-          begins by imagining that things could be different.
-        </p>
-
-        <p>
-          Entrepreneurs imagine businesses that do not yet exist.
-          Architects imagine buildings before construction begins.
-          Community leaders imagine stronger neighborhoods.
-          Technologists imagine new tools.
-        </p>
-
-        <p>
-          ImagineThis.Site explores that creative process through articles,
-          fictional concepts, planning exercises, and practical resources.
-        </p>
-
-      </div>
-
-    </section>
-
-    <!-- Exploration -->
-
-    <section class="bg-gray-50 dark:bg-gray-900">
-
-      <div class="mx-auto max-w-6xl px-6 py-20">
-
-        <p class="font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-400">
-          Areas of exploration
-        </p>
-
-        <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold">Business Ideas</h3>
-
-            <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-              Imagining organizations that solve problems in thoughtful,
-              sustainable ways.
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold">Technology</h3>
-
-            <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-              Exploring how AI and digital tools can expand human capability
-              instead of replacing human judgment.
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold">Communities</h3>
-
-            <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-              Considering how neighborhoods, organizations, and public spaces
-              might better support the people who use them.
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold">Learning</h3>
-
-            <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-              Curiosity often begins with asking "What if?"
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold">Accessibility</h3>
-
-            <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-              Better design often begins by imagining experiences different
-              from our own.
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold">Everyday Life</h3>
-
-            <p class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">
-              Sometimes the most meaningful ideas improve ordinary moments
-              rather than transform entire industries.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <!-- Why Imagine -->
-
-    <section class="mx-auto max-w-5xl px-6 py-20">
-
-      <div class="grid gap-12 lg:grid-cols-2">
-
+    <!-- What you'll find -->
+    <section class="bg-white dark:bg-gray-900">
+      <div
+        class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
+      >
         <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-400"
+          >
+            What you’ll find
+          </p>
+        </div>
 
-          <p class="font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-400">
+        <div class="max-w-3xl">
+          <h2
+            class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            Ideas in different stages of becoming.
+          </h2>
+
+          <div
+            class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            <p>
+              Some entries begin as fictional concepts: a hotel, a coffee
+              company, a health practice, an architecture studio, or a public
+              event that does not yet exist.
+            </p>
+
+            <p>
+              Others are practical guides for planning websites, clarifying
+              business needs, or choosing tools with more intention.
+            </p>
+
+            <p>
+              The project leaves room for both. A concept can help reveal what
+              matters before a plan exists, while a guide can help turn a broad
+              idea into practical decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inside the laboratory -->
+    <section
+      class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+    >
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-400"
+          >
+            Inside the laboratory
+          </p>
+
+          <h2
+            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            Different ways to explore what might be possible.
+          </h2>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-2">
+          {
+            explorationTypes.map((item) => (
+              <article
+                class="rounded-2xl border border-gray-200 bg-white p-7 dark:border-gray-800 dark:bg-gray-900 sm:p-8"
+              >
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                  {item.title}
+                </h3>
+
+                <p class="mt-4 leading-7 text-gray-600 dark:text-gray-300">
+                  {item.description}
+                </p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Areas of exploration -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-400"
+          >
+            Areas of exploration
+          </p>
+
+          <h2
+            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            Ideas for how people might live, work, create, and participate.
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            The subjects vary, but the underlying questions are often similar:
+            What do people need? What could work differently? What would make an
+            experience more useful, accessible, or humane?
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {
+            explorationAreas.map((area) => (
+              <article
+                class="rounded-2xl border border-gray-200 p-7 dark:border-gray-800 sm:p-8"
+              >
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+                  {area.title}
+                </h3>
+
+                <p class="mt-4 leading-7 text-gray-600 dark:text-gray-300">
+                  {area.description}
+                </p>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Why imagine -->
+    <section
+      class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+    >
+      <div
+        class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-8 lg:py-28"
+      >
+        <div
+          class="rounded-3xl border border-gray-200 bg-gradient-to-br from-amber-50 via-white to-sky-50 p-8 dark:border-gray-800 dark:from-gray-950 dark:via-gray-900 dark:to-sky-950/30 sm:p-10"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-400"
+          >
             Why imagine?
           </p>
 
-          <h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
+          <p
+            class="mt-6 text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
             Better questions often come before better answers.
+          </p>
+        </div>
+
+        <div>
+          <h2
+            class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            Imagination is one way we examine reality more closely.
           </h2>
 
+          <div
+            class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            <p>
+              Not every idea on ImagineThis.Site is intended to become a
+              business, product, organization, or finished project.
+            </p>
+
+            <p>
+              Imagining an alternative can still clarify values, reveal hidden
+              assumptions, expose tradeoffs, and make opportunities easier to
+              see.
+            </p>
+
+            <p>
+              Even an idea that remains fictional can strengthen the judgment
+              used to build something real.
+            </p>
+          </div>
         </div>
-
-        <div class="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-
-          <p>
-            Many of the ideas on ImagineThis.Site may never become businesses,
-            products, or organizations.
-          </p>
-
-          <p>
-            That isn't failure.
-          </p>
-
-          <p>
-            The act of imagining helps clarify values, expose assumptions,
-            reveal opportunities, and deepen understanding of how systems work.
-          </p>
-
-          <p>
-            Even ideas that remain fictional can improve our ability to build
-            better real-world solutions.
-          </p>
-
-        </div>
-
       </div>
-
     </section>
 
-    <!-- Quote -->
+    <!-- Ideas do not need to become products -->
+    <section class="bg-white dark:bg-gray-900">
+      <div
+        class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
+      >
+        <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-400"
+          >
+            Room to explore
+          </p>
+        </div>
 
-    <section class="bg-amber-900 text-white">
+        <div class="max-w-3xl">
+          <h2
+            class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            An idea can be useful without becoming a product.
+          </h2>
 
-      <div class="mx-auto max-w-4xl px-6 py-20 text-center">
+          <div
+            class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            <p>
+              Sometimes developing an idea reveals that it should be pursued.
+              Sometimes it exposes a better direction. Sometimes the exploration
+              itself is enough.
+            </p>
 
-        <blockquote class="text-3xl font-semibold leading-relaxed md:text-4xl">
-          "Imagining better possibilities is one way we discover what is actually possible."
-        </blockquote>
-
+            <p>
+              ImagineThis.Site gives unfinished ideas somewhere to live without
+              requiring each one to become a company, platform, or completed
+              project.
+            </p>
+          </div>
+        </div>
       </div>
-
     </section>
 
-    <!-- Why I Built It -->
+    <!-- Why I built it -->
+    <section class="bg-white dark:bg-gray-900">
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div
+          class="rounded-3xl bg-amber-950 px-6 py-14 text-white sm:px-10 lg:px-14 lg:py-20"
+        >
+          <div class="max-w-4xl">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-300"
+            >
+              Why I built it
+            </p>
 
-    <section class="mx-auto max-w-4xl px-6 py-20">
+            <h2 class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
+              A place for unfinished ideas.
+            </h2>
 
-      <p class="font-semibold uppercase tracking-wide text-amber-700 dark:text-amber-400">
-        Why I built it
-      </p>
+            <div class="mt-7 space-y-5 text-lg leading-8 text-amber-100">
+              <p>
+                Throughout my career, I have found myself sketching websites,
+                organizations, accessibility tools, community projects,
+                business concepts, and educational experiences.
+              </p>
 
-      <h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-        An idea laboratory.
-      </h2>
+              <p>
+                I did not expect every idea to become real. Developing them
+                helped me think more clearly about what people need, how systems
+                work, and what might be designed differently.
+              </p>
 
-      <div class="mt-8 space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-
-        <p>
-          Throughout my career I found myself sketching websites,
-          organizations, accessibility tools, community projects, business
-          concepts, and educational experiences—not because I expected all of
-          them to become reality, but because imagining them helped me think
-          more clearly.
-        </p>
-
-        <p>
-          ImagineThis.Site became a place to collect those explorations.
-        </p>
-
-        <p>
-          Some ideas are practical. Others are ambitious. Some may never leave
-          the page. Together they represent a belief that imagination is not
-          separate from good judgment—it is one of the ways good judgment
-          develops.
-        </p>
-
+              <p>
+                ImagineThis.Site became a place to collect those explorations
+                and let them remain useful even when they never leave the page.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-
     </section>
 
     <!-- Closing -->
+    <section
+      class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+    >
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div
+          class="rounded-3xl border border-gray-200 bg-white px-6 py-14 dark:border-gray-800 dark:bg-gray-900 sm:px-10 lg:px-14 lg:py-20"
+        >
+          <div class="max-w-4xl">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700 dark:text-amber-400"
+            >
+              Explore the project
+            </p>
 
-    <section class="bg-gray-50 dark:bg-gray-900">
+            <h2
+              class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+            >
+              See what begins with “What if?”
+            </h2>
 
-      <div class="mx-auto max-w-4xl px-6 py-20 text-center">
+            <p
+              class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
+            >
+              Visit ImagineThis.Site to browse concepts, practical guides,
+              prototypes, and thought experiments about what people might build,
+              change, or understand differently.
+            </p>
 
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white">
-          Explore ImagineThis.Site
-        </h2>
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a
+                href="https://imaginethis.site/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center rounded-lg bg-amber-600 px-6 py-3 font-medium text-white transition-colors hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+              >
+                Visit ImagineThis.Site
+                <span class="ml-2" aria-hidden="true">↗</span>
+              </a>
 
-        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-          Browse concepts, guides, and thought experiments exploring how
-          imagination can shape better technology, organizations, and everyday
-          life.
-        </p>
-
-        <div class="mt-10 flex flex-wrap justify-center gap-4">
-
-          <a
-            href="https://imaginethis.site/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center rounded-lg bg-amber-600 px-6 py-3 font-semibold text-white transition hover:bg-amber-700"
-          >
-            Visit ImagineThis.Site
-            <span class="ml-2">↗</span>
-          </a>
-
-          <a
-            href="/projects/"
-            class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-semibold text-gray-900 transition hover:bg-white dark:border-gray-700 dark:text-white dark:hover:bg-gray-800"
-          >
-            Back to Projects
-          </a>
-
+              <a
+                href="/projects/"
+                class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-offset-gray-900"
+              >
+                Return to projects
+              </a>
+            </div>
+          </div>
         </div>
-
       </div>
-
     </section>
-
   </main>
 </BaseLayout>

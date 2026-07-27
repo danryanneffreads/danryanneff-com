@@ -1,321 +1,479 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const features = [
+  {
+    title: "Introduce yourself",
+    description:
+      "Share a concise biography, an image, and enough context for visitors to understand who you are.",
+  },
+  {
+    title: "Highlight what matters now",
+    description:
+      "Feature a project, idea, update, piece of work, or direction that deserves attention.",
+  },
+  {
+    title: "Connect the pieces",
+    description:
+      "Guide visitors to your websites, portfolio, store, newsletter, profiles, communities, and other destinations.",
+  },
+  {
+    title: "Change as you change",
+    description:
+      "Revise your introduction and featured content as your work, interests, and priorities evolve.",
+  },
+];
+
+const uses = [
+  "A professional introduction",
+  "A home for creative work",
+  "A starting point for several projects",
+  "A personal alternative to a social profile",
+  "A central page for links and current work",
+  "A simple presence for someone without a full website",
+];
 ---
 
 <BaseLayout
   title="LandingBio | Dan Ryan Neff"
-  description="LandingBio explores digital identity, personal websites, and creating a place online that reflects who you are."
+  description="LandingBio is a free personal entry page for introducing yourself, highlighting what matters, and connecting visitors with your work, websites, projects, and communities."
 >
   <main>
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-sky-50 via-white to-indigo-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
-      <div class="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:py-28">
-        <div>
-          <p class="font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-400">
-            Project
+    <section
+      class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
+    >
+      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div
+          class="absolute -right-24 top-0 h-96 w-96 rounded-full bg-cyan-100/70 blur-3xl dark:bg-cyan-900/20"
+        >
+        </div>
+
+        <div
+          class="absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-indigo-100/60 blur-3xl dark:bg-indigo-900/20"
+        >
+        </div>
+      </div>
+
+      <div
+        class="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32"
+      >
+        <div class="max-w-4xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+          >
+            Personal websites
           </p>
 
-          <h1 class="mt-3 text-5xl font-bold tracking-tight text-gray-900 dark:text-white md:text-6xl">
+          <h1
+            class="mt-6 text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl"
+          >
             LandingBio
           </h1>
 
-          <p class="mt-6 text-2xl leading-relaxed text-gray-700 dark:text-gray-300">
-            A home for your digital identity.
+          <p
+            class="mt-7 max-w-3xl text-2xl leading-9 text-gray-700 dark:text-gray-300"
+          >
+            A thoughtful place to begin with someone online.
           </p>
 
-          <p class="mt-6 max-w-xl text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-            LandingBio explores a simple idea: everyone deserves a place online
-            that reflects who they are—not just another profile inside someone
-            else’s platform.
-          </p>
+          <div
+            class="mt-6 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            <p>
+              LandingBio is a free personal page for introducing yourself,
+              highlighting what matters, and helping visitors discover the
+              different places where your work and interests live.
+            </p>
 
-          <div class="mt-10 flex flex-wrap gap-4">
+            <p>
+              It gives you more room than a social profile and less complexity
+              than a full website.
+            </p>
+          </div>
+
+          <div class="mt-9 flex flex-wrap gap-4">
             <a
               href="https://landingbio.com/"
               target="_blank"
               rel="noopener noreferrer"
-              class="inline-flex items-center rounded-lg bg-sky-600 px-6 py-3 font-semibold text-white transition hover:bg-sky-700"
+              class="inline-flex items-center rounded-lg bg-sky-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
             >
               Visit LandingBio
               <span class="ml-2" aria-hidden="true">↗</span>
             </a>
 
             <a
-              href="/projects/"
-              class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-semibold text-gray-900 transition hover:bg-white dark:border-gray-700 dark:text-white dark:hover:bg-gray-800"
+              href="#why-landingbio"
+              class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-offset-gray-900"
             >
-              Back to Projects
+              Learn more
+              <span class="ml-2" aria-hidden="true">↓</span>
             </a>
           </div>
         </div>
 
+        <figure class="mt-14">
+          <div
+            class="overflow-hidden rounded-[2rem] border border-gray-200 bg-gray-950 shadow-xl shadow-gray-200/60 dark:border-gray-800 dark:shadow-black/20"
+          >
+            <img
+              src="/images/landingbio-hero-personal-entry-page-v1.webp"
+              alt="LandingBio homepage with the words Your Personal Entry Page on the Internet"
+              class="aspect-[14/5] w-full object-cover"
+              width="1680"
+              height="600"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Why LandingBio -->
+    <section
+      id="why-landingbio"
+      class="scroll-mt-24 bg-white dark:bg-gray-900"
+    >
+      <div
+        class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
+      >
         <div>
-          <img
-            src="/images/dot-compilation.webp"
-            alt="An abstract composition of connected points and forms"
-            class="w-full rounded-2xl shadow-xl"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- The Idea -->
-    <section class="mx-auto max-w-4xl px-6 py-20">
-      <p class="font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-400">
-        The idea
-      </p>
-
-      <h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-        A place of your own on the web
-      </h2>
-
-      <div class="mt-8 space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-        <p>
-          Most people spend years building a digital presence, yet much of it
-          exists on platforms they do not control. Social networks change.
-          Algorithms change. Features disappear. Accounts come and go.
-        </p>
-
-        <p>
-          A personal website offers something different. It can become a place
-          where your work, interests, relationships, and identity develop over
-          time without depending entirely on someone else’s priorities.
-        </p>
-
-        <p>
-          LandingBio began as an exploration of how that kind of digital home
-          could be easier to create while still encouraging thoughtful
-          self-expression.
-        </p>
-      </div>
-    </section>
-
-    <!-- Beyond Link in Bio -->
-    <section class="bg-gray-50 dark:bg-gray-900">
-      <div class="mx-auto max-w-6xl px-6 py-20">
-        <p class="font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-400">
-          Beyond a list of links
-        </p>
-
-        <h2 class="mt-3 max-w-3xl text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-          Digital presence can be more intentional
-        </h2>
-
-        <p class="mt-6 max-w-3xl text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-          A useful personal page does more than gather destinations. It helps a
-          visitor understand the person behind them.
-        </p>
-
-        <div class="mt-12 grid gap-8 md:grid-cols-2">
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Clarity
-            </h3>
-
-            <p class="mt-4 leading-relaxed text-gray-600 dark:text-gray-400">
-              Present yourself intentionally rather than chasing attention.
-              Visitors should be able to understand what matters to you.
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Ownership
-            </h3>
-
-            <p class="mt-4 leading-relaxed text-gray-600 dark:text-gray-400">
-              Your identity should not depend entirely on a platform’s
-              interface, algorithm, or business decisions.
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Simplicity
-            </h3>
-
-            <p class="mt-4 leading-relaxed text-gray-600 dark:text-gray-400">
-              A focused page can communicate more clearly than a long
-              collection of disconnected profiles and links.
-            </p>
-          </article>
-
-          <article class="rounded-2xl bg-white p-8 shadow-sm dark:bg-gray-800">
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-              Connection
-            </h3>
-
-            <p class="mt-4 leading-relaxed text-gray-600 dark:text-gray-400">
-              Technology can help people discover meaningful relationships,
-              conversations, ideas, and opportunities.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Digital identity -->
-    <section class="mx-auto max-w-5xl px-6 py-20">
-      <div class="grid gap-12 lg:grid-cols-2">
-        <div>
-          <p class="font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-400">
-            Digital identity
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+          >
+            Why LandingBio
           </p>
+        </div>
 
-          <h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-            A person is more than a profile
+        <div class="max-w-3xl">
+          <h2
+            class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
+            Most people have an online presence. Fewer have a place that feels
+            genuinely their own.
           </h2>
-        </div>
 
-        <div class="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-          <p>
-            A résumé emphasizes employment. A social profile emphasizes recent
-            activity. A personal website can hold a much broader picture.
-          </p>
+          <div
+            class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            <p>
+              Social profiles are useful, but they are shaped by the priorities
+              of the platform: feeds, reactions, follower counts, advertising,
+              and a continual stream of new posts.
+            </p>
 
-          <p>
-            Professional work can exist alongside creative projects, learning,
-            writing, photography, community involvement, personal interests, or
-            new directions that have not yet become careers.
-          </p>
+            <p>
+              A personal website offers more independence, but not everyone
+              needs—or wants—to build and maintain a complete site.
+            </p>
 
-          <p>
-            That flexibility is part of what makes the web valuable. It gives
-            people room to represent themselves more fully.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Evolving identity -->
-    <section class="border-y border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-950">
-      <div class="mx-auto max-w-4xl px-6 py-20">
-        <h2 class="text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-          Digital identity is never finished
-        </h2>
-
-        <div class="mt-8 space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-          <p>
-            People change. Their work changes. Their interests deepen, separate,
-            reconnect, and move in directions they could not have anticipated.
-          </p>
-
-          <p>
-            A personal website can evolve alongside that process. It does not
-            have to compress a person into a fixed professional label or a
-            sequence of temporary posts.
-          </p>
-
-          <p>
-            Over time, it can become a record of attention: what someone has
-            built, explored, learned, valued, and chosen to share.
-          </p>
+            <p>
+              LandingBio sits between those options. It offers a stable,
+              personal page with enough room for identity, context, current
+              work, and meaningful links.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Technology and capability -->
-    <section class="mx-auto max-w-6xl px-6 py-20">
-      <div class="rounded-3xl bg-sky-950 px-8 py-14 text-white md:px-14">
-        <p class="font-semibold uppercase tracking-wide text-sky-300">
-          Technology and capability
-        </p>
-
-        <h2 class="mt-3 max-w-3xl text-3xl font-bold md:text-4xl">
-          Tools should expand expression, not flatten it
-        </h2>
-
-        <div class="mt-8 max-w-3xl space-y-6 text-lg leading-relaxed text-sky-100">
-          <p>
-            Digital tools often ask people to fit themselves into predefined
-            categories, templates, and patterns of behavior.
+    <!-- What it contains -->
+    <section
+      class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+    >
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="max-w-3xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+          >
+            What you can create
           </p>
 
-          <p>
-            Those structures can be useful, but they can also narrow the range
-            of what people are able to express. LandingBio explores how a
-            structured tool might still leave room for personality, context,
-            development, and choice.
+          <h2
+            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            One page that helps visitors understand you and decide where to go
+            next.
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            A LandingBio page combines a clear introduction with selected
+            content and destinations.
+          </p>
+        </div>
+
+        <div class="mt-14 grid gap-6 md:grid-cols-2">
+          {
+            features.map((feature, index) => (
+              <article
+                class="rounded-2xl border border-gray-200 bg-white p-7 dark:border-gray-800 dark:bg-gray-900 sm:p-8"
+              >
+                <div class="flex items-start gap-4">
+                  <span class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <div>
+                    <h3
+                      class="text-2xl font-bold text-gray-900 dark:text-white"
+                    >
+                      {feature.title}
+                    </h3>
+
+                    <p
+                      class="mt-4 leading-7 text-gray-600 dark:text-gray-300"
+                    >
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Designed to lead outward -->
+    <section class="bg-white dark:bg-gray-900">
+      <div
+        class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-8 lg:py-28"
+      >
+        <div
+          class="rounded-3xl border border-gray-200 bg-gradient-to-br from-sky-50 via-white to-indigo-50 p-8 dark:border-gray-800 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950/30 sm:p-10"
+        >
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+          >
+            A point of departure
           </p>
 
-          <p>
-            The larger question is not only whether technology makes something
-            easier. It is whether the technology helps people become more
-            capable of presenting themselves with honesty and clarity.
+          <p
+            class="mt-6 text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
+            LandingBio is not meant to contain your entire online life.
           </p>
+
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            It gives visitors enough context to understand you—and then helps
+            them continue toward the places that matter.
+          </p>
+        </div>
+
+        <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+          >
+            Designed to lead outward
+          </p>
+
+          <h2
+            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            Your presence does not have to live inside one platform.
+          </h2>
+
+          <div
+            class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            <p>
+              Your work, interests, relationships, and communities may be
+              spread across many places online.
+            </p>
+
+            <p>
+              LandingBio can connect those places without asking one platform
+              to become the permanent center of everything.
+            </p>
+
+            <p>
+              It can direct visitors to a personal website, portfolio, store,
+              newsletter, organization, social profile, community, or any other
+              destination you choose.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Possible uses -->
+    <section
+      class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+    >
+      <div
+        class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.58fr_1fr] lg:px-8 lg:py-28"
+      >
+        <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+          >
+            Different people, different purposes
+          </p>
+
+          <h2
+            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+          >
+            A LandingBio page can serve many kinds of lives and work.
+          </h2>
+
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            The structure is simple enough to remain approachable and flexible
+            enough to support very different uses.
+          </p>
+        </div>
+
+        <ul class="border-t border-gray-300 dark:border-gray-700">
+          {
+            uses.map((use, index) => (
+              <li
+                class="grid grid-cols-[2rem_1fr] gap-4 border-b border-gray-300 py-6 dark:border-gray-700 sm:grid-cols-[3rem_1fr]"
+              >
+                <span class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <p class="text-xl leading-8 text-gray-800 dark:text-gray-200">
+                  {use}
+                </p>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <!-- A living introduction -->
+    <section class="bg-white dark:bg-gray-900">
+      <div
+        class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
+      >
+        <div>
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+          >
+            A living introduction
+          </p>
+        </div>
+
+        <div class="max-w-3xl">
+          <h2
+            class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
+          >
+            A personal page should be able to change without pretending your
+            past no longer exists.
+          </h2>
+
+          <div
+            class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
+          >
+            <p>
+              People develop new interests, begin projects, leave roles, join
+              communities, and reconsider how they want to be understood.
+            </p>
+
+            <p>
+              LandingBio lets you update what you emphasize without requiring
+              a complete reinvention of your online identity.
+            </p>
+
+            <p>
+              It can remain selective and current: a useful introduction to the
+              person you are now and the directions you are following.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Why I built it -->
-    <section class="bg-gray-50 dark:bg-gray-900">
-      <div class="mx-auto max-w-4xl px-6 py-20">
-        <p class="font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-400">
-          Why I built it
-        </p>
-
-        <h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-          A small contribution to a more human web
-        </h2>
-
-        <div class="mt-8 space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-          <p>
-            LandingBio reflects a broader question that appears throughout my
-            work:
+    <section class="bg-sky-950 text-white">
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div class="max-w-4xl">
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-300"
+          >
+            Why I built it
           </p>
 
-          <blockquote class="border-l-4 border-sky-500 pl-6 text-2xl font-medium leading-relaxed text-gray-900 dark:text-white">
-            How can technology help people express who they are instead of
-            continually asking them to become someone else?
-          </blockquote>
+          <h2 class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
+            I wanted to make personal presence on the web more approachable.
+          </h2>
 
-          <p>
-            I believe the web is still one of the best places for thoughtful
-            self-expression. Personal websites create room for depth,
-            curiosity, continuity, and ownership in ways that fast-moving
-            social platforms often do not.
-          </p>
+          <div class="mt-7 space-y-5 text-lg leading-8 text-sky-100">
+            <p>
+              People should have ways to represent themselves online that are
+              not entirely defined by social platforms, professional
+              directories, or the demands of continual publishing.
+            </p>
 
-          <p>
-            LandingBio is one experiment in making that possibility more
-            approachable.
-          </p>
+            <p>
+              LandingBio provides a clear structure while leaving room for
+              personality, changing interests, professional work, creative
+              projects, and different ways of participating in the world.
+            </p>
+
+            <p>
+              It is one experiment in giving people a little more ownership
+              over how they introduce themselves and where they direct
+              attention.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Closing -->
-    <section class="mx-auto max-w-4xl px-6 py-20 text-center">
-      <p class="font-semibold uppercase tracking-wide text-sky-700 dark:text-sky-400">
-        Explore the project
-      </p>
-
-      <h2 class="mt-3 text-3xl font-bold text-gray-900 dark:text-white md:text-4xl">
-        Visit LandingBio
-      </h2>
-
-      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 dark:text-gray-400">
-        See the project itself, or return to the collection of projects and
-        continue exploring.
-      </p>
-
-      <div class="mt-10 flex flex-wrap justify-center gap-4">
-        <a
-          href="https://landingbio.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center rounded-lg bg-sky-600 px-6 py-3 font-semibold text-white transition hover:bg-sky-700"
+    <section
+      class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+    >
+      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        <div
+          class="rounded-3xl border border-gray-200 bg-white px-6 py-14 dark:border-gray-800 dark:bg-gray-900 sm:px-10 lg:px-14 lg:py-20"
         >
-          Visit LandingBio
-          <span class="ml-2" aria-hidden="true">↗</span>
-        </a>
+          <div class="max-w-4xl">
+            <p
+              class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+            >
+              Explore the project
+            </p>
 
-        <a
-          href="/projects/"
-          class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-semibold text-gray-900 transition hover:bg-gray-50 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800"
-        >
-          Back to Projects
-        </a>
+            <h2
+              class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
+            >
+              Create a place where people can begin.
+            </h2>
+
+            <p
+              class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
+            >
+              Visit LandingBio to see the project and explore how a personal
+              entry page can introduce who you are, highlight what matters, and
+              connect the different parts of your online presence.
+            </p>
+
+            <div class="mt-9 flex flex-wrap gap-4">
+              <a
+                href="https://landingbio.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center rounded-lg bg-sky-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+              >
+                Visit LandingBio
+                <span class="ml-2" aria-hidden="true">↗</span>
+              </a>
+
+              <a
+                href="/projects/"
+                class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-offset-gray-900"
+              >
+                Return to projects
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </main>
