@@ -6,7 +6,7 @@ const experience = [
   {
     title: "Operations and leadership",
     description:
-      "More than two decades inside organizations taught me how much good work depends on clear expectations, thoughtful systems, sound judgment, and the ability of people to work well together.",
+      "More than two decades inside organizations taught me how much good work depends on clear expectations, thoughtful systems, sound judgment, and people working well together.",
   },
   {
     title: "Accessibility",
@@ -16,7 +16,7 @@ const experience = [
   {
     title: "Websites and digital places",
     description:
-      "Building websites led me to see the internet not simply as a collection of tools, but as an environment people inhabit—one that shapes identity, attention, access, trust, and connection.",
+      "Building websites taught me to see the internet not just as a collection of tools, but as an environment people inhabit—one that shapes identity, attention, access, trust, and connection.",
   },
   {
     title: "Artificial intelligence",
@@ -34,35 +34,35 @@ const interests = [
   {
     title: "Health and daily life",
     description:
-      "How do habits, relationships, movement, rest, food, and the environments within and around us compound over time?",
+      "How do habits, relationships, movement, rest, food, and our environments shape us over time?",
   },
   {
     title: "Organizations",
     description:
-      "What helps people work together effectively, pursue meaningful goals, and adapt without losing sight of the human beings involved?",
+      "What helps people work well together, pursue meaningful goals, and adapt without losing sight of the people involved?",
   },
   {
     title: "Accessibility and participation",
     description:
-      "What allows more people to enter, navigate, contribute to, and feel at home in the places and systems we create?",
+      "What helps more people enter, navigate, contribute to, and feel at home in the places and systems we create?",
   },
   {
     title: "Creativity",
     description:
-      "What supports curiosity, experimentation, expression, and the confidence to turn an idea into something real?",
+      "What supports curiosity, experimentation, expression, and the confidence to make ideas real?",
   },
   {
     title: "Cities and communities",
     description:
-      "How do streets, public spaces, transportation, gardens, local institutions, and relationships shape everyday life?",
+      "How do streets, public spaces, transportation, gardens, institutions, and relationships shape everyday life?",
   },
 ];
 
 const principles = [
-  "Technology should expand human possibility without diminishing human life.",
+  "Technology should expand what people can do without weakening our judgment, agency, or connection to others.",
   "Good systems should help people participate, contribute, and exercise judgment.",
   "Small decisions and supportive conditions can compound into meaningful change.",
-  "The environments we create influence what people notice, believe, and become able to do.",
+  "The environments we create shape what people notice, understand, and are able to do.",
 ];
 
 const pageTitle = `About | ${SITE_NAME}`;
@@ -114,16 +114,15 @@ const pageDescription =
           class="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl"
         >
           <p>
-            I’m Dan Ryan Neff. My work and interests move among organizations,
-            technology, accessibility, websites, creativity, health, cities,
-            community, and the everyday choices through which a life takes
-            shape.
+            I’m Dan Ryan Neff. My interests range from organizations and
+            technology to accessibility, creativity, health, cities, and
+            everyday life.
           </p>
 
           <p>
-            These subjects do not always appear connected at first. I keep
-            finding that they are: each influences what people can notice,
-            understand, create, contribute, and become.
+            They connect through a common question: how do the environments we
+            create shape what people can notice, understand, create, contribute,
+            and become?
           </p>
         </div>
       </div>
@@ -170,29 +169,26 @@ const pageDescription =
         <h2
           class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
         >
-          Better lives rarely emerge from one dramatic answer.
+          Better lives are shaped by many conditions working together.
         </h2>
 
         <div
           class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
         >
           <p>
-            They develop through many interacting conditions: health,
-            relationships, habits, knowledge, tools, organizations, physical
-            surroundings, digital environments, and the decisions we make
-            repeatedly over time.
+            They take shape through interacting conditions: health,
+            relationships, habits, tools, organizations, physical and digital
+            environments, and repeated choices.
           </p>
 
           <p>
-            I am drawn to those interactions. I want to understand what helps
-            people and meaningful work flourish—and how thoughtful choices can
-            improve the systems and environments in which life unfolds.
+            I’m interested in how those conditions work together—and what helps
+            people and meaningful work flourish.
           </p>
 
           <p>
-            That interest is practical as much as philosophical. It influences
-            what I build, the work I take on, the questions I ask, and the
-            conversations I value.
+            That interest shapes what I build, the work I take on, and the
+            questions I keep asking.
           </p>
         </div>
       </div>
@@ -215,41 +211,30 @@ const pageDescription =
           <h2
             class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
           >
-            My perspective has grown through different kinds of work.
+            My perspective has been shaped through different kinds of work.
           </h2>
 
-          <p
-            class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300"
-          >
-            I have spent years working where people, systems, tools, and
-            changing conditions meet. That experience has taught me to look
-            beyond isolated problems and pay attention to the environment
-            around them.
+          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+            I’ve spent years where people, systems, and technology meet. That
+            experience taught me to look beyond isolated problems and pay
+            attention to the conditions around them.
           </p>
         </div>
 
         <div class="border-t border-gray-300 dark:border-gray-700">
           {
             experience.map((item, index) => (
-              <article
-                class="grid gap-4 border-b border-gray-300 py-8 dark:border-gray-700 sm:grid-cols-[3rem_1fr]"
-              >
-                <span
-                  class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500"
-                >
+              <article class="grid gap-4 border-b border-gray-300 py-8 dark:border-gray-700 sm:grid-cols-[3rem_1fr]">
+                <span class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500">
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
                 <div>
-                  <h3
-                    class="text-2xl font-bold text-gray-900 dark:text-white"
-                  >
+                  <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
                     {item.title}
                   </h3>
 
-                  <p
-                    class="mt-4 max-w-2xl leading-7 text-gray-600 dark:text-gray-300"
-                  >
+                  <p class="mt-4 max-w-2xl leading-7 text-gray-600 dark:text-gray-300">
                     {item.description}
                   </p>
                 </div>
@@ -274,7 +259,7 @@ const pageDescription =
         <h2
           class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
         >
-          I tend to follow the connections between things.
+          These are areas I keep coming back to.
         </h2>
 
         <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
@@ -286,24 +271,18 @@ const pageDescription =
       <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {
           interests.map((interest, index) => (
-            <article
-              class="rounded-2xl border border-gray-200 bg-gray-50 p-7 dark:border-gray-800 dark:bg-gray-950 sm:p-8"
-            >
+            <article class="rounded-2xl border border-gray-200 bg-gray-50 p-7 dark:border-gray-800 dark:bg-gray-950 sm:p-8">
               <div class="flex items-start gap-4">
                 <span class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500">
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
                 <div>
-                  <h3
-                    class="text-xl font-bold text-gray-900 dark:text-white"
-                  >
+                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">
                     {interest.title}
                   </h3>
 
-                  <p
-                    class="mt-4 leading-7 text-gray-600 dark:text-gray-300"
-                  >
+                  <p class="mt-4 leading-7 text-gray-600 dark:text-gray-300">
                     {interest.description}
                   </p>
                 </div>
@@ -328,21 +307,18 @@ const pageDescription =
         </p>
 
         <h2 class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
-          A few ideas guide how I approach the world.
+          A few principles guide how I work and think.
         </h2>
 
         <p class="mt-6 max-w-xl text-lg leading-8 text-gray-300">
-          These are not a fixed framework. They are durable ideas that continue
-          to shape my judgment and work.
+          They are not a fixed framework, but ideas I keep returning to.
         </p>
       </div>
 
       <ol class="border-t border-gray-700">
         {
           principles.map((principle, index) => (
-            <li
-              class="grid grid-cols-[2rem_1fr] gap-4 border-b border-gray-700 py-6 sm:grid-cols-[3rem_1fr]"
-            >
+            <li class="grid grid-cols-[2rem_1fr] gap-4 border-b border-gray-700 py-6 sm:grid-cols-[3rem_1fr]">
               <span class="pt-1 font-mono text-xs text-gray-500">
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -372,22 +348,20 @@ const pageDescription =
         <h2
           class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
         >
-          Ideas often become clearer when they meet the world.
+          I like turning ideas into something real.
         </h2>
 
         <div
           class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
         >
           <p>
-            Sometimes that means building a website, developing a resource,
-            improving a process, creating something visual, or helping an
-            organization think through a complicated challenge.
+            That might mean building a website, creating a resource, improving a
+            process, or helping an organization work through a challenge.
           </p>
 
           <p>
-            My projects arise from different interests and circumstances. Taken
-            together, they show how I approach ideas: with curiosity, practical
-            judgment, and a willingness to make something real.
+            My projects reflect how I tend to work: with curiosity, practical
+            judgment, and a desire to make something useful.
           </p>
         </div>
 
@@ -432,16 +406,14 @@ const pageDescription =
           <h2
             class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
           >
-            Good conversations can become ideas, projects, and useful work.
+            Good conversations can lead to useful work.
           </h2>
 
           <p
             class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
           >
-            You may be building something, navigating change, reconsidering how
-            an organization works, or exploring questions that overlap with my
-            own. I welcome thoughtful conversations and unexpected points of
-            connection.
+            You may be building something, navigating change, or exploring a
+            questions that overlaps with mine, I'd be glad to talk.
           </p>
 
           <a
