@@ -1,449 +1,155 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE_NAME, OG_IMAGE } from "../lib/constants";
 
-const calUrl = "https://cal.com/danryanneff/conversation";
+// Keep these in one place so they're easy to update later.
 const emailAddress = "danryanneff@gmail.com";
+const calUrl = "https://cal.com/danryanneff/conversation";
+const emailHref = `mailto:${emailAddress}`;
+const collaborationHref = `mailto:${emailAddress}?subject=${encodeURIComponent("Work or collaboration inquiry")}`;
+
+const pageTitle = `Contact | ${SITE_NAME}`;
+const pageDescription =
+  "Get in touch with Dan Ryan Neff about daily money management, administrative and technology-related work, creative projects, or a conversation.";
 ---
 
 <BaseLayout
-  title="Contact | Dan Ryan Neff"
-  description="Start a conversation, follow new work by email, or contact Dan Ryan Neff directly."
+  title={pageTitle}
+  description={pageDescription}
+  ogTitle={pageTitle}
+  ogDescription={pageDescription}
+  ogImage={OG_IMAGE}
 >
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero__content">
-        <p class="eyebrow">Contact</p>
+  <!-- A short, direct invitation with two easy ways to reach Dan. -->
+  <section
+    class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
+    aria-labelledby="contact-heading"
+  >
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -right-24 top-0 h-80 w-80 rounded-full bg-blue-100/70 blur-3xl dark:bg-blue-900/20"></div>
+      <div class="absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-indigo-100/60 blur-3xl dark:bg-indigo-900/20"></div>
+    </div>
 
-        <h1>What are you thinking about?</h1>
+    <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(220px,0.65fr)] lg:gap-16 lg:px-8 lg:py-24">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-400">
+          Contact Dan Ryan Neff
+        </p>
+        <h1
+          id="contact-heading"
+          class="mt-5 text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl"
+        >
+          Let's talk.
+        </h1>
+        <p class="mt-6 max-w-2xl text-xl font-semibold leading-8 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-9">
+          Looking for help, considering a collaboration, or simply think we should connect?
+        </p>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-700 dark:text-gray-300">
+          I'm open to conversations about practical work, technology, creative projects, and new possibilities. You don't need a finished plan or a formal proposal to reach out.
+        </p>
 
-        <div class="hero__intro">
-          <p>
-            You may be developing an idea, reconsidering how something works,
-            or exploring a question that overlaps with my interests.
-          </p>
-
-          <p>
-            I welcome thoughtful conversations about websites, technology,
-            organizations, accessibility, creativity, communities, and the
-            systems that shape everyday life.
-          </p>
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <a
+            href={emailHref}
+            class="inline-flex min-h-12 items-center justify-center rounded-lg bg-blue-700 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-800 hover:text-white focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-blue-500 dark:text-gray-950 dark:hover:bg-blue-400 dark:hover:text-gray-950"
+          >
+            Email me
+            <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+          <a
+            href={calUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex min-h-12 items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-900 transition-colors hover:border-blue-500 hover:text-blue-700 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-blue-400 dark:hover:text-blue-300"
+          >
+            Schedule a conversation
+            <span class="ml-2" aria-hidden="true">↗</span>
+          </a>
         </div>
+        <p class="mt-5 text-base text-gray-700 dark:text-gray-300">
+          Or write directly to
+          <a
+            href={emailHref}
+            class="font-semibold text-blue-700 underline underline-offset-4 hover:text-blue-900 dark:text-blue-400 dark:hover:text-blue-300"
+          >{emailAddress}</a>.
+        </p>
       </div>
 
-      <figure class="hero__art" aria-hidden="true">
+      <!-- Use Dan's original artwork, not generic business stock imagery. -->
+      <figure class="mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:justify-self-end" aria-hidden="true">
         <img
           src="/images/orange-loops-green-background.webp"
           alt=""
+          class="aspect-square w-full rounded-full object-cover shadow-lg shadow-gray-200/60 dark:shadow-black/20"
           width="660"
           height="660"
           loading="eager"
           decoding="async"
-          fetchpriority="high"
         />
       </figure>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact options -->
-    <section class="contact-options" aria-label="Ways to connect">
-      <!-- Conversation -->
-      <article class="contact-option">
-        <p class="contact-option__number" aria-hidden="true">01</p>
-
-        <div class="contact-option__content">
-          <p class="contact-option__label">A place to begin</p>
-
-          <h2>Schedule a conversation</h2>
-
-          <div class="contact-option__copy">
-            <p>
-              A conversation can help clarify an idea, reveal a useful
-              connection, or open a direction neither person had anticipated.
-            </p>
-
-            <p>
-              This is a free, informal conversation rather than a sales call.
-              There is no expectation that it needs to lead anywhere in
-              particular.
-            </p>
-          </div>
-
-          <a
-            class="button"
-            href={calUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Choose a time
-            <span aria-hidden="true">↗</span>
+  <!-- Let a visitor recognize their reason for contacting Dan immediately. -->
+  <section class="bg-gray-50 py-16 dark:bg-gray-950 sm:py-20" aria-labelledby="reasons-heading">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-400">
+        A few places to start
+      </p>
+      <h2 id="reasons-heading" class="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        What can we talk about?
+      </h2>
+      <div class="mt-9 grid gap-5 md:grid-cols-3">
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900 sm:p-7">
+          <div class="mb-5 h-1 w-12 rounded-full bg-blue-600 dark:bg-blue-400" aria-hidden="true"></div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Daily Money Management</h3>
+          <p class="mt-3 flex-1 text-base leading-7 text-gray-700 dark:text-gray-300">
+            Help with bills, paperwork, financial records, and other everyday responsibilities for yourself or someone you care about.
+          </p>
+          <a href="/dmm/" class="mt-6 inline-flex w-fit items-center font-semibold text-blue-700 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 dark:text-blue-400">
+            Learn about the service <span class="ml-2" aria-hidden="true">→</span>
           </a>
-        </div>
-      </article>
+        </article>
 
-      <!-- Email updates -->
-      <article class="contact-option">
-        <p class="contact-option__number" aria-hidden="true">02</p>
-
-        <div class="contact-option__content">
-          <p class="contact-option__label">Occasional updates</p>
-
-          <h2>Follow what I’m exploring</h2>
-
-          <div class="contact-option__copy">
-            <p>
-              I occasionally share new projects, observations, questions, and
-              additions to the site.
-            </p>
-
-            <p>
-              Messages are infrequent and written when there is something
-              worthwhile to share.
-            </p>
-          </div>
-
-          <div class="email-signup">
-            <iframe
-              src="https://embeds.beehiiv.com/7b7905fd-bdf1-49b9-9cbc-754021ddf12e?slim=true"
-              data-test-id="beehiiv-embed"
-              title="Subscribe to email updates from Dan Ryan Neff"
-              height="52"
-              frameborder="0"
-              scrolling="no"
-            ></iframe>
-          </div>
-        </div>
-      </article>
-
-      <!-- Direct email -->
-      <article class="contact-option">
-        <p class="contact-option__number" aria-hidden="true">03</p>
-
-        <div class="contact-option__content">
-          <p class="contact-option__label">Direct contact</p>
-
-          <h2>Send me an email</h2>
-
-          <div class="contact-option__copy">
-            <p>
-              Email may be the simplest option if you already know what you
-              would like to discuss or share.
-            </p>
-          </div>
-
-          <a
-            class="email-link"
-            href={`mailto:${emailAddress}`}
-            aria-label={`Email ${emailAddress}`}
-          >
-            {emailAddress}
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900 sm:p-7">
+          <div class="mb-5 h-1 w-12 rounded-full bg-indigo-500 dark:bg-indigo-400" aria-hidden="true"></div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Work &amp; collaboration</h3>
+          <p class="mt-3 flex-1 text-base leading-7 text-gray-700 dark:text-gray-300">
+            Have a need involving administration, coordination, better processes, or technology? I'm interested in discussing where my experience might be useful.
+          </p>
+          <a href={collaborationHref} class="mt-6 inline-flex w-fit items-center font-semibold text-blue-700 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 dark:text-blue-400">
+            Discuss an opportunity <span class="ml-2" aria-hidden="true">→</span>
           </a>
-        </div>
-      </article>
-    </section>
+        </article>
 
-    <!-- Closing -->
-    <section class="closing">
-      <figure class="closing__art" aria-hidden="true">
-        <img
-          src="/images/mandala-blue-labyrinth-660.webp"
-          alt=""
-          width="660"
-          height="660"
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
+        <article class="flex flex-col rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900 sm:p-7">
+          <div class="mb-5 h-1 w-12 rounded-full bg-emerald-500 dark:bg-emerald-400" aria-hidden="true"></div>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Creative projects &amp; ideas</h3>
+          <p class="mt-3 flex-1 text-base leading-7 text-gray-700 dark:text-gray-300">
+            Curious about something I'm building, have feedback, or see a possibility for working together? I'd enjoy hearing about it.
+          </p>
+          <a href="/projects/" class="mt-6 inline-flex w-fit items-center font-semibold text-blue-700 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 dark:text-blue-400">
+            Explore projects <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      <div class="closing__content">
-        <p class="eyebrow">An open door</p>
-
-        <p class="closing__statement">
-          You do not need to arrive with a finished idea.
+  <!-- No complicated intake process or newsletter required. -->
+  <section class="border-t border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900" aria-labelledby="starting-heading">
+    <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-16 lg:px-8">
+      <div class="max-w-3xl">
+        <h2 id="starting-heading" class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
+          A few sentences are enough to begin.
+        </h2>
+        <p class="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+          Tell me a little about what you have in mind. We can start with a message or a conversation and see whether there's a useful next step.
         </p>
-
-        <p class="closing__support">
-          Curiosity, a useful question, or something you have begun noticing is
-          enough.
+        <p class="mt-5 text-sm leading-6 text-gray-600 dark:text-gray-400">
+          For financial matters, please don't include account numbers, passwords, or other sensitive information in an ordinary email. We can discuss appropriate ways to share documents if needed.
         </p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </BaseLayout>
-
-<style>
-  main {
-    overflow: hidden;
-  }
-
-  .hero,
-  .contact-options,
-  .closing {
-    width: min(1120px, calc(100% - 2rem));
-    margin-inline: auto;
-  }
-
-  /* Hero */
-
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
-    align-items: center;
-    gap: clamp(3rem, 8vw, 7rem);
-    min-height: 72vh;
-    padding-block: clamp(5rem, 11vw, 9rem);
-  }
-
-  .hero__content {
-    max-width: 760px;
-  }
-
-  .eyebrow,
-  .contact-option__label {
-    margin: 0;
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-  }
-
-  .eyebrow {
-    margin-bottom: 1.25rem;
-  }
-
-  h1 {
-    max-width: 800px;
-    margin: 0;
-    font-size: clamp(3.2rem, 7vw, 6.8rem);
-    font-weight: 450;
-    line-height: 0.98;
-    letter-spacing: -0.055em;
-    text-wrap: balance;
-  }
-
-  .hero__intro {
-    max-width: 650px;
-    margin-top: 2rem;
-    font-size: clamp(1.15rem, 2vw, 1.45rem);
-    line-height: 1.6;
-  }
-
-  .hero__intro p {
-    margin: 0;
-  }
-
-  .hero__intro p + p {
-    margin-top: 1rem;
-  }
-
-  .hero__art {
-    margin: 0;
-  }
-
-  .hero__art img,
-  .closing__art img {
-    display: block;
-    width: 100%;
-    height: auto;
-  }
-
-  .hero__art img {
-    border-radius: 50%;
-  }
-
-  /* Contact options */
-
-  .contact-options {
-    border-top: 1px solid currentColor;
-  }
-
-  .contact-option {
-    display: grid;
-    grid-template-columns: minmax(3rem, 0.25fr) minmax(0, 1fr);
-    gap: clamp(1.5rem, 5vw, 5rem);
-    padding-block: clamp(3.5rem, 7vw, 5.5rem);
-    border-bottom: 1px solid currentColor;
-  }
-
-  .contact-option__number {
-    margin: 0.5rem 0 0;
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
-  }
-
-  .contact-option__content {
-    width: 100%;
-    max-width: 760px;
-  }
-
-  .contact-option__label {
-    margin-bottom: 1rem;
-    opacity: 0.68;
-  }
-
-  h2 {
-    max-width: 720px;
-    margin: 0;
-    font-size: clamp(2rem, 4.5vw, 4rem);
-    font-weight: 450;
-    line-height: 1.05;
-    letter-spacing: -0.04em;
-    text-wrap: balance;
-  }
-
-  .contact-option__copy {
-    max-width: 640px;
-    margin-top: 1.5rem;
-    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-    line-height: 1.65;
-  }
-
-  .contact-option__copy p {
-    margin: 0;
-  }
-
-  .contact-option__copy p + p {
-    margin-top: 1rem;
-  }
-
-  /* Links and actions */
-
-  .button,
-  .email-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    margin-top: 2rem;
-    color: inherit;
-    font-weight: 600;
-    text-underline-offset: 0.25em;
-  }
-
-  .button {
-    padding: 0.9rem 1.2rem;
-    border: 1px solid currentColor;
-    border-radius: 999px;
-    text-decoration: none;
-    transition:
-      opacity 160ms ease,
-      transform 160ms ease;
-  }
-
-  .button:hover {
-    opacity: 0.72;
-    transform: translateY(-2px);
-  }
-
-  .email-link {
-    font-size: clamp(1rem, 2vw, 1.15rem);
-    overflow-wrap: anywhere;
-  }
-
-  .button:focus-visible,
-  .email-link:focus-visible {
-    outline: 3px solid currentColor;
-    outline-offset: 5px;
-  }
-
-  /* Email signup */
-
-  .email-signup {
-    width: 100%;
-    max-width: 640px;
-    margin-top: 2rem;
-    overflow: hidden;
-  }
-
-  .email-signup iframe {
-    display: block;
-    width: 100%;
-    min-height: 52px;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
-  }
-
-  /* Closing */
-
-  .closing {
-    display: grid;
-    grid-template-columns: minmax(240px, 0.75fr) minmax(0, 1.25fr);
-    align-items: center;
-    gap: clamp(3rem, 8vw, 7rem);
-    padding-block: clamp(5rem, 11vw, 10rem);
-  }
-
-  .closing__art {
-    max-width: 420px;
-    margin: 0;
-  }
-
-  .closing__content {
-    max-width: 720px;
-  }
-
-  .closing__content .eyebrow {
-    opacity: 0.68;
-  }
-
-  .closing__statement {
-    margin: 0;
-    font-size: clamp(1.8rem, 4vw, 3.6rem);
-    line-height: 1.15;
-    letter-spacing: -0.035em;
-    text-wrap: balance;
-  }
-
-  .closing__support {
-    max-width: 600px;
-    margin: 1.5rem 0 0;
-    font-size: clamp(1.05rem, 1.8vw, 1.25rem);
-    line-height: 1.65;
-  }
-
-  /* Responsive */
-
-  @media (max-width: 760px) {
-    .hero,
-    .closing {
-      grid-template-columns: 1fr;
-    }
-
-    .hero {
-      min-height: auto;
-      padding-top: 5rem;
-    }
-
-    .hero__art {
-      width: min(78vw, 420px);
-      margin-inline: auto;
-    }
-
-    .contact-option {
-      grid-template-columns: 1fr;
-      gap: 1.25rem;
-    }
-
-    .contact-option__number {
-      margin: 0;
-    }
-
-    .email-signup iframe {
-      width: 100%;
-    }
-
-    .closing__art {
-      width: min(72vw, 360px);
-      margin-inline: auto;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .button {
-      transition: none;
-    }
-
-    .button:hover {
-      transform: none;
-    }
-  }
-</style>
