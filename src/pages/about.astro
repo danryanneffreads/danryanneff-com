@@ -2,73 +2,27 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_NAME, OG_IMAGE } from "../lib/constants";
 
+const pageTitle = `About | ${SITE_NAME}`;
+const pageDescription =
+  "Learn about Dan Ryan Neff: executive assistant, daily money manager, and creator working across operations, technology, and art in Madison, Wisconsin.";
+
 const experience = [
   {
-    title: "Operations and leadership",
+    title: "Operations and coordination",
     description:
-      "More than two decades inside organizations taught me how much good work depends on clear expectations, thoughtful systems, sound judgment, and people working well together.",
+      "I spent more than 20 years working in telecommunications operations, including supervision and coordinating day-to-day work. That experience taught me the value of clear communication, sound judgment, and steady follow-through.",
   },
   {
-    title: "Accessibility",
+    title: "Executive assistance",
     description:
-      "Accessibility has deepened my understanding of participation. The same environment can support one person while excluding another, and thoughtful design often creates a better experience for everyone.",
+      "Today, I work as an executive assistant at the Wisconsin Council of the Blind and Visually Impaired, helping keep people, information, and administrative responsibilities organized.",
   },
   {
-    title: "Websites and digital places",
+    title: "Daily money management",
     description:
-      "Building websites taught me to see the internet not just as a collection of tools, but as an environment people inhabit—one that shapes identity, attention, access, trust, and connection.",
-  },
-  {
-    title: "Artificial intelligence",
-    description:
-      "AI has expanded how I learn, reason, create, and build. It has also made questions about judgment, authorship, dependence, inequality, and human agency more urgent.",
+      "I also help individuals and families with bills, financial paperwork, and everyday financial organization. I value trust, independence, and building dependable working relationships over time.",
   },
 ];
-
-const interests = [
-  {
-    title: "Technology",
-    description:
-      "How can technology make people more capable without weakening judgment, attention, confidence, or human connection?",
-  },
-  {
-    title: "Health and daily life",
-    description:
-      "How do habits, relationships, movement, rest, food, and our environments shape us over time?",
-  },
-  {
-    title: "Organizations",
-    description:
-      "What helps people work well together, pursue meaningful goals, and adapt without losing sight of the people involved?",
-  },
-  {
-    title: "Accessibility and participation",
-    description:
-      "What helps more people enter, navigate, contribute to, and feel at home in the places and systems we create?",
-  },
-  {
-    title: "Creativity",
-    description:
-      "What supports curiosity, experimentation, expression, and the confidence to make ideas real?",
-  },
-  {
-    title: "Cities and communities",
-    description:
-      "How do streets, public spaces, transportation, gardens, institutions, and relationships shape everyday life?",
-  },
-];
-
-const principles = [
-  "Technology should expand what people can do without weakening our judgment, agency, or connection to others.",
-  "Good systems should help people participate, contribute, and exercise judgment.",
-  "Small decisions and supportive conditions can compound into meaningful change.",
-  "The environments we create shape what people notice, understand, and are able to do.",
-];
-
-const pageTitle = `About | ${SITE_NAME}`;
-
-const pageDescription =
-  "About Dan Ryan Neff, whose work and interests span organizations, technology, accessibility, websites, creativity, health, cities, and community.";
 ---
 
 <BaseLayout
@@ -78,59 +32,50 @@ const pageDescription =
   ogDescription={pageDescription}
   ogImage={OG_IMAGE}
 >
-  <!-- Hero -->
+  <!-- A clear introduction, with the site's existing portrait and visual language. -->
   <section
     class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
+    aria-labelledby="about-heading"
   >
     <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-      <div
-        class="absolute -right-32 top-8 h-96 w-96 rounded-full bg-indigo-100/70 blur-3xl dark:bg-indigo-900/20"
-      >
-      </div>
-
-      <div
-        class="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-blue-100/60 blur-3xl dark:bg-blue-900/20"
-      >
-      </div>
+      <div class="absolute -right-24 top-0 h-80 w-80 rounded-full bg-blue-100/70 blur-3xl dark:bg-blue-900/20"></div>
+      <div class="absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-indigo-100/60 blur-3xl dark:bg-indigo-900/20"></div>
     </div>
-
-    <div
-      class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-16 lg:px-8 lg:py-32"
-    >
-      <div class="max-w-4xl">
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          About
+    <div class="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-[minmax(0,1.3fr)_minmax(220px,0.65fr)] lg:gap-16 lg:px-8 lg:py-24">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-400">
+          About Dan Ryan Neff
         </p>
-
-        <h1
-          class="mt-6 text-5xl font-bold leading-[1.06] tracking-tight text-gray-900 dark:text-white sm:text-6xl"
-        >
-          I am interested in how the worlds we create shape the lives we live.
+        <h1 id="about-heading" class="mt-5 text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl">
+          A little about me.
         </h1>
-
-        <div
-          class="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl"
-        >
-          <p>
-            I’m Dan Ryan Neff. My interests range from organizations and
-            technology to accessibility, creativity, health, cities, and
-            everyday life.
-          </p>
-
-          <p>
-            They connect through a common question: how do the environments we
-            create shape what people can notice, understand, create, contribute,
-            and become?
-          </p>
+        <p class="mt-6 max-w-2xl text-xl font-semibold leading-8 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-9">
+          I like helping people navigate complicated things, and I like making new things possible.
+        </p>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-700 dark:text-gray-300">
+          I'm Dan, based in Madison, Wisconsin. My work includes executive assistance and daily money management, grounded in years of experience coordinating people, information, and everyday responsibilities.
+        </p>
+        <p class="mt-4 max-w-2xl text-lg leading-8 text-gray-700 dark:text-gray-300">
+          I'm also an artist and a builder of digital projects. I'm interested in how technology, including AI, can help people create, work, and connect in better ways.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href="/contact/"
+            class="inline-flex min-h-12 items-center justify-center rounded-lg bg-blue-700 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-800 hover:text-white focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-blue-500 dark:text-gray-950 dark:hover:bg-blue-400 dark:hover:text-gray-950"
+          >
+            Get in touch
+            <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+          <a
+            href="/projects/"
+            class="inline-flex min-h-12 items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-900 transition-colors hover:border-blue-500 hover:text-blue-700 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-blue-400 dark:hover:text-blue-300"
+          >
+            Explore projects
+          </a>
         </div>
       </div>
-
-      <figure class="mx-auto w-full max-w-xs lg:mx-0 lg:justify-self-end">
-        <div
-          class="overflow-hidden rounded-[2rem] border border-gray-200 bg-gray-100 shadow-lg shadow-gray-200/60 dark:border-gray-700 dark:bg-gray-800 dark:shadow-black/20"
-        >
+      <figure class="mx-auto w-full max-w-[280px] sm:max-w-[320px] lg:justify-self-end">
+        <div class="overflow-hidden rounded-[2rem] border border-gray-200 bg-gray-100 shadow-lg shadow-gray-200/60 dark:border-gray-700 dark:bg-gray-800 dark:shadow-black/20">
           <img
             src="/images/dan-ryan-neff.webp"
             alt="Dan Ryan Neff outdoors"
@@ -139,289 +84,93 @@ const pageDescription =
             height="800"
             loading="eager"
             decoding="async"
-            fetchpriority="high"
           />
         </div>
-
-        <figcaption
-          class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400 lg:text-left"
-        >
-          Dan Ryan Neff
-        </figcaption>
       </figure>
     </div>
   </section>
 
-  <!-- Perspective -->
-  <section class="bg-white dark:bg-gray-900">
-    <div
-      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
-    >
-      <div>
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          A way of looking
-        </p>
+  <!-- Relevant experience, without a long resume or an abstract manifesto. -->
+  <section class="border-b border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950" aria-labelledby="experience-heading">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-400">Professional background</p>
+      <h2 id="experience-heading" class="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+        Work shaped by people and practical details.
+      </h2>
+      <p class="mt-4 max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300">
+        My experience has taken different forms, but much of it comes down to making complicated responsibilities more manageable and working well with the people involved.
+      </p>
+      <div class="mt-9 grid gap-5 md:grid-cols-3">
+        {experience.map((item) => (
+          <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-gray-800 dark:bg-gray-900 sm:p-7">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white">{item.title}</h3>
+            <p class="mt-4 text-base leading-7 text-gray-700 dark:text-gray-300">{item.description}</p>
+            {item.title === "Daily money management" && (
+              <a href="/dmm/" class="mt-5 inline-flex font-semibold text-blue-700 underline-offset-4 hover:underline dark:text-blue-400">
+                Learn about this service <span class="ml-2" aria-hidden="true">→</span>
+              </a>
+            )}
+          </article>
+        ))}
       </div>
+    </div>
+  </section>
 
+  <!-- Room for personality and ambition, with a clear route to the projects. -->
+  <section class="border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900" aria-labelledby="creative-heading">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[minmax(0,1.25fr)_minmax(230px,0.75fr)] lg:gap-16 lg:px-8 lg:py-20">
       <div class="max-w-3xl">
-        <h2
-          class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
-        >
-          Better lives are shaped by many conditions working together.
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-400">Creative work and technology</p>
+        <h2 id="creative-heading" class="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          I'm curious about what else we can make and do.
         </h2>
-
-        <div
-          class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-        >
-          <p>
-            They take shape through interacting conditions: health,
-            relationships, habits, tools, organizations, physical and digital
-            environments, and repeated choices.
-          </p>
-
-          <p>
-            I’m interested in how those conditions work together—and what helps
-            people and meaningful work flourish.
-          </p>
-
-          <p>
-            That interest shapes what I build, the work I take on, and the
-            questions I keep asking.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section
-    class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
-  >
-    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div class="grid gap-12 lg:grid-cols-[0.55fr_1fr]">
-        <div>
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-          >
-            Experience
-          </p>
-
-          <h2
-            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-          >
-            My perspective has been shaped through different kinds of work.
-          </h2>
-
-          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            I’ve spent years where people, systems, and technology meet. That
-            experience taught me to look beyond isolated problems and pay
-            attention to the conditions around them.
-          </p>
-        </div>
-
-        <div class="border-t border-gray-300 dark:border-gray-700">
-          {
-            experience.map((item, index) => (
-              <article class="grid gap-4 border-b border-gray-300 py-8 dark:border-gray-700 sm:grid-cols-[3rem_1fr]">
-                <span class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <div>
-                  <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
-                    {item.title}
-                  </h3>
-
-                  <p class="mt-4 max-w-2xl leading-7 text-gray-600 dark:text-gray-300">
-                    {item.description}
-                  </p>
-                </div>
-              </article>
-            ))
-          }
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Areas of interest -->
-  <section class="bg-white dark:bg-gray-900">
-    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div class="max-w-3xl">
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          Areas of interest
+        <p class="mt-5 text-lg leading-8 text-gray-700 dark:text-gray-300">
+          I create artwork, experiment with websites and digital tools, and keep learning about emerging technology. AI is an important part of that exploration, but so are design, accessibility, and the experience of the people using what we build.
         </p>
-
-        <h2
-          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-        >
-          These are areas I keep coming back to.
-        </h2>
-
-        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          My interests continue to evolve, but these are some of the places
-          where my attention regularly returns.
+        <p class="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+          This website is a home base for those projects and for the people and opportunities they may bring into my life. Some may become businesses; others are worth exploring because they are interesting or useful.
         </p>
-      </div>
-
-      <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {
-          interests.map((interest, index) => (
-            <article class="rounded-2xl border border-gray-200 bg-gray-50 p-7 dark:border-gray-800 dark:bg-gray-950 sm:p-8">
-              <div class="flex items-start gap-4">
-                <span class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <div>
-                  <h3 class="text-xl font-bold text-gray-900 dark:text-white">
-                    {interest.title}
-                  </h3>
-
-                  <p class="mt-4 leading-7 text-gray-600 dark:text-gray-300">
-                    {interest.description}
-                  </p>
-                </div>
-              </div>
-            </article>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Principles -->
-  <section class="bg-gray-900 text-white dark:bg-black">
-    <div
-      class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.62fr_1fr] lg:px-8 lg:py-28"
-    >
-      <div>
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-400"
-        >
-          Principles
-        </p>
-
-        <h2 class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
-          A few principles guide how I work and think.
-        </h2>
-
-        <p class="mt-6 max-w-xl text-lg leading-8 text-gray-300">
-          They are not a fixed framework, but ideas I keep returning to.
-        </p>
-      </div>
-
-      <ol class="border-t border-gray-700">
-        {
-          principles.map((principle, index) => (
-            <li class="grid grid-cols-[2rem_1fr] gap-4 border-b border-gray-700 py-6 sm:grid-cols-[3rem_1fr]">
-              <span class="pt-1 font-mono text-xs text-gray-500">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
-              <p class="text-xl leading-8 text-gray-200 sm:text-2xl">
-                {principle}
-              </p>
-            </li>
-          ))
-        }
-      </ol>
-    </div>
-  </section>
-
-  <!-- Work and projects -->
-  <section class="bg-white dark:bg-gray-900">
-    <div
-      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:px-8 lg:py-28"
-    >
-      <div class="max-w-3xl">
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          Work and projects
-        </p>
-
-        <h2
-          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-        >
-          I like turning ideas into something real.
-        </h2>
-
-        <div
-          class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-        >
-          <p>
-            That might mean building a website, creating a resource, improving a
-            process, or helping an organization work through a challenge.
-          </p>
-
-          <p>
-            My projects reflect how I tend to work: with curiosity, practical
-            judgment, and a desire to make something useful.
-          </p>
-        </div>
-
-        <a
-          href="/projects/"
-          class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-        >
-          Explore the projects
-          <span class="ml-2" aria-hidden="true">→</span>
+        <a href="/projects/" class="mt-7 inline-flex font-semibold text-blue-700 underline-offset-4 hover:underline dark:text-blue-400">
+          See what I'm creating <span class="ml-2" aria-hidden="true">→</span>
         </a>
       </div>
-
-      <div class="flex justify-center lg:justify-end">
+      <figure class="mx-auto w-full max-w-xs sm:max-w-sm lg:justify-self-end" aria-hidden="true">
         <img
           src="/images/dot-compilation.webp"
-          alt="A colorful collection of connected circular illustrations"
-          class="w-full max-w-md"
+          alt=""
+          class="h-auto w-full"
           width="800"
           height="800"
           loading="lazy"
           decoding="async"
         />
-      </div>
+      </figure>
     </div>
   </section>
 
-  <!-- Invitation -->
-  <section
-    class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
-  >
-    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div
-        class="rounded-3xl border border-gray-200 bg-white px-6 py-14 dark:border-gray-800 dark:bg-gray-900 sm:px-10 lg:px-14 lg:py-20"
-      >
-        <div class="max-w-4xl">
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-          >
-            Continue the conversation
-          </p>
-
-          <h2
-            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-          >
-            Good conversations can lead to useful work.
-          </h2>
-
-          <p
-            class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
-          >
-            You may be building something, navigating change, or exploring a
-            questions that overlaps with mine, I'd be glad to talk.
-          </p>
-
+  <!-- A relationship-oriented invitation, aligned with the new Contact page. -->
+  <section class="bg-gray-50 dark:bg-gray-950" aria-labelledby="connect-heading">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <div class="rounded-3xl border border-gray-200 bg-white px-6 py-10 dark:border-gray-800 dark:bg-gray-900 sm:px-10 sm:py-12 lg:px-12">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-400">Let's connect</p>
+        <h2 id="connect-heading" class="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          Good work often starts with a conversation.
+        </h2>
+        <p class="mt-5 max-w-3xl text-lg leading-8 text-gray-700 dark:text-gray-300">
+          If you need practical help, see a possibility for collaboration, or just think we should meet, I'd be glad to hear from you.
+        </p>
+        <div class="mt-7 flex flex-wrap gap-3">
           <a
             href="/contact/"
-            class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+            class="inline-flex min-h-12 items-center justify-center rounded-lg bg-blue-700 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-800 hover:text-white focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-blue-500 dark:text-gray-950 dark:hover:bg-blue-400 dark:hover:text-gray-950"
           >
-            Start a conversation
-            <span class="ml-2" aria-hidden="true">→</span>
+            Start a conversation <span class="ml-2" aria-hidden="true">→</span>
+          </a>
+          <a
+            href="mailto:danryanneff@gmail.com"
+            class="inline-flex min-h-12 items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-900 transition-colors hover:border-blue-500 hover:text-blue-700 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-blue-400 dark:hover:text-blue-300"
+          >
+            Email Dan directly
           </a>
         </div>
       </div>
