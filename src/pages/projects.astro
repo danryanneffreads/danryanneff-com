@@ -2,67 +2,62 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { SITE_NAME, OG_IMAGE } from "../lib/constants";
 
+// Add another project here when it is ready to share.
+// The cards below will automatically expand to include it.
 const projects = [
   {
-    title: "Mandalafy",
-    category: "Interactive creativity",
-    introduction:
-      "Mandalafy is a guided creative tool for making a mandala one choice at a time.",
-    body: [
-      "Mandalas combine structure with freedom. Every choice influences the whole, yet the finished design can still feel surprising and distinctly your own.",
-      "I created Mandalafy to make that kind of creative experience approachable. Rather than beginning with a blank canvas, you choose colors, shapes, patterns, and arrangements as the design gradually emerges.",
-      "The experience provides a framework without taking over the creative decisions. You can experiment, revise, and watch the composition change through your participation.",
-      "When the design is finished, you can save it or choose to place it on a product. Making the mandala is free, and buying something is entirely optional. The creative process comes first.",
-    ],
+    id: "mandalafy",
+    name: "Mandalafy",
+    category: "Art & interactive creativity",
+    headline: "Making mandalas more playful and personal.",
+    description:
+      "Mandalafy explores an inviting way to create mandalas through color, pattern, and experimentation.",
+    detail:
+      "I'm also interested in making it easy to turn a finished design into something tangible, such as a product you can enjoy or share.",
     image: "/images/mandala-woven-sunlight-660.webp",
-    imageAlt:
-      "A colorful geometric mandala created with the Mandalafy design tool",
+    imageAlt: "Colorful geometric mandala with intricate radial patterns",
+    imageWidth: 660,
+    imageHeight: 660,
     href: "/mandalafy/",
-    linkLabel: "Explore Mandalafy",
-    accent: "Art, attention, and play",
+    linkText: "Explore Mandalafy",
   },
   {
-    title: "LandingBio",
-    category: "Personal websites",
-    introduction:
-      "LandingBio grew from a simple question: what if everyone had a thoughtful home on the web?",
-    body: [
-      "Most people now have an online presence, but much of it exists inside platforms built around feeds, follower counts, reactions, and continual posting.",
-      "LandingBio offers a different model: a personal website organized around who you are, what you do, what matters to you, and what you want others to find.",
-      "It can support professional work, creative projects, community involvement, personal interests, or simply a more intentional introduction to yourself.",
-      "There is no social feed to maintain and no audience metric to chase. The goal is to help people create a digital place that feels more stable, personal, and genuinely their own.",
-    ],
+    id: "landingbio",
+    name: "LandingBio",
+    category: "Personal presence online",
+    headline: "A more intentional home on the web.",
+    description:
+      "LandingBio considers how a personal website can introduce someone beyond a social profile or a stream of posts.",
+    detail:
+      "The idea is to help people show what matters to them and create clearer, more personal ways for others to connect.",
     image: "/images/dot-compilation.webp",
-    imageAlt:
-      "An abstract composition of colorful dots and connected forms",
+    imageAlt: "An abstract composition of colorful dots and connected forms",
+    imageWidth: 800,
+    imageHeight: 800,
     href: "/landingbio/",
-    linkLabel: "Explore LandingBio",
-    accent: "Identity, presence, and connection",
+    linkText: "Explore LandingBio",
   },
   {
-    title: "ImagineThis.Site",
-    category: "Website ideas and guides",
-    introduction:
-      "Many people know they need a website long before they know what that website should become.",
-    body: [
-      "ImagineThis.Site explores that gap through concept websites, practical guides, and small experiments in digital design.",
-      "The concept sites imagine fictional businesses, organizations, places, events, and services. By giving an idea a visual form, they make it easier to see how different choices might shape the experience.",
-      "The guides help people think through questions such as what a website needs to accomplish, what visitors need to understand, which tools may fit, and how the finished site should feel.",
-      "The project is both practical and imaginative: a place to learn about websites while also seeing what becomes possible when an idea is developed with care.",
-    ],
+    id: "imaginethis-site",
+    name: "ImagineThis.Site",
+    category: "Websites & imagination",
+    headline: "Helping people picture what a website could be.",
+    description:
+      "ImagineThis.Site explores ideas through concept websites, visual examples, and practical guidance.",
+    detail:
+      "It's a place to experiment with how websites might look, feel, and work before committing to a particular direction.",
     image: "/images/VividRhythms.webp",
-    imageAlt:
-      "An expressive abstract artwork with layered shapes and vivid visual rhythms",
+    imageAlt: "Expressive abstract artwork with vivid colors and layered forms",
+    imageWidth: 1200,
+    imageHeight: 900,
     href: "/imaginethis-site/",
-    linkLabel: "Explore ImagineThis.Site",
-    accent: "Websites, imagination, and possibility",
+    linkText: "Explore ImagineThis.Site",
   },
 ];
 
 const pageTitle = `Projects | ${SITE_NAME}`;
-
 const pageDescription =
-  "Explore Mandalafy, LandingBio, and ImagineThis.Site—creative and practical projects by Dan Ryan Neff involving art, personal websites, digital identity, and thoughtful web design.";
+  "Explore creative and digital projects by Dan Ryan Neff, including Mandalafy, LandingBio, and ImagineThis.Site, and get in touch about ideas or collaborations.";
 ---
 
 <BaseLayout
@@ -72,411 +67,195 @@ const pageDescription =
   ogDescription={pageDescription}
   ogImage={OG_IMAGE}
 >
-  <!-- Hero -->
+  <!-- A direct introduction instead of an extended explanation of the philosophy. -->
   <section
     class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
+    aria-labelledby="projects-heading"
   >
     <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-      <div
-        class="absolute -right-32 top-8 h-96 w-96 rounded-full bg-blue-100/70 blur-3xl dark:bg-blue-900/20"
-      >
-      </div>
-
-      <div
-        class="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-indigo-100/60 blur-3xl dark:bg-indigo-900/20"
-      >
-      </div>
+      <div class="absolute -right-24 top-0 h-80 w-80 rounded-full bg-blue-100/70 blur-3xl dark:bg-blue-900/20"></div>
+      <div class="absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-indigo-100/60 blur-3xl dark:bg-indigo-900/20"></div>
     </div>
 
-    <div
-      class="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32"
-    >
-      <div class="max-w-4xl">
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          Projects
+    <div class="relative mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-400">
+          Creative &amp; digital work
         </p>
-
         <h1
-          class="mt-6 text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl"
+          id="projects-heading"
+          class="mt-5 text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl"
         >
-          Projects are one way I explore ideas.
+          Projects I'm building.
         </h1>
-
-        <div
-          class="mt-8 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300 sm:text-xl"
-        >
-          <p>
-            Some questions are easiest to explore by making something.
-          </p>
-
-          <p>
-            These projects combine curiosity, design, technology, creativity,
-            and practical problem solving. Some are tools. Some are
-            experiments. Each continues to evolve as I learn.
-          </p>
-
-          <p>
-            Together, they show where several of my interests have taken
-            concrete form.
-          </p>
-        </div>
-
-        <div class="mt-10 flex flex-wrap gap-4">
+        <p class="mt-6 max-w-2xl text-xl font-semibold leading-8 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-9">
+          Art, technology, and ideas made tangible.
+        </p>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-700 dark:text-gray-300">
+          Some of these projects are creative experiences; others explore new ways to use the web. They continue to evolve as I learn and build.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
           <a
-            href="#mandalafy"
-            class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
+            href="#project-list"
+            class="inline-flex min-h-12 items-center justify-center rounded-lg bg-blue-700 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-800 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-blue-500 dark:text-gray-950 dark:hover:bg-blue-400"
           >
-            Explore the projects
-            <span class="ml-2" aria-hidden="true">↓</span>
+            Explore the projects <span class="ml-2" aria-hidden="true">↓</span>
           </a>
-
           <a
             href="/contact/"
-            class="inline-flex items-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-medium text-gray-800 transition-colors hover:border-blue-500 hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:border-blue-400 dark:hover:text-blue-400 dark:focus:ring-offset-gray-900"
+            class="inline-flex min-h-12 items-center justify-center rounded-lg border border-gray-300 bg-white px-6 py-3 font-semibold text-gray-900 transition-colors hover:border-blue-500 hover:text-blue-700 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100 dark:hover:border-blue-400 dark:hover:text-blue-300"
           >
-            Start a conversation
+            Get in touch
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Project overview -->
-  <section class="bg-white dark:bg-gray-900">
-    <div
-      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
-    >
-      <div>
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          The workshop
-        </p>
-      </div>
-
-      <div class="max-w-3xl">
-        <h2
-          class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
-        >
-          Each project began with something I wanted to understand, improve, or
-          bring into existence.
-        </h2>
-
-        <div
-          class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-        >
-          <p>
-            Mandalafy explores guided creativity. LandingBio explores identity
-            and personal presence online. ImagineThis.Site explores how ideas
-            become useful, expressive websites.
-          </p>
-
-          <p>
-            They are different projects, but they share an approach: start with
-            a worthwhile question, make something real, pay attention to what
-            happens, and continue refining the idea.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mandalafy -->
+  <!-- Compact project previews: artwork and description appear side by side on desktop. -->
   <section
-    id="mandalafy"
-    class="scroll-mt-24 border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+    id="project-list"
+    class="scroll-mt-24 border-b border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
+    aria-label="Featured projects"
   >
-    <div
-      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_0.88fr] lg:gap-20 lg:px-8 lg:py-28"
-    >
-      <div>
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          {projects[0].category}
-        </p>
-
-        <h2
-          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-        >
-          {projects[0].title}
-        </h2>
-
-        <p
-          class="mt-6 text-xl font-medium leading-8 text-gray-900 dark:text-white"
-        >
-          {projects[0].introduction}
-        </p>
-
-        <div
-          class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-        >
-          {
-            projects[0].body.map((paragraph) => (
-              <p>{paragraph}</p>
-            ))
-          }
-        </div>
-
-        <div class="mt-9">
-          <a
-            href={projects[0].href}
-            class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
+    <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8 lg:py-14">
+      <div class="space-y-5">
+        {projects.map((project) => (
+          <article
+            id={project.id}
+            aria-labelledby={`${project.id}-heading`}
+            class="project-card scroll-mt-24 overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900"
           >
-            {projects[0].linkLabel}
-            <span class="ml-2" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
+            <div class="project-art bg-gray-100 dark:bg-gray-950">
+              <img
+                src={project.image}
+                alt={project.imageAlt}
+                width={project.imageWidth}
+                height={project.imageHeight}
+                loading="lazy"
+                decoding="async"
+                class="project-art-image"
+              />
+            </div>
 
-      <figure>
-        <div
-          class="overflow-hidden rounded-3xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-800 dark:bg-gray-900 sm:p-6"
-        >
-          <img
-            src={projects[0].image}
-            alt={projects[0].imageAlt}
-            class="mx-auto aspect-square w-full max-w-lg rounded-2xl object-cover"
-            width="660"
-            height="660"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-
-        <figcaption
-          class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400"
-        >
-          {projects[0].accent}
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- LandingBio -->
-  <section
-    id="landingbio"
-    class="scroll-mt-24 bg-white dark:bg-gray-900"
-  >
-    <div
-      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.88fr_1fr] lg:gap-20 lg:px-8 lg:py-28"
-    >
-      <figure class="order-2 lg:order-1">
-        <div
-          class="overflow-hidden rounded-3xl border border-gray-200 bg-gray-50 p-5 dark:border-gray-800 dark:bg-gray-950 sm:p-8"
-        >
-          <img
-            src={projects[1].image}
-            alt={projects[1].imageAlt}
-            class="mx-auto w-full max-w-lg"
-            width="800"
-            height="800"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-
-        <figcaption
-          class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400"
-        >
-          {projects[1].accent}
-        </figcaption>
-      </figure>
-
-      <div class="order-1 lg:order-2">
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          {projects[1].category}
-        </p>
-
-        <h2
-          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-        >
-          {projects[1].title}
-        </h2>
-
-        <p
-          class="mt-6 text-xl font-medium leading-8 text-gray-900 dark:text-white"
-        >
-          {projects[1].introduction}
-        </p>
-
-        <div
-          class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-        >
-          {
-            projects[1].body.map((paragraph) => (
-              <p>{paragraph}</p>
-            ))
-          }
-        </div>
-
-        <div class="mt-9">
-          <a
-            href={projects[1].href}
-            class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-          >
-            {projects[1].linkLabel}
-            <span class="ml-2" aria-hidden="true">→</span>
-          </a>
-        </div>
+            <div class="project-content">
+              <p class="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700 dark:text-blue-400 sm:text-sm">
+                {project.category}
+              </p>
+              <h2
+                id={`${project.id}-heading`}
+                class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white"
+              >
+                {project.name}
+              </h2>
+              <p class="mt-3 text-lg font-semibold leading-7 text-gray-900 dark:text-gray-100">
+                {project.headline}
+              </p>
+              <p class="mt-3 text-base leading-7 text-gray-700 dark:text-gray-300">
+                {project.description}
+              </p>
+              <p class="mt-2 text-base leading-7 text-gray-700 dark:text-gray-300">
+                {project.detail}
+              </p>
+              <a
+                href={project.href}
+                class="mt-5 inline-flex min-h-11 w-fit items-center font-semibold text-blue-700 underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600 dark:text-blue-400"
+              >
+                {project.linkText} <span class="ml-2" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
-  <!-- ImagineThis.Site -->
-  <section
-    id="imaginethis-site"
-    class="scroll-mt-24 border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
-  >
-    <div
-      class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_0.88fr] lg:gap-20 lg:px-8 lg:py-28"
-    >
-      <div>
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          {projects[2].category}
-        </p>
-
-        <h2
-          class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-        >
-          {projects[2].title}
-        </h2>
-
-        <p
-          class="mt-6 text-xl font-medium leading-8 text-gray-900 dark:text-white"
-        >
-          {projects[2].introduction}
-        </p>
-
-        <div
-          class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-        >
-          {
-            projects[2].body.map((paragraph) => (
-              <p>{paragraph}</p>
-            ))
-          }
-        </div>
-
-        <div class="mt-9">
-          <a
-            href={projects[2].href}
-            class="inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-950"
-          >
-            {projects[2].linkLabel}
-            <span class="ml-2" aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
-
-      <figure>
-        <div
-          class="overflow-hidden rounded-3xl border border-gray-200 bg-white p-5 shadow-sm dark:border-gray-800 dark:bg-gray-900 sm:p-8"
-        >
-          <img
-            src={projects[2].image}
-            alt={projects[2].imageAlt}
-            class="mx-auto w-full max-w-lg rounded-2xl"
-            width="1200"
-            height="900"
-            loading="lazy"
-            decoding="async"
-          />
-        </div>
-
-        <figcaption
-          class="mt-4 text-center text-sm text-gray-500 dark:text-gray-400"
-        >
-          {projects[2].accent}
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Future projects -->
-  <section class="bg-white dark:bg-gray-900">
-    <div
-      class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
-    >
-      <div>
-        <p
-          class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-        >
-          What comes next
-        </p>
-      </div>
-
-      <div class="max-w-3xl">
-        <h2
-          class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
-        >
-          There will always be another project.
-        </h2>
-
-        <div
-          class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-        >
-          <p>
-            Some ideas become websites. Others become tools, conversations,
-            essays, artwork, resources, or entirely new directions I have not
-            anticipated yet.
-          </p>
-
-          <p>
-            This collection reflects where my curiosity has led so far—not
-            where it ends.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Invitation -->
-  <section
-    class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
-  >
-    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-      <div
-        class="rounded-3xl border border-gray-200 bg-white px-6 py-14 dark:border-gray-800 dark:bg-gray-900 sm:px-10 lg:px-14 lg:py-20"
-      >
-        <div class="max-w-4xl">
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400"
-          >
-            Ideas can connect
-          </p>
-
-          <h2
-            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-          >
-            A project may begin with one person’s question and grow through
-            conversation.
+  <!-- Encourage a genuine interaction without promising a product or service not yet available. -->
+  <section class="bg-white dark:bg-gray-900" aria-labelledby="project-contact-heading">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+      <div class="rounded-3xl border border-gray-200 bg-gray-50 px-6 py-10 dark:border-gray-800 dark:bg-gray-950 sm:px-10 sm:py-12">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-700 dark:text-blue-400">Let's connect</p>
+          <h2 id="project-contact-heading" class="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+            See something worth exploring together?
           </h2>
-
-          <p
-            class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
-          >
-            Something here may connect with an idea you are developing, a
-            challenge you are considering, or work you would like to bring into
-            the world. I welcome thoughtful conversations and unexpected
-            possibilities.
+          <p class="mt-4 text-lg leading-8 text-gray-700 dark:text-gray-300">
+            I'd welcome feedback, a fresh perspective, or a conversation about collaborating on one of these projects. New ideas are welcome, too.
           </p>
-
-          <a
-            href="/contact/"
-            class="mt-9 inline-flex items-center rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-          >
-            Start a conversation
-            <span class="ml-2" aria-hidden="true">→</span>
-          </a>
+          <div class="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+            <a
+              href="/contact/"
+              class="inline-flex min-h-12 items-center justify-center rounded-lg bg-blue-700 px-6 py-3 font-semibold text-white transition-colors hover:bg-blue-800 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-blue-600 dark:bg-blue-500 dark:text-gray-950 dark:hover:bg-blue-400"
+            >
+              Start a conversation
+            </a>
+            <a href="mailto:danryanneff@gmail.com" class="font-semibold text-blue-700 underline-offset-4 hover:underline dark:text-blue-400">
+              Email me directly <span class="ml-1" aria-hidden="true">→</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  /* Explicit CSS grid instead of a complex generated Tailwind grid class.
+     This fixes the tall, full-width image panels in the desktop layout. */
+  .project-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .project-art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    padding: 24px;
+    overflow: hidden;
+  }
+
+  .project-art-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(100%, 250px);
+    max-height: 240px;
+    object-fit: contain;
+  }
+
+  .project-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    padding: 26px;
+  }
+
+  @media (min-width: 640px) {
+    .project-content {
+      padding: 34px;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .project-card {
+      grid-template-columns: minmax(260px, 34%) minmax(0, 1fr);
+    }
+
+    .project-art {
+      min-height: 320px;
+      padding: 28px;
+    }
+
+    .project-art-image {
+      max-width: min(100%, 260px);
+      max-height: 260px;
+    }
+
+    .project-content {
+      padding: 34px 40px;
+    }
+  }
+</style>

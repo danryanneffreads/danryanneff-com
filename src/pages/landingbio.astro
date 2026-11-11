@@ -1,480 +1,188 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const features = [
-  {
-    title: "Introduce yourself",
-    description:
-      "Share a concise biography, an image, and enough context for visitors to understand who you are.",
-  },
-  {
-    title: "Highlight what matters now",
-    description:
-      "Feature a project, idea, update, piece of work, or direction that deserves attention.",
-  },
-  {
-    title: "Connect the pieces",
-    description:
-      "Guide visitors to your websites, portfolio, store, newsletter, profiles, communities, and other destinations.",
-  },
-  {
-    title: "Change as you change",
-    description:
-      "Revise your introduction and featured content as your work, interests, and priorities evolve.",
-  },
-];
-
-const uses = [
-  "A professional introduction",
-  "A home for creative work",
-  "A starting point for several projects",
-  "A personal alternative to a social profile",
-  "A central page for links and current work",
-  "A simple presence for someone without a full website",
-];
 ---
 
 <BaseLayout
   title="LandingBio | Dan Ryan Neff"
-  description="LandingBio is a free personal entry page for introducing yourself, highlighting what matters, and connecting visitors with your work, websites, projects, and communities."
+  description="LandingBio is a simple personal page for introducing yourself, sharing what matters, and helping people find their way to your work and ways to connect."
 >
-  <main>
-    <!-- Hero -->
-    <section
-      class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"
-    >
-      <div class="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div
-          class="absolute -right-24 top-0 h-96 w-96 rounded-full bg-cyan-100/70 blur-3xl dark:bg-cyan-900/20"
-        >
-        </div>
+  <!-- An immediate explanation and a useful next step -->
+  <section class="relative overflow-hidden border-b border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900">
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div class="absolute -right-24 top-0 h-72 w-72 rounded-full bg-cyan-100/60 blur-3xl dark:bg-cyan-900/20"></div>
+      <div class="absolute -left-24 bottom-0 h-64 w-64 rounded-full bg-indigo-100/60 blur-3xl dark:bg-indigo-900/20"></div>
+    </div>
 
-        <div
-          class="absolute -left-24 bottom-0 h-80 w-80 rounded-full bg-indigo-100/60 blur-3xl dark:bg-indigo-900/20"
-        >
-        </div>
-      </div>
+    <div class="relative mx-auto max-w-6xl px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600 dark:text-blue-400">
+          Digital project
+        </p>
+        <h1 class="mt-4 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl lg:text-6xl">
+          LandingBio
+        </h1>
+        <p class="mt-5 text-2xl font-medium leading-snug text-gray-900 dark:text-white sm:text-3xl">
+          A simple place to introduce yourself online.
+        </p>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-300">
+          LandingBio helps people understand who you are, what you're working on, and where to go next. Make a personal page with a short introduction, useful links, and room to change as you do. You don't need a full website or a constant stream of posts.
+        </p>
 
-      <div
-        class="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-32"
-      >
-        <div class="max-w-4xl">
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a
+            href="https://landingbio.com/start-here/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="landingbio-action landingbio-action--primary inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white"
           >
-            Personal websites
-          </p>
-
-          <h1
-            class="mt-6 text-5xl font-bold leading-[1.04] tracking-tight text-gray-900 dark:text-white sm:text-6xl lg:text-7xl"
+            Get started
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9" /></svg>
+          </a>
+          <a
+            href="https://landingbio.com/members"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="landingbio-action landingbio-action--secondary inline-flex items-center justify-center rounded-lg border border-gray-300 px-5 py-3 font-semibold text-gray-900 dark:border-gray-700 dark:text-white"
           >
-            LandingBio
-          </h1>
-
-          <p
-            class="mt-7 max-w-3xl text-2xl leading-9 text-gray-700 dark:text-gray-300"
-          >
-            A thoughtful place to begin with someone online.
-          </p>
-
-          <div
-            class="mt-6 max-w-3xl space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-          >
-            <p>
-              LandingBio is a free personal page for introducing yourself,
-              highlighting what matters, and helping visitors discover the
-              different places where your work and interests live.
-            </p>
-
-            <p>
-              It gives you more room than a social profile and less complexity
-              than a full website.
-            </p>
-          </div>
-
-          <div class="mt-9 flex flex-wrap gap-4">
-            <a
-              href="https://landingbio.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center rounded-lg bg-sky-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-            >
-              Visit LandingBio
-              <span class="ml-2" aria-hidden="true">↗</span>
-            </a>
-
-            <a
-              href="#why-landingbio"
-              class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-offset-gray-900"
-            >
-              Learn more
-              <span class="ml-2" aria-hidden="true">↓</span>
-            </a>
-          </div>
-        </div>
-
-        <figure class="mt-14">
-          <div
-            class="overflow-hidden rounded-[2rem] border border-gray-200 bg-gray-950 shadow-xl shadow-gray-200/60 dark:border-gray-800 dark:shadow-black/20"
-          >
-            <img
-              src="/images/landingbio-hero-personal-entry-page-v1.webp"
-              alt="LandingBio homepage with the words Your Personal Entry Page on the Internet"
-              class="aspect-[14/5] w-full object-cover"
-              width="1680"
-              height="600"
-              loading="eager"
-              decoding="async"
-              fetchpriority="high"
-            />
-          </div>
-        </figure>
-      </div>
-    </section>
-
-    <!-- Why LandingBio -->
-    <section
-      id="why-landingbio"
-      class="scroll-mt-24 bg-white dark:bg-gray-900"
-    >
-      <div
-        class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
-      >
-        <div>
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
-          >
-            Why LandingBio
-          </p>
-        </div>
-
-        <div class="max-w-3xl">
-          <h2
-            class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
-          >
-            Most people have an online presence. Fewer have a place that feels
-            genuinely their own.
-          </h2>
-
-          <div
-            class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-          >
-            <p>
-              Social profiles are useful, but they are shaped by the priorities
-              of the platform: feeds, reactions, follower counts, advertising,
-              and a continual stream of new posts.
-            </p>
-
-            <p>
-              A personal website offers more independence, but not everyone
-              needs—or wants—to build and maintain a complete site.
-            </p>
-
-            <p>
-              LandingBio sits between those options. It offers a stable,
-              personal page with enough room for identity, context, current
-              work, and meaningful links.
-            </p>
-          </div>
+            Explore profiles
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9" /></svg>
+          </a>
         </div>
       </div>
-    </section>
 
-    <!-- What it contains -->
-    <section
-      class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
-    >
-      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div class="max-w-3xl">
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
-          >
-            What you can create
+      <!-- Use the existing artwork, but keep it visually contained on desktop -->
+      <figure class="mt-10 max-w-4xl overflow-hidden rounded-2xl border border-gray-200 bg-gray-950 shadow-sm dark:border-gray-700 sm:mt-12">
+        <img
+          src="/images/landingbio-hero-personal-entry-page-v1.webp"
+          alt="LandingBio project artwork showing a personal entry page on the internet"
+          width="1680"
+          height="600"
+          class="landingbio-preview block h-auto w-full object-contain"
+          loading="eager"
+          decoding="async"
+        />
+      </figure>
+    </div>
+  </section>
+
+  <!-- Benefits in plain language -->
+  <section class="bg-gray-50 py-14 dark:bg-gray-950 sm:py-20">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          What you can do with it
+        </h2>
+        <p class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-300">
+          Start small. Your page can become more useful as your work and interests evolve.
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Introduce yourself</h3>
+          <p class="mt-3 leading-7 text-gray-600 dark:text-gray-300">
+            Add an image and a short bio so visitors can quickly understand who you are.
           </p>
-
-          <h2
-            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-          >
-            One page that helps visitors understand you and decide where to go
-            next.
-          </h2>
-
-          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            A LandingBio page combines a clear introduction with selected
-            content and destinations.
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Point people somewhere useful</h3>
+          <p class="mt-3 leading-7 text-gray-600 dark:text-gray-300">
+            Share links to your work, projects, profiles, or ways to get in touch.
           </p>
-        </div>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-gray-900">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">Keep it current</h3>
+          <p class="mt-3 leading-7 text-gray-600 dark:text-gray-300">
+            Update what you're highlighting as your priorities change, without rebuilding a website.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        <div class="mt-14 grid gap-6 md:grid-cols-2">
-          {
-            features.map((feature, index) => (
-              <article
-                class="rounded-2xl border border-gray-200 bg-white p-7 dark:border-gray-800 dark:bg-gray-900 sm:p-8"
-              >
-                <div class="flex items-start gap-4">
-                  <span class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+  <!-- A brief audience explanation and personal context -->
+  <section class="border-t border-gray-200 bg-white py-14 dark:border-gray-800 dark:bg-gray-900 sm:py-20">
+    <div class="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600 dark:text-blue-400">Who it's for</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          One place to start, even when you do many things.
+        </h2>
+        <p class="mt-5 text-lg leading-8 text-gray-600 dark:text-gray-300">
+          LandingBio can be useful for independent professionals, artists, makers, people with several projects, or anyone who wants a clear personal introduction to share. It offers a lightweight alternative to building an entire website.
+        </p>
+      </div>
+      <div>
+        <p class="text-sm font-semibold uppercase tracking-[0.16em] text-blue-600 dark:text-blue-400">Why I built it</p>
+        <h2 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+          Make it easier to connect.
+        </h2>
+        <p class="mt-5 text-lg leading-8 text-gray-600 dark:text-gray-300">
+          I like the idea of having more say in how we introduce ourselves online and how people find their way to us. LandingBio is my exploration of a simple, flexible starting point for those connections.
+        </p>
+      </div>
+    </div>
+  </section>
 
-                  <div>
-                    <h3
-                      class="text-2xl font-bold text-gray-900 dark:text-white"
-                    >
-                      {feature.title}
-                    </h3>
-
-                    <p
-                      class="mt-4 leading-7 text-gray-600 dark:text-gray-300"
-                    >
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              </article>
-            ))
-          }
+  <!-- A clear action, without requiring the visitor to read more -->
+  <section class="border-t border-gray-200 bg-gray-50 py-14 dark:border-gray-800 dark:bg-gray-950 sm:py-16">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-gray-200 bg-white p-7 dark:border-gray-800 dark:bg-gray-900 sm:p-10">
+        <h2 class="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl">
+          See what you can make of it.
+        </h2>
+        <p class="mt-3 max-w-2xl text-lg leading-8 text-gray-600 dark:text-gray-300">
+          Try LandingBio for yourself. If you have feedback or an idea worth exploring together, I'd be glad to hear from you.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="https://landingbio.com/start-here/" target="_blank" rel="noopener noreferrer" class="landingbio-action landingbio-action--primary inline-flex items-center rounded-lg bg-blue-600 px-5 py-3 font-semibold text-white">
+            Visit LandingBio
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 17 17 7M8 7h9v9" /></svg>
+          </a>
+          <a href="/contact/" class="landingbio-action landingbio-action--secondary inline-flex items-center rounded-lg border border-gray-300 px-5 py-3 font-semibold text-gray-900 dark:border-gray-700 dark:text-white">
+            Contact me
+          </a>
+          <a href="/projects/" class="inline-flex items-center px-2 py-3 font-medium text-blue-700 dark:text-blue-400">Other projects</a>
         </div>
       </div>
-    </section>
-
-    <!-- Designed to lead outward -->
-    <section class="bg-white dark:bg-gray-900">
-      <div
-        class="mx-auto grid max-w-6xl items-center gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.88fr_1.12fr] lg:gap-20 lg:px-8 lg:py-28"
-      >
-        <div
-          class="rounded-3xl border border-gray-200 bg-gradient-to-br from-sky-50 via-white to-indigo-50 p-8 dark:border-gray-800 dark:from-gray-950 dark:via-gray-900 dark:to-indigo-950/30 sm:p-10"
-        >
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
-          >
-            A point of departure
-          </p>
-
-          <p
-            class="mt-6 text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
-          >
-            LandingBio is not meant to contain your entire online life.
-          </p>
-
-          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            It gives visitors enough context to understand you—and then helps
-            them continue toward the places that matter.
-          </p>
-        </div>
-
-        <div>
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
-          >
-            Designed to lead outward
-          </p>
-
-          <h2
-            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-          >
-            Your presence does not have to live inside one platform.
-          </h2>
-
-          <div
-            class="mt-7 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-          >
-            <p>
-              Your work, interests, relationships, and communities may be
-              spread across many places online.
-            </p>
-
-            <p>
-              LandingBio can connect those places without asking one platform
-              to become the permanent center of everything.
-            </p>
-
-            <p>
-              It can direct visitors to a personal website, portfolio, store,
-              newsletter, organization, social profile, community, or any other
-              destination you choose.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Possible uses -->
-    <section
-      class="border-y border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
-    >
-      <div
-        class="mx-auto grid max-w-6xl gap-12 px-4 py-20 sm:px-6 lg:grid-cols-[0.58fr_1fr] lg:px-8 lg:py-28"
-      >
-        <div>
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
-          >
-            Different people, different purposes
-          </p>
-
-          <h2
-            class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-          >
-            A LandingBio page can serve many kinds of lives and work.
-          </h2>
-
-          <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-            The structure is simple enough to remain approachable and flexible
-            enough to support very different uses.
-          </p>
-        </div>
-
-        <ul class="border-t border-gray-300 dark:border-gray-700">
-          {
-            uses.map((use, index) => (
-              <li
-                class="grid grid-cols-[2rem_1fr] gap-4 border-b border-gray-300 py-6 dark:border-gray-700 sm:grid-cols-[3rem_1fr]"
-              >
-                <span class="pt-1 font-mono text-xs text-gray-400 dark:text-gray-500">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-
-                <p class="text-xl leading-8 text-gray-800 dark:text-gray-200">
-                  {use}
-                </p>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-    </section>
-
-    <!-- A living introduction -->
-    <section class="bg-white dark:bg-gray-900">
-      <div
-        class="mx-auto grid max-w-6xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.42fr_1fr] lg:px-8 lg:py-28"
-      >
-        <div>
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
-          >
-            A living introduction
-          </p>
-        </div>
-
-        <div class="max-w-3xl">
-          <h2
-            class="text-3xl font-semibold leading-tight tracking-tight text-gray-900 dark:text-white sm:text-4xl"
-          >
-            A personal page should be able to change without pretending your
-            past no longer exists.
-          </h2>
-
-          <div
-            class="mt-8 space-y-5 text-lg leading-8 text-gray-600 dark:text-gray-300"
-          >
-            <p>
-              People develop new interests, begin projects, leave roles, join
-              communities, and reconsider how they want to be understood.
-            </p>
-
-            <p>
-              LandingBio lets you update what you emphasize without requiring
-              a complete reinvention of your online identity.
-            </p>
-
-            <p>
-              It can remain selective and current: a useful introduction to the
-              person you are now and the directions you are following.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why I built it -->
-    <section class="bg-sky-950 text-white">
-      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div class="max-w-4xl">
-          <p
-            class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-300"
-          >
-            Why I built it
-          </p>
-
-          <h2 class="mt-5 text-4xl font-bold tracking-tight sm:text-5xl">
-            I wanted to make personal presence on the web more approachable.
-          </h2>
-
-          <div class="mt-7 space-y-5 text-lg leading-8 text-sky-100">
-            <p>
-              People should have ways to represent themselves online that are
-              not entirely defined by social platforms, professional
-              directories, or the demands of continual publishing.
-            </p>
-
-            <p>
-              LandingBio provides a clear structure while leaving room for
-              personality, changing interests, professional work, creative
-              projects, and different ways of participating in the world.
-            </p>
-
-            <p>
-              It is one experiment in giving people a little more ownership
-              over how they introduce themselves and where they direct
-              attention.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Closing -->
-    <section
-      class="border-t border-gray-200 bg-gray-50 dark:border-gray-800 dark:bg-gray-950"
-    >
-      <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <div
-          class="rounded-3xl border border-gray-200 bg-white px-6 py-14 dark:border-gray-800 dark:bg-gray-900 sm:px-10 lg:px-14 lg:py-20"
-        >
-          <div class="max-w-4xl">
-            <p
-              class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600 dark:text-sky-400"
-            >
-              Explore the project
-            </p>
-
-            <h2
-              class="mt-5 text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl"
-            >
-              Create a place where people can begin.
-            </h2>
-
-            <p
-              class="mt-6 max-w-3xl text-lg leading-8 text-gray-600 dark:text-gray-300"
-            >
-              Visit LandingBio to see the project and explore how a personal
-              entry page can introduce who you are, highlight what matters, and
-              connect the different parts of your online presence.
-            </p>
-
-            <div class="mt-9 flex flex-wrap gap-4">
-              <a
-                href="https://landingbio.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center rounded-lg bg-sky-600 px-6 py-3 font-medium text-white transition-colors hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900"
-              >
-                Visit LandingBio
-                <span class="ml-2" aria-hidden="true">↗</span>
-              </a>
-
-              <a
-                href="/projects/"
-                class="inline-flex items-center rounded-lg border border-gray-300 px-6 py-3 font-medium text-gray-900 transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:ring-offset-gray-900"
-              >
-                Return to projects
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  /* Explicit sizing prevents the oversized desktop image panels seen in an earlier project page. */
+  .landingbio-preview {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 310px;
+    object-fit: contain;
+  }
+  /* Keep CTA contrast and padding stable even if site-wide link styles apply. */
+  a.landingbio-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    min-height: 3.1rem;
+    padding: 0.8rem 1.25rem !important;
+    border-radius: 0.65rem;
+    line-height: 1.25;
+    text-decoration: none !important;
+    white-space: normal;
+    transition: background-color 160ms ease, border-color 160ms ease;
+  }
+  a.landingbio-action--primary,
+  a.landingbio-action--primary:visited,
+  a.landingbio-action--primary:hover { color: #fff !important; }
+  a.landingbio-action--primary { background-color: #2563eb; }
+  a.landingbio-action--primary:hover { background-color: #1d4ed8; }
+  a.landingbio-action--secondary,
+  a.landingbio-action--secondary:visited { color: #111827 !important; }
+  a.landingbio-action--secondary:hover { background-color: #f3f4f6; }
+  :global(.dark) a.landingbio-action--secondary,
+  :global(.dark) a.landingbio-action--secondary:visited { color: #fff !important; }
+  :global(.dark) a.landingbio-action--secondary:hover { background-color: #1f2937; }
+  a.landingbio-action:focus-visible { outline: 3px solid #60a5fa; outline-offset: 3px; }
+  a.landingbio-action svg { flex: none; }
+</style>
