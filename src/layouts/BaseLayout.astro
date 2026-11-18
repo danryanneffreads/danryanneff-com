@@ -4,6 +4,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import DarkModeToggle from '../components/DarkModeToggle.astro';
+import AccessibilityToolbar from '../components/AccessibilityToolbar.astro';
 
 interface Props {
   title?: string;
@@ -30,12 +31,12 @@ const canonicalURL = new URL(Astro.url.pathname, SITE_URL);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="canonical" href={canonicalURL} />
-    
+
     <!-- SEO Meta Tags -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="robots" content="max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
@@ -46,21 +47,37 @@ const canonicalURL = new URL(Astro.url.pathname, SITE_URL);
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="954" />
     <meta property="og:image:height" content="499" />
-    
+
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={ogTitle} />
     <meta name="twitter:description" content={ogDescription} />
     <meta name="twitter:image" content={ogImage} />
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    
+
     <!-- Manifest -->
     <link rel="manifest" href="/manifest.json" />
+
+    <!-- Restore saved display preferences before the page becomes visible. -->
+    <script is:inline>
+      try {
+        const saved = JSON.parse(localStorage.getItem('drn-a11y-v2') || '{}');
+        if ([1, 2, 3, 4].includes(saved.sizeIndex)) {
+          document.documentElement.dataset.drnTextScale = String(saved.sizeIndex);
+        }
+        if (saved.highContrast === true) {
+          document.documentElement.classList.add('drn-high-contrast');
+        }
+      } catch {
+        // Browsers that block storage still get working accessibility controls.
+      }
+    </script>
   </head>
   <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
     <DarkModeToggle />
+    <AccessibilityToolbar />
     <Header />
     <main class="min-h-screen">
       <slot />
